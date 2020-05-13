@@ -1,0 +1,55 @@
+<div class="modal" id="invitenewuser" role="dialog">
+    <div class="modal-dialog">    
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><img src="images/close.svg"/></button>
+				<h4 class="modal-title">Invite New User</h4>
+			</div>
+			<div class="modal-body">
+				<ul class="nav nav-pills">
+					<li class="active inviteHme"><a data-toggle="pill" href="#home">Email</a></li>
+					<li class="inviteLnk"><a data-toggle="pill" href="#menu1">Share a Link</a></li>
+				</ul>
+  
+				<div class="tab-content">
+					<div id="home" class="tab-pane fade in active">
+						<div class="row clearfix">
+							<div class="col-md-10">
+								<label>Email Address<br>
+									<input id="inviteTxt" type="text" name="" placeholder="sample@gmail.com" autocomplete="off"/>
+								</label>
+							</div>
+							<div class="col-md-2"><span class="icon-add-1"><span class="path1"></span><span class="path2"></span></span></div>
+						</div>
+						<div class="adduserslist row clearfix">
+							<div class="col-md-12">
+								<ol class="inviteMember">
+									<li><img src="images/list-name.png"/> mary_ortiz <span><img src="images/close.svg"/></li>
+									<li><img src="images/list-name.png"/> mary_ortiz <span><img src="images/close.svg"/></li>
+									<li><img src="images/list-name.png"/> mary_ortiz <span><img src="images/close.svg"/></li>
+									<li><img src="images/list-name.png"/> mary_ortiz <span><img src="images/close.svg"/></li>
+								</ol>
+							</div>
+						</div>
+					</div>
+					<div id="menu1" class="tab-pane fade">
+						<div class="row clearfix">
+							<div class="col-md-1"><span class='icon-Link'></span></div>
+							<div class="col-md-8">
+								<label>Link<br>
+									 <input type="text" id="inviteLink" name="" placeholder="https://www.sample.com" readonly/>
+								</label>
+							</div>
+							<div id="inviteCpy" class="col-md-3">Copy Link</div>
+						</div>
+					</div>
+				</div>
+						
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default closes" data-dismiss="modal">Cancel</button>
+				<button id="inviteSend" type="button" class="btn btn-default proceed">Invite User</button>
+			</div>
+		</div>      
+    </div>
+</div>

@@ -1,0 +1,66 @@
+
+	<div class="modal fade" id="teamPopUp" role="dialog">
+		<div class="modal-dialog">    
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><img src="images/close.svg"/></button>
+					<h4 class="modal-title">New Team</h4>
+				</div>
+				<div class="modal-body">
+					<div class="row clearfix">
+						<div class="col-md-12">
+							<label>Team or Project Name<br>
+								<input type="text" name="" id="groupchat_name" placeholder="Team Name" maxlength="25" autocomplete="off"/>
+							</label>
+						</div>
+					</div>
+					<div class="row clearfix">
+						<div class="col-md-12">
+							<label>Members (Enter name or email address)</label>
+							<input type="text" id="contactlstSh" name="" onkeyup="TeamcontactSt(this.value)" placeholder=""  autocomplete="off"/>
+							
+							<div class="modal-body myModaladdnewteamevents style-4" id="teamcontacturlSt" style="overflow-y: auto; max-height: 200px;display:none">
+								<ul class="style-4" id="teamcontacturl_ul"></ul>
+							</div>
+							<ol class="teamLst">
+								<li><img src="images/list-name.png"/> mary_ortiz <span><img src="images/close.svg"/></li>
+								<li><img src="images/list-name.png"/> mary_ortiz <span><img src="images/close.svg"/></li>
+								<li><img src="images/list-name.png"/> mary_ortiz <span><img src="images/close.svg"/></li>
+								<li><img src="images/list-name.png"/> mary_ortiz <span><img src="images/close.svg"/></li>
+							</ol>
+						</div>
+					</div>
+					<div class="row clearfix">
+						<div class="col-md-12">
+							<label>Description<br>
+								<input id="DestlstSh" type="text" name="" placeholder="Description" autocomplete="off"/>
+							</label>
+						</div>
+					</div>
+					<div class="data-retention row clearfix">
+						<div class="col-md-12">
+							<ul class="ad-secters">
+								<li>
+									<div class="ad-name-images"><h3>Public Team (any co-worker can join)</h3></div>
+									<div class="ad-name-icons">
+										<label class="switch ">
+											<input type="checkbox" class="primary" id="switch1">
+											<span class="slider round"></span>
+										</label>
+									</div>
+								</li>
+																
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default closes" data-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-default proceed" id="create_group">Create Team</button>
+				</div>
+			</div>      
+		</div>
+	</div>
+	
+
+	

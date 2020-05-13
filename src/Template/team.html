@@ -1,0 +1,1411 @@
+<!DOCTYPE html> 
+<html>
+<title>UnifiedRing</title>
+<head>
+<meta name="keyword" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles-app.css"/>
+<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">	
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/fjs.js"></script><script> 
+$(document).ready(function() {
+    $('#examples').DataTable();
+} );
+</script>
+</head>
+<body>
+
+<div class="dashboard-home container-fluid"> 
+	<div class="container">
+		<div class="row clearfix">			
+			<div class="col-sm-1 first-columns">
+				<ul class="icons-top">
+					
+					<li><a href="#"><span class="icon-Dashboard"></span>Dashboard</a></li>
+					<li><a href="#"><span class="icon-Phone"></span>Phone</a></li>
+					<li><a href="#"><span class="icon-Bookmark"></span>Bookmarks</a></li>
+					<li><a href="#"><span class="icon-Directory"></span>Directory</a></li>
+				</ul>
+				<ul class="icons-bottom">
+					<li><a href="#"><span class="icon-Task"></span>Task</a></li>
+					<li><a href="#"><span class="icon-Calendar-date"></span>Events</a></li>
+					<li><a href="#"><span class="icon-Notes"></span>Notes</a></li>
+					<li><a href="#"><span class="icon-Folder"></span>Files</a></li>
+					<li><a href="#"><span class="icon-Link"></span>Link</a></li>
+				</ul>
+			</div>
+					
+			<div class="col-sm-2 second-columns">
+				<div class="row clearfix">			
+					<div class="customer-header col-md-12">						
+						<img src="images/close.svg" class="closing"/> 
+						<div class="customer-header-sect">
+							<div class="dropdown customer-header-sect-img">
+								<img src="images/customer-img.png" class="customer-img" class="dropdown-toggle" data-toggle="dropdown"/>
+								<img src="images/green-active.svg" class="dotactive"/>
+								<ul class="dropdown-menu">
+									<li class="dropdown dropdown-submenu"><a href="#"><img src="images/green-active.svg"/> Available <span class="icon-arrow-right submenu-img"></span></a>
+										<ul class="dropdown-menus">
+											<li><a href="#"><img src="images/green-active.svg"/> Available</a></li>
+											<li><a href="#"><img src="images/yellow.png"/> Invisible</a></li>
+											<li><a href="#"><img src="images/red.png"/> Do not Disturb</a></li>
+											<li><a href="#"><img src="images/grey.png"/> Busy</a></li>
+										</ul>
+									</li>												
+									</li>
+									<li><a href="#">Share Status</a></li>
+									<li><a href="#">Edit profile</a></li>
+									<li><a href="#">Preferences</a></li>
+									<li><a href="#">Help</a></li>
+									<li><a href="#">Keyboard Shortcuts</a></li>
+									<li class="dropdown dropdown-submenu"><a href="#">About <span class="icon-arrow-right submenu-img"></span></a>		
+										<ul class="dropdown-menus">
+											<li><a href="#"><img src="images/green-active.svg"/> Available</a></li>
+											<li><a href="#"><img src="images/yellow.png"/> Invisible</a></li>
+											<li><a href="#"><img src="images/red.png"/> Do not Disturb</a></li>
+											<li><a href="#"><img src="images/grey.png"/> Busy</a></li>
+										</ul>
+									</li>
+									<li><a href="#">What's New</a></li>
+									<li><a href="#">Download Apps</a></li>
+									<li><a href="#">@Mentions</a></li>
+									<li><a href="#">Signout</a></li>
+								</ul>							
+							</div>
+							<div class="customer-header-sect-name">
+								<h3>  </h3>
+							</div>
+							<div class="customer-header-sect-imgplus dropdown"><span class="icon-Add dropdown-toggle" data-toggle="dropdown"></span>
+								<ul class="dropdown-menu">
+									<li><a href="#"><span class="icon-Phone"></span> Start phone Call</a></li>
+									<li><a href="#"><span class="icon-Video"></span> Start Video Meeting</a></li>
+									<li><a href="#"><span class="icon-Chat"></span> Send New Message</a></li>
+									<li><a href="#"><span class="icon-Contacts"></span> Create Team</a></li>
+									<li><a href="#"><span class="icon-mail-read"></span> Invite New User</a></li>
+								</ul>							
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="searchbox row clearfix">			
+					<div class="col-md-12">
+						<form action="" method="post">
+							<input type="text" name="search" placeholder="Search"/>
+						</form>
+					</div>
+				</div>
+				<div class="chat-left row clearfix">			
+					<div class="col-md-12">
+						<h4><span class="icon-Favourites list-name-icons"></span> Favourites</h4>
+						<ul class="style-4">
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+						</ul>
+					</div>
+				</div>
+				<hr>
+				<div class="chat-left row clearfix">			
+					<div class="col-md-12">
+						<h4><span class="icon-Contacts list-name-icons"></span> Contacts
+							<a href="#myModaladdnewmessage" class="tooltips"><span class="icon-Add-doted dropdown-toggle" data-toggle="modal" data-target="#myModaladdnewmessage"></span>
+								<p class="pophover">New Message</p>
+							</a>
+						</h4>
+						<ul class="style-4">
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+						</ul>
+					</div>
+				</div>
+				<hr>
+				<div class="chat-left row clearfix">			
+					<div class="col-md-12">
+						<h4><span class="icon-Teams list-name-icons"></span> Teams
+							<a href="#myModaladdnewmessage" class="tooltips1"><span class="icon-Add-doted dropdown-toggle" data-toggle="modal" data-target="#teamPopUp"></span>
+								<p class="pophover1">Create Team</p>
+								</ul>
+							</a>
+						</h4>
+						<ul class="style-4">
+							<li class="active"><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-9 third-columns">
+			<div class="fixedscroll team-page style-4">
+				
+				<div class="chat-info123" title="Expand">
+					<div class="toggle-info">
+						<a class="toggle-icon"><span class="icon-arrow-left"></span></a>
+					</div>
+				</div>
+				<img src="images/m-3dot.png" class="left-menu-section"/>
+				<div class="taskassigned-screen team row clearfix">
+					<div class="col-md-12">
+						<div class="phds row clearfix">
+							<div class="col-sm-5">
+								<img src="images/menu-black.svg" class="m-menus"/><h3>Team</h3>
+							</div>
+							<span class="icon-add-1 addnew" data-toggle="modal" data-target="#teamPopUp"><span class="path1"></span><span class="path2"></span></span>
+							
+						</div>
+						
+						<div class="ph-search row clearfix">							
+							<div class="col-sm-4">
+								<input type="text" name="number" onKeyup="teamFilter(this.value)" placeholder="Type a Name or Number" autocomplete="off" maxlength="28"/>
+							</div>
+							<div class="col-sm-4">
+								<b><span class="menutitle">Teams</span></b><h4 class="dropdown-toggle" data-toggle="dropdown"><span class="menulike one"><b class="filterLst">All Active Teams</b><span class="icon-arrow-down"></span></span></h4>
+								<ul class="dropdown-menu">
+									<li onclick="loadingTeamLst('All Active Teams')"><a href="#">All Active Teams</a></li>
+									<li onclick="loadingTeamLst('Team I created')"><a href="#" class="team-created1">Team I created</a></li>
+									<li onclick="loadingTeamLst('Public Teams')"><a href="#" class="team-public1">Public Teams</a></li>
+									<li onclick="loadingTeamLst('Archived Teams')"><a href="#" class="team-archieve1">Archived Teams</a></li>
+								</ul>  
+							</div>
+							<div class="col-sm-4">
+								<b><span class="menutitle">Sort</span></b><h4 class="dropdown-toggle" data-toggle="dropdown"><span class="menulike two"><b class="filterSrt">Name</b> <span class="icon-arrow-down"></span></span></h4>
+								<ul class="dropdown-menu">
+									<li onclick="loadingTeamSrt('Name')"><a href="#" class="team-name1">Name</a></li>
+									<li onclick="loadingTeamSrt('Recent Post')"><a href="#" class="team-post1">Recent Post</a></li>
+									<li onclick="loadingTeamSrt('Recently Created')"><a href="#" class="team-recent1">Recently Created</a></li>
+									<li onclick="loadingTeamSrt('Creators')"><a href="#" class="team-creators1">Creators</a></li>
+									<li onclick="loadingTeamSrt('Members')"><a href="#" class="team-members1">Members</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="adminscreen team page row clearfix style-4">
+					<div class="col-md-12">												
+						<ul class="ad-sect all-default adminscreen_st">
+							<li>
+								<div class="ad-name-images"><h3>UNIFIEDRING QA<br><span>Mobile Application, Praveen Kumar and QA Team</span></h3></div>
+								<div class="ad-name-icons">
+									<ul class="chat-icons">
+										<li><a href="#"><span class="icon-Phone"></span></a></li>
+										<li><a href="#"><span class="icon-Chat"></span></a></li>
+										<li><a href="#"><span class="icon-Delete-2"></span></a></li>
+										<li><a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-Action in"></span></a>
+											<ul class="dropdown-menu">
+												<li><a href="#">Mark Unread</a></li>
+												<li><a href="#">Favourite</a></li>
+												<li><a href="#">Close Conversation</a></li>
+												<li><a href="#">Post via Email</a></li>
+												<li><a href="#">Mute All Notifications</a></li>
+												<li><a href="#">Desktop Notifications</a></li>
+												<li><a href="#">Mobile Notifications</a></li>
+												<li><a href="#">Email Notifications</a></li>
+												<li><a href="#">Sound</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModaladdnewteam">Edit Team Details</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModalmanageteammember">Manage Members…</a></li>											
+												<li><a href="#" data-toggle="modal" data-target="#myModaladdteammember">Team Member</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModalarchieveteammemberconfirm">Archive Team</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModalduplicateteammember">Duplicate Team</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModaldeleteteammemberconfirm">Delete Team</a></li>
+												<li><a href="#">Add Integration</a></li>
+											</ul>
+										</li>
+									</ul>														
+								</div>
+							</li>
+							<li>
+								<div class="ad-name-images"><h3>UNIFIEDRING QA<br><span>Mobile Application, Praveen Kumar and QA Team</span></h3></div>
+								<div class="ad-name-icons">
+									<ul class="chat-icons">
+										<li><a href="#"><span class="icon-Phone"></span></a></li>
+										<li><a href="#"><span class="icon-Chat"></span></a></li>
+										<li><a href="#"><span class="icon-Delete-2"></span></a></li>
+										<li><a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-Action in"></span></a>
+											<ul class="dropdown-menu">
+												<li><a href="#">Mark Unread</a></li>
+												<li><a href="#">Favourite</a></li>
+												<li><a href="#">Close Conversation</a></li>
+												<li><a href="#">Post via Email</a></li>
+												<li><a href="#">Mute All Notifications</a></li>
+												<li><a href="#">Desktop Notifications</a></li>
+												<li><a href="#">Mobile Notifications</a></li>
+												<li><a href="#">Email Notifications</a></li>
+												<li><a href="#">Sound</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModaladdnewteam">Edit Team Details</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModalmanageteammember">Manage Members…</a></li>											
+												<li><a href="#" data-toggle="modal" data-target="#myModaladdteammember">Team Member</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModalarchieveteammemberconfirm">Archive Team</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModalduplicateteammember">Duplicate Team</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModaldeleteteammemberconfirm">Delete Team</a></li>
+												<li><a href="#">Add Integration</a></li>
+											</ul>
+										</li>
+									</ul>														
+								</div>
+							</li>
+							<li>
+								<div class="ad-name-images"><h3>UNIFIEDRING QA<br><span>Mobile Application, Praveen Kumar and QA Team</span></h3></div>
+								<div class="ad-name-icons">
+									<ul class="chat-icons">
+										<li><a href="#"><span class="icon-Phone"></span></a></li>
+										<li><a href="#"><span class="icon-Chat"></span></a></li>
+										<li><a href="#"><span class="icon-Delete-2"></span></a></li>
+										<li><a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-Action in"></span></a>
+											<ul class="dropdown-menu">
+												<li><a href="#">Mark Unread</a></li>
+												<li><a href="#">Favourite</a></li>
+												<li><a href="#">Close Conversation</a></li>
+												<li><a href="#">Post via Email</a></li>
+												<li><a href="#">Mute All Notifications</a></li>
+												<li><a href="#">Desktop Notifications</a></li>
+												<li><a href="#">Mobile Notifications</a></li>
+												<li><a href="#">Email Notifications</a></li>
+												<li><a href="#">Sound</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModaladdnewteam">Edit Team Details</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModalmanageteammember">Manage Members…</a></li>											
+												<li><a href="#" data-toggle="modal" data-target="#myModaladdteammember">Team Member</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModalarchieveteammemberconfirm">Archive Team</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModalduplicateteammember">Duplicate Team</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModaldeleteteammemberconfirm">Delete Team</a></li>
+												<li><a href="#">Add Integration</a></li>
+											</ul>
+										</li>
+									</ul>														
+								</div>
+							</li>
+							<li class="restore">
+								<div class="ad-name-images"><h3>UNIFIEDRING QA<br><span>Mobile Application, Praveen Kumar and QA Team</span></h3></div>
+								<div class="ad-name-icons">									
+									<button type="button">Restore</button>											
+								</div>
+							</li>
+							
+							<div class="phds people row clearfix"><h3>Public Teams</h3></div>
+							
+							<div class="row clearfix">
+								<div class="col-md-12">												
+									<ul class="ad-sect">
+										<li>
+											<div class="ad-name-images"><h3>IOS team<br><span>Arunkumar and d.christina</span></h3></div>
+											<div class="ad-name-icons">
+												<button type="button">Join</button>
+											</div>
+										</li>
+										<li>
+											<div class="ad-name-images"><h3>IOS team<br><span>Arunkumar and d.christina</span></h3></div>
+											<div class="ad-name-icons">
+												<button type="button">Join</button>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</ul>
+						
+						<ul class="ad-sect team-created">
+							<li>
+								<div class="ad-name-images"><h3>UNIFIEDRING QA<br><span>Mobile Application, Praveen Kumar and QA Team</span></h3></div>
+								<div class="ad-name-icons">
+									<ul class="chat-icons">
+										<li><a href="#"><span class="icon-Phone"></span></a></li>
+										<li><a href="#"><span class="icon-Chat"></span></a></li>
+										<li><a href="#"><span class="icon-Delete-2"></span></a></li>
+										<li><a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-Action in"></span></a>
+											<ul class="dropdown-menu">
+												<li><a href="#">Mark Unread</a></li>
+												<li><a href="#">Favourite</a></li>
+												<li><a href="#">Close Conversation</a></li>
+												<li><a href="#">Post via Email</a></li>
+												<li><a href="#">Mute All Notifications</a></li>
+												<li><a href="#">Desktop Notifications</a></li>
+												<li><a href="#">Mobile Notifications</a></li>
+												<li><a href="#">Email Notifications</a></li>
+												<li><a href="#">Sound</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModaladdnewteam">Edit Team Details</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModalmanageteammember">Manage Members…</a></li>											
+												<li><a href="#" data-toggle="modal" data-target="#myModaladdteammember">Team Member</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModalarchieveteammemberconfirm">Archive Team</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModalduplicateteammember">Duplicate Team</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModaldeleteteammemberconfirm">Delete Team</a></li>
+												<li><a href="#">Add Integration</a></li>
+											</ul>
+										</li>
+									</ul>														
+								</div>
+							</li>
+							<li>
+								<div class="ad-name-images"><h3>UNIFIEDRING QA<br><span>Mobile Application, Praveen Kumar and QA Team</span></h3></div>
+								<div class="ad-name-icons">
+									<ul class="chat-icons">
+										<li><a href="#"><span class="icon-Phone"></span></a></li>
+										<li><a href="#"><span class="icon-Chat"></span></a></li>
+										<li><a href="#"><span class="icon-Delete-2"></span></a></li>
+										<li><a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-Action in"></span></a>
+											<ul class="dropdown-menu">
+												<li><a href="#">Mark Unread</a></li>
+												<li><a href="#">Favourite</a></li>
+												<li><a href="#">Close Conversation</a></li>
+												<li><a href="#">Post via Email</a></li>
+												<li><a href="#">Mute All Notifications</a></li>
+												<li><a href="#">Desktop Notifications</a></li>
+												<li><a href="#">Mobile Notifications</a></li>
+												<li><a href="#">Email Notifications</a></li>
+												<li><a href="#">Sound</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModaladdnewteam">Edit Team Details</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModalmanageteammember">Manage Members…</a></li>											
+												<li><a href="#" data-toggle="modal" data-target="#myModaladdteammember">Team Member</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModalarchieveteammemberconfirm">Archive Team</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModalduplicateteammember">Duplicate Team</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModaldeleteteammemberconfirm">Delete Team</a></li>
+												<li><a href="#">Add Integration</a></li>
+											</ul>
+										</li>
+									</ul>														
+								</div>
+							</li>
+							<li>
+								<div class="ad-name-images"><h3>UNIFIEDRING QA<br><span>Mobile Application, Praveen Kumar and QA Team</span></h3></div>
+								<div class="ad-name-icons">
+									<ul class="chat-icons">
+										<li><a href="#"><span class="icon-Phone"></span></a></li>
+										<li><a href="#"><span class="icon-Chat"></span></a></li>
+										<li><a href="#"><span class="icon-Delete-2"></span></a></li>
+										<li><a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-Action in"></span></a>
+											<ul class="dropdown-menu">
+												<li><a href="#">Mark Unread</a></li>
+												<li><a href="#">Favourite</a></li>
+												<li><a href="#">Close Conversation</a></li>
+												<li><a href="#">Post via Email</a></li>
+												<li><a href="#">Mute All Notifications</a></li>
+												<li><a href="#">Desktop Notifications</a></li>
+												<li><a href="#">Mobile Notifications</a></li>
+												<li><a href="#">Email Notifications</a></li>
+												<li><a href="#">Sound</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModaladdnewteam">Edit Team Details</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModalmanageteammember">Manage Members…</a></li>											
+												<li><a href="#" data-toggle="modal" data-target="#myModaladdteammember">Team Member</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModalarchieveteammemberconfirm">Archive Team</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModalduplicateteammember">Duplicate Team</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModaldeleteteammemberconfirm">Delete Team</a></li>
+												<li><a href="#">Add Integration</a></li>
+											</ul>
+										</li>
+									</ul>														
+								</div>
+							</li>
+							<li class="restore">
+								<div class="ad-name-images"><h3>UNIFIEDRING QA<br><span>Mobile Application, Praveen Kumar and QA Team</span></h3></div>
+								<div class="ad-name-icons">									
+									<button type="button">Restore</button>											
+								</div>
+							</li>
+						</ul>
+						
+						<ul class="ad-sect team-public">
+							<li class="restore">
+								<div class="ad-name-images"><h3>UNIFIEDRING QA<br><span>Mobile Application, Praveen Kumar and QA Team</span></h3></div>
+								<div class="ad-name-icons">									
+									<button type="button">Join</button>											
+								</div>
+							</li>
+							<li class="restore">
+								<div class="ad-name-images"><h3>UNIFIEDRING QA<br><span>Mobile Application, Praveen Kumar and QA Team</span></h3></div>
+								<div class="ad-name-icons">									
+									<button type="button">Join</button>											
+								</div>
+							</li>
+							
+						</ul>
+						
+						<ul class="ad-sect team-archieve">
+							<li>
+								<div class="ad-name-images"><h3>UNIFIEDRING QA<br><span>Mobile Application, Praveen Kumar and QA Team</span></h3></div>
+								<div class="ad-name-icons">
+									<ul class="chat-icons">
+										<li><a href="#"><span class="icon-Phone"></span></a></li>
+										<li><a href="#"><span class="icon-Chat"></span></a></li>
+										<li><a href="#"><span class="icon-Delete-2"></span></a></li>
+										<li><a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-Action in"></span></a>
+											<ul class="dropdown-menu">
+												<li><a href="#">Mark Unread</a></li>
+												<li><a href="#">Favourite</a></li>
+												<li><a href="#">Close Conversation</a></li>
+												<li><a href="#">Post via Email</a></li>
+												<li><a href="#">Mute All Notifications</a></li>
+												<li><a href="#">Desktop Notifications</a></li>
+												<li><a href="#">Mobile Notifications</a></li>
+												<li><a href="#">Email Notifications</a></li>
+												<li><a href="#">Sound</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModaladdnewteam">Edit Team Details</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModalmanageteammember">Manage Members…</a></li>											
+												<li><a href="#" data-toggle="modal" data-target="#myModaladdteammember">Team Member</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModalarchieveteammemberconfirm">Archive Team</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModalduplicateteammember">Duplicate Team</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModaldeleteteammemberconfirm">Delete Team</a></li>
+												<li><a href="#">Add Integration</a></li>
+											</ul>
+										</li>
+									</ul>														
+								</div>
+							</li>
+							<li>
+								<div class="ad-name-images"><h3>UNIFIEDRING QA<br><span>Mobile Application, Praveen Kumar and QA Team</span></h3></div>
+								<div class="ad-name-icons">
+									<ul class="chat-icons">
+										<li><a href="#"><span class="icon-Phone"></span></a></li>
+										<li><a href="#"><span class="icon-Chat"></span></a></li>
+										<li><a href="#"><span class="icon-Delete-2"></span></a></li>
+										<li><a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-Action in"></span></a>
+											<ul class="dropdown-menu">
+												<li><a href="#">Mark Unread</a></li>
+												<li><a href="#">Favourite</a></li>
+												<li><a href="#">Close Conversation</a></li>
+												<li><a href="#">Post via Email</a></li>
+												<li><a href="#">Mute All Notifications</a></li>
+												<li><a href="#">Desktop Notifications</a></li>
+												<li><a href="#">Mobile Notifications</a></li>
+												<li><a href="#">Email Notifications</a></li>
+												<li><a href="#">Sound</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModaladdnewteam">Edit Team Details</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModalmanageteammember">Manage Members…</a></li>											
+												<li><a href="#" data-toggle="modal" data-target="#myModaladdteammember">Team Member</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModalarchieveteammemberconfirm">Archive Team</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModalduplicateteammember">Duplicate Team</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModaldeleteteammemberconfirm">Delete Team</a></li>
+												<li><a href="#">Add Integration</a></li>
+											</ul>
+										</li>
+									</ul>														
+								</div>
+							</li>
+							<li>
+								<div class="ad-name-images"><h3>UNIFIEDRING QA<br><span>Mobile Application, Praveen Kumar and QA Team</span></h3></div>
+								<div class="ad-name-icons">
+									<ul class="chat-icons">
+										<li><a href="#"><span class="icon-Phone"></span></a></li>
+										<li><a href="#"><span class="icon-Chat"></span></a></li>
+										<li><a href="#"><span class="icon-Delete-2"></span></a></li>
+										<li><a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-Action in"></span></a>
+											<ul class="dropdown-menu">
+												<li><a href="#">Mark Unread</a></li>
+												<li><a href="#">Favourite</a></li>
+												<li><a href="#">Close Conversation</a></li>
+												<li><a href="#">Post via Email</a></li>
+												<li><a href="#">Mute All Notifications</a></li>
+												<li><a href="#">Desktop Notifications</a></li>
+												<li><a href="#">Mobile Notifications</a></li>
+												<li><a href="#">Email Notifications</a></li>
+												<li><a href="#">Sound</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModaladdnewteam">Edit Team Details</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModalmanageteammember">Manage Members…</a></li>											
+												<li><a href="#" data-toggle="modal" data-target="#myModaladdteammember">Team Member</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModalarchieveteammemberconfirm">Archive Team</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModalduplicateteammember">Duplicate Team</a></li>
+												<li><a href="#" data-toggle="modal" data-target="#myModaldeleteteammemberconfirm">Delete Team</a></li>
+												<li><a href="#">Add Integration</a></li>
+											</ul>
+										</li>
+									</ul>														
+								</div>
+							</li>
+							<li class="restore">
+								<div class="ad-name-images"><h3>UNIFIEDRING QA<br><span>Mobile Application, Praveen Kumar and QA Team</span></h3></div>
+								<div class="ad-name-icons">									
+									<button type="button">Restore</button>											
+								</div>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div></div>
+				
+			<div class="col-sm-3 fourth-columns style-4">
+				<div class="chat-info" title="Collapse">
+					<div class="toggle-info">
+						<a class="toggle-icon"><span class="icon-arrow-right"></span></a>
+					</div>
+				</div>	
+				<div class="taskallocation row clearfix">
+					<div class="taskall-sect col-md-12">
+						<h4> Update the client call detail to my email</h4>						
+						<ol>
+							<li><a href="#"><span class="icon-thump_up"></span></a></li>
+							<li><a href="#"><span class="icon-Bookmark"></span></a></li>
+							<li><a href="#"><span class="icon-Pin"></span></a></li>
+							<li><a href="#"><span class="icon-Share"></span></a></li>
+							<li><a href="#myModaladdnew1" data-toggle="modal" data-target="#myModaladdnew1"><span class="icon-edit"></span></a></li>
+							<li><a href="#"><span class="icon-Delete-1"></span></a></li>
+						</ol>						
+						<ul class="allocate-details style-4">
+							<li class="col-md-12">
+								<h3>Assigned To <br><span>jonathansmith32@gmail.com</span></h3>
+							</li>
+							<li class="col-md-4">
+								<h3>Start Date <br><span>12.06.19</span></h3>
+							</li>
+							<li class="col-md-4">
+								<h3>Due Date <br><span>12.06.19</span></h3>
+							</li>
+							<li class="col-md-4">
+								<h3>Days <br><span>2</span></h3>
+							</li>
+							<li class="col-md-3">
+								<h3>Repeat <br><span>None</span></h3>
+							</li>
+							<li class="col-md-9">
+								<h3>Complete When <br><span>100% Done</span></h3>
+							</li>
+							<li class="col-md-12">
+								<h3>Section <br><span>Sample Section</span></h3>
+							</li>
+							<li class="col-md-12">
+								<h3>Description <br><span>Sample Section</span></h3>
+							</li>
+							<li class="col-md-10">
+								<h3>Attach <br><span><img src="images/list-name.png"> Sample File.jpg<br><span>Added 1 days ago</span></span></h3>
+							</li>
+							<li class="col-md-2 dropdown">
+								<span class="icon-Action in dropdown-toggle rets" data-toggle="dropdown"></span>
+								<ul class="innermenus dropdown-menu">
+									<li><a href="#">Download</a></li>
+									<li><a href="#">Delete</a></li>
+								</ul>
+							</li>
+							<li class="col-md-12">
+								<div class="panel-group" id="accordion">
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<h4 class="panel-title">
+												<a data-toggle="collapse" data-parent="#accordion" href="#collapse2"><span class="icon-arrow-down"></span> Activity</a>
+											</h4>
+										</div>
+										<div id="collapse2" class="panel-collapse collapse in">
+											<div class="panel-body">
+												<div class="tasks">
+													<p>QA Team changed the color <span>16:45</span></p>
+												</div>
+												<div class="tasks">
+													<p>QA Team changed the color <span>16:45</span></p>
+												</div>
+												<div class="tasks">
+													<p>QA Team changed the color <span>16:45</span></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>								
+							</li>
+							<li class="col-md-12">
+								<h3>Conversation<br><br>
+								<div class="comment-name-section">
+									<div class="name-images">
+										<img src="images/list-name.png" class="list-name-img">	
+									</div>														
+									<h3>Ronnie Diaz</h3>
+									<h4>Mon, 2 Apr</h4>
+								</div>
+									<div class="comments-section">
+										<div class="commemts-boxes">Please let me know how we can assist you, we’re here to guide you through.</div>
+									</div>
+								</h3>
+							</li>
+						</ul>
+						<div class="start-chats">	
+							<div class="row clearfix">
+								<div class="col-md-2"> 
+									<span class="icon-add dropdown-toggle" data-toggle="dropdown"></span>
+									<ul class="dropdown-menu">
+										<li><a href="#addnewevent" data-toggle="modal" data-dismiss="modal">New Event</a></li>
+										<li><a href="#addnewtask" data-toggle="modal" data-dismiss="modal">New Task</a></li>
+										<li><a href="#addnewnote" data-toggle="modal" data-dismiss="modal">New Note</a></li>
+										<li><a href="#addnewsnippet" data-toggle="modal" data-dismiss="modal">New Snippet</a></li>
+										<li class="dropdown dropdown-submenu"><a href="#">Share Files <span class="icon-arrow-right"></span></a>
+											<ul class="dropdown-menus">
+												<li><a href="#"><span class="icon-monitor"></span> Computer</a></li>
+												<li><a href="#"><span class="icon-google-drive"></span> Google Drive</a></li>
+												<li><a href="#"><span class="icon-dropbox-logo"></span> Dropbox</a></li>
+												<li><a href="#"><span class="icon-box"></span> Box</a></li>
+												<li><a href="#"><span class="icon-evernote-logo"></span> Evernote</a></li>
+												<li><a href="#"><span class="icon-onedrive"></span> OneDrive</a></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+								<div class="col-md-7">
+									<input type="text" id="myInput" name="" placeholder="Type your message here">
+								</div>
+								<div class="col-md-3">
+									<ul class="bottom-charts">
+										<li><a href="#"><span class="icon-attach"></span></a></li>								
+										<li><a href="#" data-toggle="modal" data-target="#stickers"><span class="icon-sticker"></span></a></li>
+										<li><a href="#" data-toggle="modal" data-target="#emojis"><span class="icon-emojis"></span></a></li>
+									</ul>
+									<input type="submit" name="submit" value="send" class="lake">
+								</div>
+							</div>
+						</div>									
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="modal fade" id="teamPopUp" role="dialog">
+		<div class="modal-dialog">    
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close"><img src="images/close.svg"/></button>
+					<h4 class="modal-title">New Team</h4>
+				</div>
+				<div class="modal-body">
+					<div class="row clearfix">
+						<div class="col-md-12">
+							<label>Team or Project Name<br>
+								<input type="text" name="" id="groupchat_name" onkeypress="return IsAlphaNumeric(event);" placeholder="Team Name" maxlength="25" autocomplete="off"/>
+							</label>
+						</div>
+					</div>
+					<div class="row clearfix">
+						<div class="col-md-12">
+							<label>Members (Enter name or email address)</label>
+							<input type="text" id="contactlstSh" name="" onkeypress="return IsAlphaNumeric(event);" onkeyup="TeamcontactSt(this.value)" placeholder=""  autocomplete="off"/>
+							<!--<div class="modal-body myModaladdnewteamevents style-4" id="teamcontacturlSt" style="overflow-y: auto; max-height: 200px;display:none"></div>!-->
+							<!--<div class="serch row clearfix style-4">
+								<div class="col-md-12">
+									<ul id="teamcontacturlSt" style="display:none">
+									</ul>
+								</div>
+							</div>!-->
+							<div class="modal-body myModaladdnewteamevents style-4" id="teamcontacturlSt" style="overflow-y: auto; max-height: 200px;display:none">
+								<ul class="style-4" id="teamcontacturl_ul"></ul>
+							</div>
+							<ol class="teamLst">
+								<li><img src="images/list-name.png"/> mary_ortiz <span><img src="images/close.svg"/></li>
+								<li><img src="images/list-name.png"/> mary_ortiz <span><img src="images/close.svg"/></li>
+								<li><img src="images/list-name.png"/> mary_ortiz <span><img src="images/close.svg"/></li>
+								<li><img src="images/list-name.png"/> mary_ortiz <span><img src="images/close.svg"/></li>
+							</ol>
+						</div>
+					</div>
+					<div class="row clearfix">
+						<div class="col-md-12">
+							<label>Description<br>
+								<input id="DestlstSh" type="text" name="" placeholder="Description" autocomplete="off"/>
+							</label>
+						</div>
+					</div>
+					<div class="data-retention row clearfix">
+						<div class="col-md-12">
+							<ul class="ad-secters">
+								<li>
+									<div class="ad-name-images"><h3>Public Team (any co-worker can join)</h3></div>
+									<div class="ad-name-icons">
+										<label class="switch ">
+											<input type="checkbox" class="primary" id="switch1" checked>
+											<span class="slider round"></span>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="ad-name-images"><h3>Members (except guests) may add other members</h3></div>
+									<div class="ad-name-icons">
+										<label class="switch ">
+											<input type="checkbox" class="primary" id="switch2">
+											<span class="slider round"></span>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="ad-name-images"><h3>Members may post messages</h3></div>
+									<div class="ad-name-icons">
+										<label class="switch ">
+											<input type="checkbox" class="primary" id="switch3" checked>
+											<span class="slider round"></span>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="ad-name-images"><h3>Members may @team mention</h3></div>
+									<div class="ad-name-icons">
+										<label class="switch ">
+											<input type="checkbox" class="primary" id="switch4">
+											<span class="slider round"></span>
+										</label>
+									</div>
+								</li>
+								<!--<li>
+									<div class="ad-name-images"><h3>Members may add integrations</h3></div>
+									<div class="ad-name-icons">
+										<label class="switch ">
+											<input type="checkbox" class="primary" id="switch5">
+											<span class="slider round"></span>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="ad-name-images"><h3>Members may pin posts</h3></div>
+									<div class="ad-name-icons">
+										<label class="switch ">
+											<input type="checkbox" class="primary" id="switch6">
+											<span class="slider round"></span>
+										</label>
+									</div>
+								</li>!-->							
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default closes" data-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-default proceed" id="create_group">Create Team</button>
+				</div>
+			</div>      
+		</div>
+	</div>
+
+</div>
+
+
+
+
+<div class="modal fade" id="myModaladdnew1" role="dialog">
+    <div class="modal-dialog">    
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><img src="images/close.svg"/></button>
+				<h4 class="modal-title">Edit Task</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<label>Task Title<br>
+							<input type="text" name="" placeholder="Sample Task Title"/>
+						</label>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<label>Assigned To<br>
+							<input type="email" name="" placeholder="jonathansmith@gmail.com"/>
+						</label>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-md-4">
+						<label>Start Date<br>
+							<input type="date" name="" placeholder="12.06.19"/>
+						</label>
+					</div>
+					<div class="col-md-4">
+						<label>Due Date<br>
+							<input type="date" name="" placeholder="12.06.19"/>
+						</label>
+					</div>
+					<div class="col-md-4">
+						<label>Days<br>
+							<input type="text" name="" placeholder="2"/>
+						</label>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-md-4">
+						<label>Repeat<br>
+							<select name="">
+								<option value="">None</option>
+							</select>
+						</label>
+					</div>
+					<div class="col-md-8">
+						<label>Complete When<br>
+							<select name="">
+								<option value="">100% Done</option>
+							</select>
+						</label>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<label>Section<br>
+							<input type="text" name="" placeholder="Sample Section"/>
+						</label>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<label>Description<br>
+							<input type="text" name="" placeholder="Sample Description"/>
+						</label>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="colored col-md-8">
+						<label class="labs">Color<br>
+							<label class="blue">
+								<input type="radio">
+								<span class="checkmarks"></span>
+							</label>
+							<label class="blue1">
+								<input type="radio">
+								<span class="checkmarks"></span>
+							</label>
+							<label class="blue2">
+								<input type="radio">
+								<span class="checkmarks"></span>
+							</label>
+							<label class="blue3">
+								<input type="radio">
+								<span class="checkmarks"></span>
+							</label>
+							<label class="blue4">
+								<input type="radio" checked>
+								<span class="checkmarks"></span>
+							</label>
+							<label class="blue5">
+								<input type="radio">
+								<span class="checkmarks"></span>
+							</label>
+						</label>
+					</div>
+					<div class="col-md-4">
+						<label class="afiles">Attach<br>
+							<input type="file" name="" placeholder="Attach Files"/><span>Attach Files</span>
+						</label>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<label class="containe">After saving, Create another task
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default closes" data-dismiss="modal">Cancel</button>
+				<button type="button" class="btn btn-default proceed">Post Task</button>
+			</div>
+		</div>      
+    </div>
+</div>
+ 
+<div class="modal fade teamadd" id="myModaladdteammember" role="dialog">
+    <div class="modal-dialog">    
+		<!-- Modal content-->
+		<div class="modal-content data-retention">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><img src="images/close.svg"/></button>
+				<h4 class="modal-title">Team Members</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<ul class="ad-secters">
+							<li>
+								<div class="ad-name-images"><img src="images/customer-img.png" class="customer-img"/> <h3>Ronnie Diaz<br><span>jessica_lucas@gmail.com</span></h3></div>
+								<div class="ad-name-icons"></div>
+							</li>
+							<li>
+								<div class="ad-name-images"><img src="images/customer-img.png" class="customer-img"/> <h3>Ronnie Diaz<br><span>jessica_lucas@gmail.com</span></h3></div>
+								<div class="ad-name-icons"><img src="images/stars.svg"/> Team Admin</div>
+							</li>
+							<li>
+								<div class="ad-name-images"><img src="images/customer-img.png" class="customer-img"/> <h3>Ronnie Diaz<br><span>jessica_lucas@gmail.com</span></h3></div>
+								<div class="ad-name-icons"></div>
+							</li>
+							<li>
+								<div class="ad-name-images"><img src="images/customer-img.png" class="customer-img"/> <h3>Ronnie Diaz<br><span>jessica_lucas@gmail.com</span></h3></div>
+								<div class="ad-name-icons"></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default closes" data-dismiss="modal">Cancel</button>
+				<button type="button" class="btn btn-default proceed" data-toggle="modal"  data-dismiss="modal" data-target="#myModaladdteammemberconfirm">Add People</button>
+			</div>
+		</div>      
+    </div>
+</div>
+
+<div class="modal fade teamadd" id="myModaladdteammemberconfirm" role="dialog">
+    <div class="modal-dialog">    
+		<!-- Modal content-->
+		<div class="modal-content data-retention">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><img src="images/close.svg"/></button>
+				<h4 class="modal-title">Are You An Admin</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<p>Should you be an admin of this team as well? Otherwise, Arunkumar will have to make any further changes.</p>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default closes" data-dismiss="modal">No</button>
+				<button type="button" class="btn btn-default proceed">Yes</button>
+			</div>
+		</div>      
+    </div>
+</div>
+
+<div class="modal fade teamadd" id="myModalmanageteammember" role="dialog">
+    <div class="modal-dialog">    
+		<!-- Modal content-->
+		<div class="modal-content data-retention">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><img src="images/close.svg"/></button>
+				<h4 class="modal-title">Manage Members</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<ul class="ad-secters">
+							<li>
+								<div class="ad-name-images"><img src="images/customer-img.png" class="customer-img"/> <h3>Ronnie Diaz<br><span>jessica_lucas@gmail.com</span></h3></div>
+								<div class="ad-name-icons"><img src="images/m-3dot.svg" class="dropdown-toggle dotadmin" data-toggle="dropdown"/>
+									<ul class="dropdown-menu">
+										<li><a href="#">Remove from Team</a></li>
+										<li><a href="#">Make Team Admin</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="ad-name-images"><img src="images/customer-img.png" class="customer-img"/> <h3>Ronnie Diaz<br><span>jessica_lucas@gmail.com</span></h3></div>
+								<div class="ad-name-icons"><img src="images/stars.svg"/> Team Admin <img src="images/m-3dot.svg" class="dropdown-toggle dotadmin" data-toggle="dropdown"/>
+									<ul class="dropdown-menu">
+										<li><a href="#">Remove from Team</a></li>
+										<li><a href="#">Revoke Team Admin</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="ad-name-images"><img src="images/customer-img.png" class="customer-img"/> <h3>Ronnie Diaz<br><span>jessica_lucas@gmail.com</span></h3></div>
+								<div class="ad-name-icons"><img src="images/m-3dot.svg" class="dropdown-toggle dotadmin" data-toggle="dropdown"/>
+									<ul class="dropdown-menu">
+										<li><a href="#">Remove from Team</a></li>
+										<li><a href="#">Make Team Admin</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="ad-name-images"><img src="images/customer-img.png" class="customer-img"/> <h3>Ronnie Diaz<br><span>jessica_lucas@gmail.com</span></h3></div>
+								<div class="ad-name-icons"></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default closes" data-dismiss="modal">Cancel</button>
+				<button type="button" class="btn btn-default proceed" data-toggle="modal"  data-dismiss="modal" data-target="#myModaladdteammemberconfirm">Add People</button>
+			</div>
+		</div>      
+    </div>
+</div>
+
+<div class="modal fade teamadd" id="myModaldeleteteammemberconfirm" role="dialog">
+    <div class="modal-dialog">    
+		<!-- Modal content-->
+		<div class="modal-content data-retention">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><img src="images/close.svg"/></button>
+				<h4 class="modal-title">Delete Team</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<p>Are you sure you want to delete the UR team?</p>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default closes" data-dismiss="modal">Cancel</button>
+				<button type="button" class="btn btn-default proceed">Delete</button>
+			</div>
+		</div>      
+    </div>
+</div>
+
+<div class="modal fade teamadd" id="myModalarchieveteammemberconfirm" role="dialog">
+    <div class="modal-dialog">    
+		<!-- Modal content-->
+		<div class="modal-content data-retention">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><img src="images/close.svg"/></button>
+				<h4 class="modal-title">Archive team?</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<p>Archived teams are still available at the bottom of the Teams page, but will not appear in the main listing, nor in your active conversations.</p>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default closes" data-dismiss="modal">Cancel</button>
+				<button type="button" class="btn btn-default proceed">Archieve</button>
+			</div>
+		</div>      
+    </div>
+</div>
+
+<div class="modal fade" id="myModalduplicateteammember" role="dialog">
+    <div class="modal-dialog">    
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><img src="images/close.svg"/></button>
+				<h4 class="modal-title">Duplicate Team</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<label>Team or Project Name<br>
+							<input type="text" name="" placeholder="Sample Task Title"/>
+						</label>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<label>Members (Enter name or email address)</label>
+						<ol>
+							<li><img src="images/list-name.png"/> mary_ortiz <span><img src="images/close.svg"/></li>
+							<li><img src="images/list-name.png"/> mary_ortiz <span><img src="images/close.svg"/></li>
+							<li><img src="images/list-name.png"/> mary_ortiz <span><img src="images/close.svg"/></li>
+							<li><img src="images/list-name.png"/> mary_ortiz <span><img src="images/close.svg"/></li>
+						</ol>
+					</div>
+				</div>
+				<hr>
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<h4>Who can join?</h4>
+						<ul>
+							<li>
+								<label class="radio">Invitation only (private)
+									<input type="radio"  name="show1" value="3">
+									<span class="checkround"></span>
+								</label>
+							</li>
+							<li>
+								<label class="radio">Any co-worker (Public)
+									<input type="radio" checked name="show1" value="3">
+									<span class="checkround"></span>
+								</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<label>Description<br>
+							<input type="text" name="" placeholder="Sample Description"/>
+						</label>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<h4>Copy Tasks</h4>
+						<ul>
+							<li>
+								<label class="radio">None
+									<input type="radio"  name="show" value="2">
+									<span class="checkround"></span>
+								</label>
+							</li>
+							<li>
+								<label class="radio">All
+									<input type="radio"  name="show" value="2">
+									<span class="checkround"></span>
+								</label>
+							</li>
+							<li>
+								<label class="radio">Completed
+									<input type="radio"  name="show" value="2">
+									<span class="checkround"></span>
+								</label>
+							</li>
+							<li>
+								<label class="radio">Pending
+									<input type="radio" checked name="show" value="2">
+									<span class="checkround"></span>
+								</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default closes" data-dismiss="modal">Cancel</button>
+				<button type="button" class="btn btn-default proceed">Create Team</button>
+			</div>
+		</div>      
+    </div>
+</div>
+
+<script src="js/fjs.js"></script><script> 
+
+$(document).ready(function(){
+   	$(".team-created1").click(function(){
+		//alert($(".team-created1").text());
+      	$('span.menulike.one b').hide();
+		var scx = $(".team-created1").text();
+		$('span.menulike.one').append("<span id='mine'><b>"+scx+"</b></span>");   
+	});
+    $(".team-public1").click(function(){
+		//alert($(".team-public1").text());
+       	$('span.menulike.one b').hide();
+		var scx1 = $(".team-public1").text();
+		$('span.menulike.one').append("<span id='mine'><b>"+scx1+"</b></span>");
+    });
+    $(".team-archieve1").click(function(){
+		//alert($(".team-archieve1").text());
+       	$('span.menulike.one b').hide();
+		var scx2 = $(".team-archieve1").text();
+		$('span.menulike.one').append("<span id='mine'><b>"+scx2+"</b></span>");
+    }); 
+	$(".team-created1").click(function(){
+		//alert($(".team-name1").text());
+      	$('span.menulike.two b').hide();
+		var scx = $(".team-name1").text();
+		$('span.menulike.two').append("<span id='mine'><b>"+scx+"</b></span>");   
+	});
+    $(".team-post1").click(function(){
+		//alert($(".team-post1").text());
+       	$('span.menulike.two b').hide();
+		var scx1 = $(".team-post1").text();
+		$('span.menulike.two').append("<span id='mine'><b>"+scx1+"</b></span>");
+    });
+    $(".team-recent1").click(function(){
+		//alert($(".team-recent1").text());
+       	$('span.menulike.two b').hide();
+		var scx2 = $(".team-recent1").text();
+		$('span.menulike.two').append("<span id='mine'><b>"+scx2+"</b></span>");
+    });
+	$(".team-creators1").click(function(){
+		//alert($(".team-creators1").text());
+       	$('span.menulike.two b').hide();
+		var scx2 = $(".team-creators1").text();
+		$('span.menulike.two').append("<span id='mine'><b>"+scx2+"</b></span>");
+    });
+	$(".team-members1").click(function(){
+		//alert($(".team-members1").text());
+       	$('span.menulike.two b').hide();
+		var scx2 = $(".team-members1").text();
+		$('span.menulike.two').append("<span id='mine'><b>"+scx2+"</b></span>");
+    });		
+});
+
+
+$(document).ready(function(){
+  $("img.list-name-img.last-childs").click(function(){
+    $("ul.member-list.keys li img").toggle();
+  });
+  
+  $(".dashboard-home .col-sm-3 h4 span").click(function(){
+    $("ul.member-list.keys li img").toggle();
+  });
+	$(".closing").click(function(){
+    $(".dashboard-home .col-sm-2").hide();
+  });
+  $(".chat-info").click(function(){
+    $(".dashboard-home .col-sm-3").hide();
+	$(".chat-info123").show();
+	$(".chat-info").hide();
+	//$(".dashboard-home .col-sm-9").css("width","77%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+	//$(".start-chats").css("width","77%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+  });
+   $(".chat-info123").click(function(){
+    $(".dashboard-home .col-sm-3").show();
+	$(".chat-info123").hide();
+	$(".chat-info").show();
+	//$(".dashboard-home .col-sm-9").css("width","56%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+	//$(".phone-sections.row.clearfix").css("width","100%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+	//$(".ph-search").css("width","100%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+	//$(".ph-search select").css("width","auto","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");	
+	
+  });  
+	$("label.containe").click(function(){
+    $(".dashboard-home .col-sm-3").show();
+	$(".chat-info123").hide();
+	$(".chat-info").show();
+	//$(".dashboard-home .col-sm-9").css("width","56%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+	//$(".phone-sections.row.clearfix").css("width","100%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+	//$(".ph-search").css("width","100%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+//$(".ph-search select").css("width","auto","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");		
+  }); 
+
+	$(".team-created1").click(function(){
+		$("ul.ad-sect.all-default").hide();
+		$("ul.ad-sect.team-created").show();
+		$("ul.ad-sect.team-public").hide();
+		$("ul.ad-sect.team-archieve").hide();
+	});
+	$(".team-public1").click(function(){
+		$("ul.ad-sect.all-default").hide();
+		$("ul.ad-sect.team-created").hide();
+		$("ul.ad-sect.team-public").show();
+		$("ul.ad-sect.team-archieve").hide();
+	});
+	$(".team-archieve1").click(function(){
+		$("ul.ad-sect.all-default").hide();
+		$("ul.ad-sect.team-created").hide();
+		$("ul.ad-sect.team-public").hide();
+		$("ul.ad-sect.team-archieve").show();
+	});
+});
+
+
+$(document).ready(function() {
+    $('#example').DataTable( {
+        "order": [[ 3, "desc" ]]
+    } );
+} );
+$("img.m-menus").click(function(){
+    $(".dashboard-home .col-sm-2").show();2
+	$(".dashboard-home .col-sm-2").css("transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+	//$(".start-chats").css("width","56%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+  });
+</script>
+</body>
+</html>

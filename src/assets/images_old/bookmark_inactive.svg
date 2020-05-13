@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="21" viewBox="0 0 23 21">
+  <defs>
+    <clipPath id="clip-bookmark_inactive">
+      <rect width="23" height="21"/>
+    </clipPath>
+  </defs>
+  <g id="bookmark_inactive" clip-path="url(#clip-bookmark_inactive)">
+    <g id="outline-bookmark_border-24px" transform="translate(-1.182 -2.109)">
+      <path id="Path_2253" data-name="Path 2253" d="M17.438,3H7.073A2.079,2.079,0,0,0,5,5.073V21.657l7.255-3.109,7.255,3.109V5.073A2.079,2.079,0,0,0,17.438,3Zm0,15.547-5.182-2.26-5.182,2.26V5.073H17.438Z" transform="translate(0.182 0.109)" fill="#828282"/>
+    </g>
+  </g>
+</svg>

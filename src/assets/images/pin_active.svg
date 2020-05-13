@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="21" viewBox="0 0 23 21">
+  <defs>
+    <clipPath id="clip-pin_active">
+      <rect width="23" height="21"/>
+    </clipPath>
+  </defs>
+  <g id="pin_active" clip-path="url(#clip-pin_active)">
+    <path id="pin_1_" data-name="pin (1)" d="M11.646,6.467a5.418,5.418,0,0,1-2.425,4.515v4.685a2.467,2.467,0,0,1,1.554,2.288V19.4H.872V17.955a2.466,2.466,0,0,1,1.554-2.288V10.982A5.419,5.419,0,0,1,0,6.467V5.9H5.255V0H6.391V5.9h5.255ZM8.084,11.558a5.4,5.4,0,0,1-1.857.328H5.419a5.394,5.394,0,0,1-1.857-.328Z" transform="matrix(-0.788, -0.616, 0.616, -0.788, 9.677, 22.959)" fill="#1d76f2" stroke="#1d76f2" stroke-width="0.7"/>
+  </g>
+</svg>

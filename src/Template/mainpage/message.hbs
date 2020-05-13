@@ -1,0 +1,27 @@
+<div class="modal" id="searchPop" role="dialog">
+    <div class="modal-dialog">    
+		
+		<div class="modal-content add-admins">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><img src="images/close.svg"/></button>
+				<h4 class="modal-title">Results Posted By</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<label>Enter name or email address<br>
+							
+							<input type="text" name="" id="srchcontactTxt" onkeyup="srchContact(this.value)" placeholder="sample@gmail.com" autocomplete="off"/>
+						</label>
+					</div>
+				</div>
+				<div class="modal-body myModaladdnewteamevents style-4" id="srchContactUrlSt" style="overflow-y: auto; max-height: 200px;display:none"></div>
+				<p class="recentPopupErr" style="display:none; color:red">Please select any one contact</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default closes" data-dismiss="modal">Cancel</button>
+				<button type="button" class="btn btn-default proceed">Continue</button>
+			</div>
+		</div>      
+    </div>
+</div>

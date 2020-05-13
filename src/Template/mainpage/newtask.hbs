@@ -1,0 +1,408 @@
+
+					<div id="default_sec">
+					<div class="row clearfix"> 
+						<div class="col-md-12 mar-top-min">
+							<label>Title <span style="color:red">*</span>
+								
+							</label> 
+							
+							<input type="text" name="" id="taskname_id" class="custom-input-set form-control" placeholder="Title" required="" maxlength="64" autocomplete="off">
+						</div>
+					</div>
+					<div class="row clearfix">
+						<div class="col-md-6">
+							<label>Assignees
+								
+							</label>
+							
+							
+							<div class="assgin-popup">
+								<ul id="taskContactLst" class="style-4" style="display:none">
+								
+								
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<label>Category
+								
+							</label>
+							<select class="form-control custom-icon" id="Section_id">
+								 
+								<option value="UI Development" selected>UI Development</option>
+								<option value="PHP">PHP</option>
+								<option value="BA">BA</option>
+								<option value="UI Design">UI Design</option>
+								
+							</select>
+							
+						</div>
+					</div>
+					<div class="col-md-12 clearfix">
+						<div class="row assigneeinner">
+							<ol class="taskLst"></ol>
+						</div>
+						
+					</div>
+
+					<div class="row clearfix">
+						<div class="col-md-4">
+							<label>Start Date <span style="color:red">*</span>
+								
+							</label>
+							<div class="input-over-pop-sec ">
+							<input class="custom-input-set form-control iscdatepicker datepicker" id="expand-js-date" type="date" name="" placeholder="12.06.19" autocomplete="off">
+							<!-- <img class="calendericon" src="images/pop/calendar.svg" > -->
+							</div>
+						</div>
+						<div class="col-md-4">
+							<label>Due Date <span style="color:red">*</span>
+								
+							</label>
+							<div class="input-over-pop-sec ">
+							<input name="" class="custom-input-set form-control iscdatepicker datepicker" id="expanddue-js-date" type="date" name="" placeholder="12.06.19" autocomplete="off">
+							<!-- <img class="calendericon" src="images/pop/calendar.svg" > -->
+							</div>
+						</div>
+						<div class="col-md-4">
+							<label>Due Time
+								
+							</label>
+							
+							<div class="input-over-pop-sec clock-popup">
+							<input type="text" name="" id="duetime_input"class="custom-input-set form-control " placeholder="Due time" required="" autocomplete="off">
+							<img class="calendericon" src="images/pop/time.svg" >
+							<ul class="clk-hour-list" id="Duetime_sec" style="display:none">
+								<li value="12:00 AM">No Due Time</li>
+								<li value="12:00 AM">12:00 am</li>
+								<li value="12:15 AM">12:15 am</li>
+								<li value="12:30 AM">12:30 am</li>
+								<li value="12:45 AM">12:45 am</li>
+								<li value="1:00 AM">1:00 am</li>
+								<li value="1:15 AM">1:15 am</li>
+								<li value="1:30 AM">1:30 am</li>
+								<li value="1:45 AM">1:45 am</li>
+								<li value="2:00 AM">2:00 am</li>
+								<li value="2:15 AM">2:15 am</li>
+								<li value="2:30 AM">2:30 am</li>
+								<li value="2:45 AM">2:45 am</li>
+								<li value="3:00 AM">3:00 am</li>
+								<li value="3:15 AM">3:15 am</li>
+								<li value="3:30 AM">3:30 am</li>
+								<li value="3:45 AM">3:45 am</li>
+								<li value="4:00 AM">4:00 am</li>
+								<li value="4:15 AM">4:15 am</li>
+								<li value="4:30 AM">4:30 am</li>
+								<li value="4:45 AM">4:45 am</li>
+								<li value="5:00 AM">5:00 am</li>
+								<li value="5:15 AM">5:15 am</li>
+								<li value="5:30 AM">5:30 am</li>
+								<li value="5:45 AM">5:45 am</li>
+								<li value="6:00 AM">6:00 am</li>
+								<li value="6:15 AM">6:15 am</li>
+								<li value="6:30 AM">6:30 am</li>
+								<li value="6:45 AM">6:45 am</li>
+								<li value="7:00 AM">7:00 am</li>
+								<li value="7:15 AM">7:15 am</li>
+								<li value="7:30 AM">7:30 am</li>
+								<li value="7:45 AM">7:45 am</li>
+								<li value="8:00 AM">8:00 am</li>
+								<li value="8:15 AM">8:15 am</li>
+								<li value="8:30 AM">8:30 am</li>
+								<li value="8:45 AM">8:45 am</li>
+								<li value="9:00 AM">9:00 am</li>
+								<li value="9:15 AM">9:15 am</li>
+								<li value="9:30 AM">9:30 am</li>
+								<li value="9:45 AM">9:45 am</li>
+								<li value="10:00 AM">10:00 am</li>
+								<li value="10:15 AM">10:15 am</li>
+								<li value="10:30 AM">10:30 am</li>
+								<li value="10:45 AM">10:45 am</li>
+								<li value="11:00 AM">10:00 am</li>
+								<li value="11:15 AM">11:15 am</li>
+								<li value="11:30 AM">11:30 am</li>
+								<li value="11:45 AM">11:45 am</li>
+								<li value="12:00 PM">12:00 pm</li>
+								<li value="12:15 PM">12:15 pm</li>
+								<li value="12:30 PM">12:30 pm</li>
+								<li value="12:45 PM">12:45 pm</li>
+								<li value="1:00 PM">1:00  pm</li>
+								<li value="1:15 PM">1:15 pm</li>
+								<li value="1:30 PM">1:30 pm</li>
+								<li value="1:45 PM">1:45 pm</li>
+								<li value="2:00 PM">2:00 pm</li>
+								<li value="2:15 PM">2:15 pm</li>
+								<li value="2:30 PM">2:30 pm</li>
+								<li value="2:45 PM">2:45 pm</li>
+								<li value="3:00 PM">3:00 pm</li>
+								<li value="3:15 PM">3:15 pm</li>
+								<li value="3:30 PM">3:30 pm</li>
+								<li value="3:45 PM">3:45 pm</li>
+								<li value="4:00 PM">4:00 pm</li>
+								<li value="4:15 PM">4:15 pm</li>
+								<li value="4:30 PM">4:30 pm</li>
+								<li value="4:45 PM">4:45 pm</li>
+								<li value="5:00 PM">5:00 pm</li>
+								<li value="5:15 PM">5:15 pm</li>
+								<li value="5:30 PM">5:30 pm</li>
+								<li value="5:45 PM">5:45 pm</li>
+								<li value="6:00 PM">6:00 pm</li>
+								<li value="6:15 PM">6:15 pm</li>
+								<li value="6:30 PM">6:30 pm</li>
+								<li value="6:45 PM">6:45 pm</li>
+								<li value="7:00 PM">7:00 pm</li>
+								<li value="7:15 PM">7:15 pm</li>
+								<li value="7:30 PM">7:30 pm</li>
+								<li value="7:45 PM">7:45 pm</li>
+								<li value="8:00 PM">8:00 pm</li>
+								<li value="8:15 PM">8:15 pm</li>
+								<li value="8:30 PM">8:30 pm</li>
+								<li value="8:45 PM">8:45 pm</li>
+								<li value="9:00 PM">9:00 pm</li>
+								<li value="9:15 PM">9:15 pm</li>
+								<li value="9:30 PM">9:30 pm</li>
+								<li value="9:45 PM">9:45 pm</li>
+								<li value="10:00 PM">10:00 pm</li>
+								<li value="10:15 PM">10:15 pm</li>
+								<li value="10:30 PM">10:30 pm</li>
+								<li value="10:45 PM">10:45 pm</li>
+								<li value="11:00 PM">11:00 pm</li>
+								<li value="11:15 PM">11:15 pm</li>
+								<li value="11:30 PM">11:30 pm</li>
+								<li value="11:45 PM">11:45 pm</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="row clearfix">
+						<div class="col-md-7">
+							<label>Repeat
+								
+							</label>
+								<select class="form-control custom-icon" id="repeat_sec">
+									
+								<option value="Repeat none" selected>Does not repeat</option>
+								<option value="Every day">Every Day  </option>
+								<option value="Every week">Every Week</option>
+								<option value="Every month">Every Month</option>
+								<option value="Every year">Every year</option>
+								<option value="Custom">Custom</option>
+								  
+							</select>
+						</div>
+						<div class="col-md-5">
+							<label>Complete When
+								
+							</label>
+								<select class="form-control custom-icon" id="Days">
+								<option value="100%" selected>100% Done</option>
+								<option value="checkedall">Checked by all assingness</option>
+								<option value="checkedonly">Checked</option>
+							</select>
+						
+						</div>
+					</div>
+
+					
+					<div class="row clearfix">
+						<div class="col-md-12">
+							<label id="rruletext" style="color: #1D76F2 !important">
+								
+							</label>
+							
+						</div>
+					</div>
+					<div class="row clearfix">
+						<div class="col-md-12">
+							<label>Description
+								
+							</label>
+							<textarea type="text" name="" id="Description" class="custom-input-set form-control" placeholder="" required=""></textarea>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<ol class="taskFileLst">
+						</ol>
+					</div>	
+					<div class="row clearfix">
+						<div class="col-md-12">
+							<label class="afiles-add top-pop-up" style="cursor: pointer;">
+								<input type="file" name="" placeholder="Add Attachment" multiple><span>Add Attachment</span>
+							</label>
+						</div>
+					</div>
+
+					<div class="modal-footer right-side">
+						<div class="float-right">
+							<button type="button" class="btn btn-default back-btn mr-3 taskbck">Cancel</button>
+							<button type="button" id="SubmitTask" class="btn cont-btn proceed auto-width" >Post</button>
+							<button type="button" id="SaveTask" class="btn cont-btn proceed" style="display:none">Save</button>
+							
+						</div>
+					</div>
+					</div>
+
+					<div class="task-sec-custom-con" id="repeatall_sec" style="display:none">
+						<div class="row clearfix">
+							<div class="col-md-12">
+								<h4 class="reapet-txt back_default"><img class="rep-icon-sec" src="images/pop/back_sub_nav.svg"> Repeat
+									
+								</h4>
+								
+							</div>
+						</div>
+						
+						<div class="row clearfix">
+							<div class="col-md-5">
+								<label>Repeats Every
+									
+								</label>
+								<select class="form-control custom-icon" id="repeatIntervalValue">
+									<option selected>1</option>
+									<option>2</option>
+									<option>3 </option>
+								</select>
+								
+							</div>
+							<div class="col-md-5">
+								<label>
+									&nbsp;
+								</label> 
+								<select class="form-control custom-icon" id="repeat_option">
+									<option value="daily" selected>Day</option>
+									<option value="weekly">Week</option>
+									<option value="monthly">Month</option>
+									<option value="yearly">Year</option>
+								</select>
+							</div>
+						</div>
+						<div id="every_week_sec" style="display: none;">
+						<div class="row clearfix">
+							<div class="col-md-12">
+								<label>Repeats On
+									
+								</label>
+								<div class="">
+									<ul class="date-badge-con rrule-weekly">
+										<li class="active" data-value="0"><a class=""  >S</a></li>
+										<li class="" data-value="1"><a class=""  data-value="1">M</a></li>
+										<li class="" data-value="2"><a class=""   data-value="2">T</a></li>
+										<li class="" data-value="3"><a class=""   data-value="3">W</a></li>
+										<li class="" data-value="4"><a class=""   data-value="4">T</a></li>
+										<li class="" data-value="5"><a class=""   data-value="5">F</a></li>
+										<li class="" data-value="6"><a class="" data-value="6">S</a></li>
+										
+										
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="every_month_sec" style="display: none;">
+					<div class="row clearfix">
+						<div class="col-md-12 mat-top-min rrule-monthly">
+							<label>Repeats On
+								
+							</label>
+							<div class="">
+								<div class="form-check">
+									<div class="custom-control custom-radio custom-control-inline">
+										<input type="radio" name="rruleMonthlyType" value="2" class="custom-control-input opacity-unset"  id="customRadio9" name="example" value="customEx">
+										<label class="custom-control-label" for="customRadio9">Monthly on the <span id="monthdays"></span></label>
+									</div>
+									
+								</div>
+							</div>
+							<div class="">
+								<div class="form-check">
+									<div class="custom-control custom-radio custom-control-inline">
+										<input type="radio" name="rruleMonthlyType" value="1" class="custom-control-input opacity-unset" id="customRadio10" name="example" value="customEx">
+										<label class="custom-control-label" for="customRadio10">Monthly on day <span id="monthdate"></span></label>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+					
+						<!-- <div id="every_day_sec"> -->
+								<div class="row clearfix endsection">
+									<div class="col-md-12 mat-top-min">
+									<label>Ends
+											
+										</label>
+									</div>	
+									
+									<div class="col-md-12 mar-bot-min">
+									<div class="mar-bot-min">
+										<div class="form-check">
+											
+											<div class="custom-control custom-radio custom-control-inline">
+												<input type="radio" class="custom-control-input opacity-unset" id="customRadio" name="rruleEndAction" value="never">
+												<label class="custom-control-label" for="customRadio">Never</label>
+											</div>
+											</div>
+										</div>
+									<div class="row mar-bot-min">
+										<div class="col-md-2">
+											<div class="form-check">
+												<div class="custom-control custom-radio custom-control-inline">
+												<input type="radio" class="custom-control-input opacity-unset" id="customRadio2" name="rruleEndAction" value="date">
+												<label class="custom-control-label" for="customRadio2">On</label>
+											</div>
+											
+											</div>
+										</div>
+										<div class="col-md-5">
+												<div class="input-over-pop-sec ">
+											<input id="repeatday-date" type="date" class="custom-input-set form-control iscdatepicker datepicker" placeholder="11 Dec 2019" required="">
+											
+											</div>
+										</div>
+									</div>
+										
+									<div class="row mar-bot-min">
+										<div class="col-md-2">
+											<div class="form-check">
+												<div class="custom-control custom-radio custom-control-inline">
+												<input type="radio" class="custom-control-input opacity-unset" id="customRadio3"  name="rruleEndAction" value="after">
+												<label class="custom-control-label" for="customRadio3">After</label>
+											</div>
+											
+											</div>
+										</div>
+										<div class="col-md-5">
+											<select class="form-control custom-icon" id="rruleEndSessionsCount">
+											<option>1</option>
+											<option>2</option>
+											<option>3 </option>
+											<option>4 </option>
+											<option>5 </option>
+											<option>6 </option>
+										</select>
+										</div>
+										<div class="col-md-5">
+											<label>Occurrence
+											
+											</label>
+										</div>
+										
+										
+									</div>
+									
+									</div>
+								
+									
+									
+								</div>
+	
+					
+						<div class="modal-footer right-side">
+							<div class="float-right">
+								<button type="button" class="btn btn-default back-btn mr-3 back_default" onclick="clearCustomRRule()">Cancel</button>
+								<button type="button" class="btn cont-btn back_default" onclick="saveCustomRRule()">Done</button>
+							</div>
+						</div>
+					</div>

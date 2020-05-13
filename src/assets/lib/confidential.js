@@ -1,0 +1,1 @@
+window.URPost = require('request');

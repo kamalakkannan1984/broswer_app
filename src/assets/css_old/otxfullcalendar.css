@@ -1,0 +1,82 @@
+.otxfullcalendar {
+	position:relative;
+}
+.otxfullcalendar .panel-title {
+	margin-left:-15px;
+	
+}
+.otxfullcalendar .panel-title a {
+	
+}
+.otxfullcalendar .otxcalendar-heading {
+	height:auto!important;
+	overflow:inherit!important;
+}
+.otxfullcalendar .otxcalendar-heading .otxcalendar-controls {
+	float:right;
+	padding-top:10px;
+}
+.otxfullcalendar .otxcalendar-heading .dropdown-menu {
+	right:0;
+	left:auto;
+}
+.otxfullcalendar .otxcalendar-event-view-band {
+	position:fixed;
+	bottom:0;
+left:0;
+right:0;
+	width:100%;
+	background:#f5f5f5;
+	z-index:100;
+	border-top:5px solid #999;
+}
+.otxfullcalendar .otxcalendar-event-view-band .otxcalendar-band-inner {
+	padding:10px 30px;
+	margin-right:251px;
+	padding-right:150px;
+}
+.otxfullcalendar .otxcalendar-event-view-band .otxcalendar-band-close-btn {
+	font-size:30px;
+	font-weight:bold;
+	position:absolute;
+	right:15px;
+	top:6px;
+	outline:0;
+	color:#999;
+}
+.otxfullcalendar .otxcalendar-event-view-band .otxcalendar-band-close-btn:hover {
+	color:#ccc;	
+}
+.otxcalendar-event-form {
+	
+}
+.otxcalendar-event-form .colors .btn,
+.otxcalendar-event-form-edit .colors .btn {
+	position:relative;
+	border-width:5px;
+	border-style:solid;
+	padding:4px!important;
+	font-size:12px;
+}
+.otxcalendar-event-form .colors .active,
+.otxcalendar-event-form-edit .colors .active {
+	border:5px solid #fff!important;
+}
+
+.popover .otxcalendar-event-form label {
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    margin: 0px 0px 3px;
+}
+@media screen and (max-width: 768px){
+	.otxfullcalendar .otxcalendar-heading .otxcalendar-controls {
+		float:none;
+		margin-left:-15px!important;
+	}
+	
+	.otxfullcalendar .otxcalendar-heading .dropdown-menu {
+		right:auto;
+		left:0;
+	}
+}

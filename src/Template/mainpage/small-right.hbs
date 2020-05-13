@@ -1,0 +1,698 @@
+<div class="row clearfix">
+				<div class="col-sm-12">
+					<ul>
+						<li ><div class="rowslideright"><span class="pull-right" onclick="openNav()"><img src="images/sidebar_expand.svg"></span></div></li>
+						<li class="toggle-first"><span class="icon_task_inactive"></span></li>
+						<li><span class="icon_event_inactive"></span></li>
+						<li><span class="icon_bookmark_inactive"></span></li>
+						<li><span class="icon_files_inactive"></span></li>
+						<li><span class="icon_pin_inactive"></span></li>
+						<li><span class="icon_notes_inactive"></span></li>
+						<li><span class="icon_link_inactive"></span></li>
+						<li><span class="icon_at_mention"></span></li>
+						<li><span class="icon_me_conversation_inactive"></span></li>
+					</ul>
+				</div>
+			</div>
+			<div id="mySidenav" class="sidenav">
+				{{> innerrightwindow}}
+			  
+			</div>
+
+			<div class="container-fluid">
+				<div class="row">
+					<div class="full-slid">
+						<div class="col-md-6 second-half p-0">
+							<div class="task-details" style="display:none">
+								<ul id="myTab" class="nav slidelist">
+							        <li class="nav-item">
+							            <a href="#tastdetailspp" class="nav-link active">Task Details</a>
+							        </li>
+							        <li class="nav-item">
+							            <a href="#tastrepliesspp" class="nav-link">Replies</a>
+							        </li>
+							    </ul>
+
+							   <div class="tab-content pptabcontent">
+							        <div class="tab-pane fade show active" id="tastdetailspp">
+							        	<p class="f-14 h-medium">Prepare Document</p>
+							        	<p class="f-13">
+							        		Proin ac quam et lectus vestibulum blandit. Nunc maximus nibh at placerat tincidunt. Nam sem lacus, ornare non ante sed, ultricies fringilla massa. Ut congue, elit non tempus elementum, sem
+							        	</p>
+							        	<div class="row pt-2 pb-2">
+				                          <div class="col-1 col-sm-1 col-md-1">
+				                          	<span class="icon_event_checked"></span>
+				                          </div>
+				                          <div class="col-8 col-sm-9 col-md-9 pl-0">
+				                            <span class="cnt-box">
+				                               <h5 class="task-details-name">Status</h5>
+				                               <div class="task-statsus-edit">Incomplete <span class="progress-cond">0/3</span><span class="icon_edit c-blue" data-toggle="modal" data-target="#editstspop"></span><span class="icon_edit c-blue" data-toggle="modal" data-target="#editstsincompop"></span><span class="icon_edit c-blue" data-toggle="modal" data-target="#editpercentincompop"></span></div>
+				                            </span>
+				                          </div>
+				                        </div>
+				                        <div class="row pt-2 pb-2">
+				                          <div class="col-1 col-sm-1 col-md-1">
+				                          	<span class="icon_assignees"></span>
+				                          </div>
+				                          <div class="col-11 col-sm-11 col-md-11 pl-0">
+				                            <span class="cnt-box">
+				                               <h5 class="task-details-name">Assignees</h5>
+				                               <div class="assignee-list">Jessica Ratke, Jeremy Wells, Elizabeth Matthews, Tom Nelson, Beverly Freeman</div>
+				                            </span>
+				                          </div>
+				                        </div>
+				                        <div class="row pt-2 pb-2">
+				                          <div class="col-1 col-sm-1 col-md-1">
+				                          	<span class="icon_calendar"></span>
+				                          </div>
+				                          <div class="col-8 col-sm-9 col-md-9 pl-0">
+				                            <span class="cnt-box">
+				                               <h5 class="task-details-name">Due On</h5>
+				                               <div class="assignee-date"><span class="assignee-date-from">Mon 16/12/2019</span> - <span class="assignee-date-to">Fri 20/12/2019</span></div>
+				                            </span>
+				                          </div>
+				                        </div>
+				                        <div class="row pt-2 pb-2">
+				                          <div class="col-1 col-sm-1 col-md-1">
+				                          	<span class="icon_time"></span>
+				                          </div>
+				                          <div class="col-8 col-sm-9 col-md-9 pl-0">
+				                            <span class="cnt-box">
+				                               <h5 class="task-details-name">Duration</h5>
+				                               <div class="assignee-list">5 days</div>
+				                            </span>
+				                          </div>
+				                        </div>
+				                        <div class="row pt-2 pb-2">
+				                          <div class="col-1 col-sm-1 col-md-1">
+				                          	<span class="icon_link_avatar"></span>
+				                          </div>
+				                          <div class="col-11 col-sm-11 col-md-11 pl-0">
+				                            <span class="cnt-box">
+				                               <div class="assignee-list"><label for="fileupd" class="custom-upd">Add Attachment</label>
+										    <input type="file" class="form-control-file v-none cus-input" id="fileupd"></div>
+				                            </span>
+				                            <ul class="attach-list">
+				                            	<li>
+				                            		<div class="row pl-0 align-items-center">
+							                          <div class="col-1 col-sm-1 col-md-1">
+							                          	<img src="images/pdf_avatar.svg">
+							                          </div>
+							                          <div class="col-10 col-sm-10 col-md-10">
+							                            <span class="cnt-box">
+							                               <h5 class="task-details-name">Duration</h5>
+							                            </span>
+							                          </div>
+							                          <div class="col-1 col-sm-1 col-md-1 pl-0">
+							                            <span class="icon_download attach-dwnl"></span>
+							                          </div>
+							                        </div>
+				                            	</li>
+				                            	<li>
+				                            		<div class="row pl-0 align-items-center">
+							                          <div class="col-1 col-sm-1 col-md-1">
+							                          	<img src="images/document_avatar.svg">
+							                          </div>
+							                          <div class="col-10 col-sm-10 col-md-10">
+							                            <span class="cnt-box">
+							                               <h5 class="task-details-name">Duration</h5>
+							                            </span>
+							                          </div>
+							                          <div class="col-1 col-sm-1 col-md-1 pl-0">
+							                            <span class="icon_download attach-dwnl"></span>
+							                          </div>
+							                        </div>
+				                            	</li>
+				                            	<li>
+				                            		<div class="row pl-0 align-items-center">
+							                          <div class="col-1 col-sm-1 col-md-1">
+							                          	<img src="images/document_avatar.svg">
+							                          </div>
+							                          <div class="col-10 col-sm-10 col-md-10">
+							                            <span class="cnt-box">
+							                               <h5 class="task-details-name">Duration</h5>
+							                            </span>
+							                          </div>
+							                          <div class="col-1 col-sm-1 col-md-1 pl-0">
+							                            <span class="icon_download attach-dwnl"></span>
+							                          </div>
+							                        </div>
+				                            	</li>
+				                            </ul>
+				                          </div>
+				                        </div>
+							        </div>
+							        <div class="tab-pane fade" id="tastrepliesspp">
+							            test2
+							        </div>
+							        <div class="btm-right text-right pull-right">
+							        	<button type="submit" class="btn btn-del">Delete</button> <button type="submit" class="btn btn-primary save-btn">Edit Task</button>
+									</div>
+							    </div>
+							</div>
+<div class="slidmain-inner">
+<div class="slidemenu-event-sec">
+									<div class="evts-title text-center">New Task</div>
+									   <form>
+										  <div class="form-group">
+										    <label for="exampleInputEmail1"  class="cus-label">Task Title <sup class="required">*</sup></label>
+										    <input type="text" class="form-control cus-input" id="taskname_id" aria-describedby="emailHelp" placeholder="Enter task name">
+										  </div>
+										  <div class="form-group">
+										    <label for="exampleInputEmail1" class="cus-label">Category</label>
+										    <input type="text" class="form-control cus-input" id="Section_id" aria-describedby="emailHelp" placeholder="Enter Category name">
+										  </div>
+										  <div class="dropdown w-100">
+										    <label for="exampleInputEmail1" class="cus-label">Assignees <sup class="required">*</sup></label>
+										    <input type="text" class="form-control cus-input dropdown-toggle" id="inputassigneeto_name"  aria-describedby="emailHelp" placeholder="Enter assignee name" data-toggle="dropdown">
+										    <ul id="taskContactLst" class="dropdown-menu cont-listselect w-100" role="menu" aria-labelledby="menu1" style="display:none">
+										     
+										    </ul>
+										    <div class="form-group">
+											    <div class="addconlist"  style="display:none">
+							                        <ol class="taskLst">
+							                         
+							                        </ol>
+							                    </div>
+										    </div>
+										  </div>
+										  <div class="container-fluid">
+												<div class="row form-group row">
+													<div class="col-md-4 pl-0">
+													  <label for="exmpdat" class="cus-label">Start Date <sup class="required">*</sup></label>
+													  <div class="start_date input-group">
+													     <input type="text" class="form-control cus-input-select br-0" id="startdate" placeholder="Select Date" autocomplete="off">
+													    <div class="input-group-append">
+													      <span class="icon_calendar input-group-text start_date_calendar" aria-hidden="true "></span>
+													    </div>
+													  </div>
+													</div>
+													<div class="col-md-4 p-0">
+														<label for="exmpdat" class="cus-label">Due Date <sup class="required">*</sup></label>
+														<div class="start_date input-group">
+													     <input type="text" class="form-control cus-input-select br-0" id="enddate" placeholder="Select Date" autocomplete="off">
+													    <div class="input-group-append">
+													      <span class="icon_calendar input-group-text start_date_calendar" aria-hidden="true "></span>
+													    </div>
+													  </div>
+													</div>
+													<div class="col-md-4 pr-0">
+														<label for="exmpdat" class="cus-label">Due Time <sup class="required">*</sup></label>
+														<div class="end_date input-group">
+														    <input id="Duetime_sec" class="time form-control end_date cus-input-select br-0 ui-timepicker-input" type="text" placeholder="11:24 AM" autocomplete="off">
+														    <div class="input-group-append">
+														      <span class="icon_time input-group-text time" aria-hidden="true "></span>
+														    </div>
+														</div>
+													</div>
+												</div>
+										  </div>
+										  <div class="form-group">
+										    <label for="tasklist" class="cus-label">Repeat</label>
+										    <select class="form-control cus-input" id="selectpopup">
+										      <option value="norepeat">Does not repeat</option>
+										      {{!-- <option value="everday">Every day</option> --}}
+										      <option value="everweek">Every week</option>
+										      {{!-- <option value="evermonth">Every month</option>
+										      <option value="everyear">Every year</option>
+										      <option value="custompopup">Custom</option> --}}
+										    </select>
+									      </div>
+
+										    <div class="everday shbx" style="display: none;">
+										      	<div class="form-group">
+												    <label for="tasklist" class="cus-label">Repeat Until</label>
+													{{!-- <select class="form-control cus-input" id="selectprtuntilpopid">
+												      <option value="selectprtuntilpop">Repeat Forever</option>
+												      
+												    </select> --}}
+												</div>
+										    </div>
+									        <div class="everweek shbx" style="display: none;">
+										      	<div class="container-fluid">
+													<div class="row">
+														<div class="col-sm-2 p-0">
+															<label for="s" class="cus-label">Repeats On</label>
+														</div>
+														<div class="col-sm-10">
+															<div class="d-flex">
+																<div class="weekDays-selector">
+																  <input type="checkbox" id="weekday-mon"value="1" name="weekdaysd" class="weekday">
+																  <label for="weekday-mon">M</label>
+																  <input type="checkbox" id="weekday-tue" value="2" name="weekdaysd" class="weekday">
+																  <label for="weekday-tue">T</label>
+																  <input type="checkbox" id="weekday-wed" value="3" name="weekdaysd" class="weekday">
+																  <label for="weekday-wed">W</label>
+																  <input type="checkbox" id="weekday-thu" value="4" name="weekdaysd" class="weekday">
+																  <label for="weekday-thu">T</label>
+																  <input type="checkbox" id="weekday-fri" value="5" name="weekdaysd" class="weekday">
+																  <label for="weekday-fri">F</label>
+																  <input type="checkbox" id="weekday-sat" value="6" name="weekdaysd" class="weekday">
+																  <label for="weekday-sat">S</label>
+																  <input type="checkbox" id="weekday-sun" value="0" name="weekdaysd" class="weekday">
+																  <label for="weekday-sun">S</label>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+												    <label for="tasklist" class="cus-label">Repeat Until</label>
+													<select class="form-control cus-input" id="selectprtuntilpopid">
+												      <option value="selectprtuntilpop" id="repeatforever">Repeat Forevesr</option>
+													  
+												      {{!-- <option value="evermonth">Repeat Forever</option> --}}
+												    </select>
+												</div>
+									        </div>
+									      <div class="evermonth shbx" style="display: none;">
+									      	<div class="form-group">
+										      	<label for="tasklist" class="cus-label">Repeat on</label>
+										      	<select class="form-control cus-input">
+											      <option value="smdayeachmonth">Repeat on the same day each month</option>
+											      <option value="evermonth">Repeat every last Wednesday</option>
+											    </select>
+											</div>
+										    <div class="form-group">
+											    <label for="tasklist" class="cus-label">Repeat Until</label>
+												<select class="form-control cus-input">
+											      <option value="selsectprtuntilpop">Repeat Forever</option>
+											      <option value="selectprtuntilpop">Repeat Forever</option>
+											    </select>
+											</div>
+									      </div>
+									      <div class="everyear shbx" style="display: none;">
+									      	<div class="form-group">
+										      	<label for="tasklist" class="cus-label">Repeat on</label>
+										      	<select class="form-control cus-input">
+											      <option value="smdayeachmonth">Repeat on the same day day every year</option>
+											      <option value="evermonth">Repeat every last Wednesday in April</option>
+											    </select>
+											</div>
+										    <div class="form-group">
+											    <label for="tasklist" class="cus-label">Repeat Until</label>
+												<select class="form-control cus-input">
+											      <option value="smdayeachmonth">Repeat Forever</option>
+											      <option value="evermonth">Repeat Forever</option>
+											    </select>
+											</div>
+									      </div>
+									      <div class="customrepeat shbx" style="display: none;">
+										    <div class="form-group">
+											    <label for="tasklist" class="cus-label">Repeat Until</label>
+												<select class="form-control cus-input">
+											      <option value="smdayeachmonth">Repeat Forever</option>
+											      <option value="evermonth">Repeat Forever</option>
+											    </select>
+											</div>
+									      </div>
+										  <div class="form-group">
+										    <label for="exampleFormControlSelect1" class="cus-label">Complete When <sup class="required">*</sup></label>
+										    <select class="form-control cus-input" id="completetype">
+										      <option value="100%">100% done</option>
+										      <option value="checkedall">Checked by all assingness</option>
+										      <option value="checkedonly">Checked</option>
+										    </select>
+										  </div>
+										  <div class="form-group">
+										    <label for="exampleFormControlTextarea1" class="cus-label">Description</label>
+										    <textarea class="form-control cus-input" id="Description" rows="2"></textarea>
+										  </div>
+										  <div class="form-group">
+										    <label for="task-file" class="custom-upd cblue"><span class="icon_link_avatar"></span> Add Attachment</label>
+										    <input type="file" id="task-file"class="form-control-file v-none cus-input" >
+										  </div>
+										  <div class="btm-right text-right pull-right"><button type="button" class="btn no-bdr-cnl">Cancel</button> <button type="button" id="SubmitTask" class="btn btn-primary save-btn">Save</button>
+										  </div>
+										</form>
+								</div>
+								</div>
+
+						</div>
+						<div class="col-md-6 first-half">
+							<div class="slidmain-inner">
+
+								<div class="container-fluid">
+									<div class="row mb-3">
+										<div class="col-md-12">
+											<div class="slid-title"><span class="icon_back toggle-first pr-2" style="display: inline;"></span>  Tasks<span class="title-cnt pl-2">(2)</span></div>
+										</div>
+									</div>
+									<div class="row mt-3 mb-2">
+										<div class="col-md-12">
+											<div class="form-group has-search">
+											    <span class="fa fa-search form-control-feedback"></span>
+											    <input type="text" class="form-control" placeholder="Search">
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-2">
+											<div class="drpdwn  drpdownlft" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											  <span class="icon_filter"> <span class="left-filter-drp">All</span></span>
+											  <div class="dropdown-menu drpdn-lft" aria-labelledby="dropdownMenuButton">
+											    <a class="dropdown-item" href="#">All</a>
+											    <a class="dropdown-item" href="#">Due</a>
+											    <a class="dropdown-item" href="#">Past</a>
+											  </div>
+											</div>
+										</div>
+										<div class="col-md-10 text-right">
+	 										<button type="button" class="btn btn-primary nxt-btn toggle-seocnd" id="new-task-btn"><span class="icon_add_new"></span>New Task</button>
+										</div>
+									</div>
+									<div class="row">
+										<div class="container-fluid" id="task-list-sec">
+										<div class="col-md-12 text-center">
+											<img src="images/no_tasks.svg">
+											<p class="text-center emptyevnt-list">
+												You have not created any task, Click on “+New Task” button to create a new task
+											</p>
+										</div>
+										</div>
+									</div>
+								</div>
+								{{!-- <div class="container-fluid">
+									<div class="row mb-3">
+										<div class="col-md-12">
+											<div class="slid-title"><span class="icon_back toggle-first pr-2"></span>  Task <span class="title-cnt pl-2">(1)</span></div>
+										</div>
+									</div>
+									<div class="row mt-3 mb-2">
+										<div class="col-md-12">
+											<div class="form-group has-search">
+											    <span class="fa fa-search form-control-feedback"></span>
+											    <input type="text" class="form-control" placeholder="Search">
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-2">
+											<div class="dropdown">
+											  <span class="icon_filter dropbtn"> All</span>
+											  <div class="dropdown-content left-0">
+											  	<ul class="list-drpdwn">
+												  	<li><a href="#" class="toggle-seocnd display-empty">All</a></li>
+												  	<li><a href="#" class="toggle-seocnd">Due date</a></li>
+												  	<li><a href="#" class="toggle-seocnd">Completed <span class="statuslist-colorbx green"></span></a></li>
+												  	<li><a href="#" class="toggle-seocnd">In Progress <span class="statuslist-colorbx orange"></span></a></li>
+												  	<li><a href="#" class="toggle-seocnd">Incomplete <span class="statuslist-colorbx red"></span></a></li>
+											  	</ul>
+											  </div>
+											</div>
+										</div>
+										<div class="col-md-10 text-right">
+	 										<button type="button" class="btn btn-primary nxt-btn"><span class="icon_add_new"></span>New Event</button>
+										</div>
+									</div>
+									
+									<div class="container-fluid" id="task-list-sec">
+				                      {{!--   <div class="row pt-2 pb-2 c-pointer new-task-desc">
+				                          <div class="col-1 col-sm-1 col-md-1">
+				                          	<label class="chbxcontainer">
+											  <input type="checkbox">
+											  <span class="chbxcheckmark"></span>
+											</label>
+				                          </div>
+				                          <div class="col-8 col-sm-9 col-md-9 pl-0">
+				                            <span class="cnt-box toggle-seocnd">
+				                               <h5 class="f-14 task-name">Quam porta dolor</h5>
+				                               <div class="msg-task-team">No Assignee</div>
+				                            </span>
+				                          </div>
+				                          <div class="col-3 col-sm-2 col-md-2">
+				                            <p class="notify-msg"><span class="notify-icon"></span><br><span class="dte-box">20/03/2020</span></p>
+				                          </div>
+				                        </div>
+				                        <div class="row pt-3 pb-2 c-pointer task-compl">
+				                          <div class="col-1 col-sm-1 col-md-1">
+				                          	<label class="chbxcontainer">
+											  <input type="checkbox">
+											  <span class="chbxcheckmark"></span>
+											</label>
+				                          </div>
+				                          <div class="col-8 col-sm-9 col-md-9 pl-0">
+				                            <span class="cnt-box toggle-seocnd">
+				                               <h5 class="f-14 task-name">Prepare Document</h5>
+				                               <div class="msg-task-team">BA Team</div>
+				                            </span>
+				                          </div>
+				                          <div class="col-3 col-sm-2 col-md-2">
+				                            <p class="notify-msg"><span class="notify-icon"></span><br><span class="dte-box">20/03/2020</span></p>
+				                          </div>
+				                        </div>
+				                        <div class="row pt-3 pb-2 c-pointer task-inprog">
+				                          <div class="col-1 col-sm-1 col-md-1">
+				                          	<span class="prgs-sts-cont">10%</span>
+				                          </div>
+				                          <div class="col-8 col-sm-9 col-md-9 pl-0">
+				                            <span class="cnt-box toggle-seocnd">
+				                               <h5 class="f-14 task-name">Pulvinar maecenas</h5>
+				                               <div class="msg-task-team">BA Team</div>
+				                            </span>
+				                          </div>
+				                          <div class="col-3 col-sm-2 col-md-2">
+				                            <p class="notify-msg"><span class="notify-icon"></span><br><span class="dte-box">20/03/2020</span></p>
+				                          </div>
+				                        </div>
+				                        <div class="row pt-3 pb-2 c-pointer task-incompl">
+				                          <div class="col-1 col-sm-1 col-md-1">
+				                          	<label class="chbxcontainer">
+											  <input type="checkbox">
+											  <span class="chbxcheckmark"></span>
+											</label>
+				                          </div>
+				                          <div class="col-8 col-sm-9 col-md-9 pl-0">
+				                            <span class="cnt-box toggle-seocnd">
+				                               <h5 class="f-14 task-name">Quam porta dolor</h5>
+				                               <div class="msg-task-team">No Assignee</div>
+				                            </span>
+				                          </div>
+				                          <div class="col-3 col-sm-2 col-md-2">
+				                            <p class="notify-msg"><span class="notify-icon"></span><br><span class="dte-box">20/03/2020</span></p>
+				                          </div>
+				                        </div> --}}
+				                    </div>
+				                
+								
+								</div> --}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			
+<div class="modal fade" id="custompopup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Repeat Task</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+			<div class="row mb-2">
+				<div class="col-md-3">
+					<label class="cus-label">Repeats Every</label>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+					    <select class="form-control cus-input" id="repeatIntervalValue">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select>
+					</div>
+				</div>
+				<div class="col-md-5">
+					<div class="form-group">
+					    <select class="form-control cus-input" id="selectrepeat">
+					      <option value="daily">Day</option>
+					      <option value="weekly">Week</option>
+					      <option value="monthly">Month</option>
+					    </select>
+					</div>
+				</div>
+			</div>
+			<div class="row mb-2 weekly shbx">
+				<div class="col-md-3">
+					<label class="cus-label">Repeats On</label>
+				</div>
+				<div class="col-md-8">
+					<div class="d-flex">
+						<div class="weekDays-selector rrule-weekly">
+						  <input type="checkbox" name ="weekdays" value="1" id="cweekday-mon" class="weekday" />
+						  <label for="cweekday-mon">M</label>
+						  <input type="checkbox" id="cweekday-tue" name ="weekdays" value="2" class="weekday"  />
+						  <label for="cweekday-tue">T</label>
+						  <input type="checkbox" id="cweekday-wed" name ="weekdays" value="3" class="weekday" />
+						  <label for="cweekday-wed">W</label>
+						  <input type="checkbox" id="cweekday-thu" name ="weekdays" value="4" class="weekday"  />
+						  <label for="cweekday-thu">T</label>
+						  <input type="checkbox" id="cweekday-fri" name ="weekdays" value="5" class="weekday" />
+						  <label for="cweekday-fri">F</label>
+						  <input type="checkbox" id="cweekday-sat" name ="weekdays" value="6" class="weekday"  />
+						  <label for="cweekday-sat">S</label>
+						  <input type="checkbox" id="cweekday-sun" name ="weekdays" value="0" class="weekday" />
+						  <label for="cweekday-sun">S</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row mb-3 monthly shbx">
+				<div class="col-md-3">
+					<label class="cus-label">Repeats On</label>
+				</div>
+				<div class="col-md-8 rrule-monthly">
+					<span class="custom-control custom-radio">
+					  <input type="radio" name="rruleMonthlyType" value="2" id="alert_type_order3" class="custom-control-input cus-input" >
+					  <label class="radio-inline custom-control-label font-14  ml-2" for="alert_type_order3">Monthly on the <span id="monthdays"></span></label>
+					</span>
+					<span class="custom-control custom-radio">
+					  <input type="radio" name="rruleMonthlyType" value="1" class="custom-control-input cus-input" id="alert_type_order4">
+					  <label class="radio-inline custom-control-label font-14  ml-2" for="alert_type_order4">Monthly on day <span id="monthdate"></span></label>
+					</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+					<label class="cus-label">Ends</label>
+				</div>
+				<div class="col-md-8">
+					<div class="form-group mb-3">
+					    <span class="custom-control custom-radio">
+						  <input type="radio" value="never" name="rruleEndAction" class="alert_type custom-control-input cus-input"  id="alert_type_order1" checked="">
+						  <label class="radio-inline custom-control-label font-14  ml-2" for="alert_type_order1">Never</label>
+						</span>
+					</div>
+					
+					<div class="row d-flex align-items-center mb-3">
+						<div class="col-md-4">
+							<span class="custom-control custom-radio">
+							  <input type="radio" value="date" name="rruleEndAction" class="alert_type custom-control-input cus-input"  id="alert_type_order2">
+							  <label class="radio-inline custom-control-label font-14  ml-2" for="alert_type_order2">On</label>
+							</span>
+						</div>
+						<div class="col-md-8">
+							<div class="start_date input-group">
+							    <input type="text" id="repeatday-date" class="form-control cus-input"  placeholder="Select Date">
+							    <div class="input-group-append">
+							      <span class="icon_calendar input-group-text start_date_calendar" aria-hidden="true "></span>
+							    </div>
+							</div>
+						</div>
+					</div>
+					<div class="row d-flex align-items-center mb-3">
+						<div class="col-md-4">
+							<span class="custom-control custom-radio">
+							  <input type="radio" value="after" class="alert_type custom-control-input cus-input" name="rruleEndAction" id="alert_type_order_after">
+							  <label class="radio-inline custom-control-label font-14  ml-2" for="alert_type_order_after">After</label>
+							</span>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group mb-0">
+							    <select class="form-control cus-input" id="rruleEndSessionsCount">
+							      <option>1</option>
+							      <option>2</option>
+							      <option>3</option>
+							      <option>4</option>
+							      <option>5</option>
+							    </select>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<label class="cus-label font-14 mb-0">Occurrence</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn no-bdr-cnl" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary save-btn" id="custom_rule_btn">Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="selectprtuntilpop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="myModalLabel">Repeat Until Options</h4>
+				<button type="button" class="close" data-dismiss="modal">
+					<span class="icon_close" aria-hidden="true"></span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="row mb-3 d-flex align-items-center">
+					<div class="col-md-5">
+						<div class="form-group mb-0">
+						    <span class="custom-control custom-radio">
+							  <input type="radio" class="custom-control-input cus-input"  value="date" name="drruleEndAction" id="alert_type_order_r">
+							  <label class="radio-inline custom-control-label font-14  ml-2" for="alert_type_order_r">Repeat Until</label>
+							</span>
+						</div>
+					</div>
+					<div class="col-md-5">
+						<div class="start_date input-group">
+						    <input type="text" class="form-control cus-input"  id="drepeatsec" placeholder="25 Feb 2020">
+						    <div class="input-group-append">
+						      <span class="icon_calendar input-group-text start_date_calendar" aria-hidden="true "></span>
+						    </div>
+						</div>
+					</div>
+				</div>
+				<div class="row mb-3 d-flex align-items-center">
+					<div class="col-md-5">
+						<div class="form-group mb-0">
+						    <span class="custom-control custom-radio">
+							  <input type="radio" class="custom-control-input cus-input" value="after" name="drruleEndAction" id="alert_type_order5">
+							  <label class="radio-inline custom-control-label font-14  ml-2" for="alert_type_order5">Stop repeating after</label>
+							</span>
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="form-group mb-0">
+						    <select class="form-control cus-input" id="drruleEndSessionsCount">
+						      <option>1</option>
+						      <option>2</option>
+						      <option>3</option>
+						      <option>4</option>
+						      <option>5</option>
+						    </select>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<label class="cus-label font-14 mb-0">Occurrence</label>
+					</div>
+				</div>
+				<div class="row mb-5 d-flex align-items-center">
+					<div class="col-md-5">
+						<div class="form-group mb-0">
+						    <span class="custom-control custom-radio">
+							  <input type="radio" class="custom-control-input cus-input" value="never" name="drruleEndAction" id="alert_type_order6">
+							  <label class="radio-inline custom-control-label font-14  ml-2" for="alert_type_order6">Repeat forever</label>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				 
+				<button type="button" class="btn no-bdr-cnl">
+					Cancel
+				</button> 
+				<button type="button" class="btn btn-primary save-btn" data-dismiss="modal" id="d-repeatsec">
+					Done
+				</button>
+			</div>
+		</div>
+		
+	</div>
+	
+</div>

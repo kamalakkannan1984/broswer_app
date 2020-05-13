@@ -1,0 +1,2347 @@
+<!DOCTYPE html> 
+<html>
+<title>UnifiedRing</title>
+<head>
+
+<meta charset="utf-8">
+<meta name="keyword" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles-app.css"/>
+<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">	
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/fjs.js"></script><script> 
+$(document).ready(function() {
+    $('#examples').DataTable();
+});
+</script>
+</head>
+<body>
+
+<div class="dashboard-home container-fluid"> 
+	<div class="container">
+		<div class="row clearfix">			
+			<div class="col-sm-1 third-columns">
+				<ul class="icons-top">
+					
+					<li class="openDashBoard active"><a href="#"><span class="icon-Dashboard"></span>Dashboard</a></li>
+					<li class="openPhone"><a href="#"><span class="icon-Phone"></span>Phone</a></li>
+					<li class="openBookM"><a href="#"><span class="icon-Bookmark"></span>Bookmarks</a></li>
+					<li class="openDic"><a href="#"><span class="icon-Directory"></span>Contacts</a></li>
+				</ul>
+				<ul class="icons-bottom">
+					<li class="openTsk"><a href="#"><span class="icon-Task"></span>Task</a></li>
+					<li class="openEvnt"><a href="#"><span class="icon-Calendar-date"></span>Events</a></li>
+					<li class="openNts"><a href="#"><span class="icon-Notes"></span>Notes</a></li>
+					<li class="openFls"><a href="#"><span class="icon-Folder"></span>Files</a></li>
+					<li class="openLnk"><a href="#"><span class="icon-Link"></span>Links</a></li>
+				</ul>
+			</div>
+					
+			<div class="col-sm-2 first-columns">
+				<div class="staticSlide">
+					<div class="row clearfix" id="profileHeader">			
+						<div class="customer-header col-md-12">						
+							<img src="images/close.svg" class="closing"/> 
+							<div class="customer-header-sect">
+								<div class="dropdown customer-header-sect-img">
+									<img id="ownavator" src="images/avatar_profile_pic.svg" class="customer-img" class="dropdown-toggle" data-toggle="dropdown"/>
+									<img id="ownavatorStatus" src="images/green-active.svg" class="dotactive"/>
+									<ul class="dropdown-menu">
+										<li class="dropdown dropdown-submenu"><a href="#"><img src="images/green-active.svg"/> Available <span class="icon-arrow-right submenu-img"></span></a>
+											<ul class="dropdown-menus">
+												<li class="setOnline"><a href="#"><img src="images/green-active.svg"/> Available</a></li>
+												<li class="setInvisible"><a href="#"><img src="images/yellow.png"/> Invisible</a></li>
+												<li class="setDnd"><a href="#"><img src="images/red.png"/> Do not Disturb</a></li>
+												<li class="setBusy"><a href="#"><img src="images/grey.png"/> Busy</a></li>
+											</ul>
+										</li>												
+										</li>
+										<li><a id="dashShareSta">Share Status</a></li>
+										<li class="showUProfile"><a href="#">Edit profile</a></li>
+										<li class="showPreference"><a href="#">Preferences</a></li>
+										<li class="helpPage"><a href="#">Help</a></li>
+										<li><a id="dashappInfo">About</a></li>
+										<li class="showMention"><a href="#">@Mentions</a></li>
+										<li class="proAdmin" style="display:none"><a href="#">Administration</a></li>
+										<li class="signOut"><a href="#">Signout</a></li>
+									</ul>							
+								</div>
+								<div class="customer-header-sect-name" onclick="BrowserProfile('self')" id="ownavator_text">
+									<h3>  </h3>
+								</div>
+								<div class="customer-header-sect-imgplus dropdown"><span class="icon-Add dropdown-toggle" data-toggle="dropdown"></span>
+									<ul class="dropdown-menu">
+										<li class="userDailpadWin"><a href="#" data-toggle="modal" data-target="#phoneDailpad"><span class="icon-Phone"></span> Start phone Call</a></li>
+										<!--<li><a href="#"><span class="icon-Video"></span> Start Video Meeting</a></li>!-->
+										<li class="userMessageWin"><a href="#" ><span class="icon-mail-read"></span> Send New Message</a></li>
+										<li class="tooltips1"><a href="#"><span class="icon-Contacts"></span> Create Team</a></li>
+										<li class="userInviteWin"><a href="#"><span class="icon-mail-read"></span> Invite New User</a></li>
+									</ul>							
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="searchbox row clearfix">			
+						<div class="col-md-12">
+							<input type="text" name="search" onKeyup="globalSearch(this.value)" maxlength="28" placeholder="Search" autocomplete="off"/>
+						</div>
+					</div>
+				</div>
+				<div class="slideMain-page scrollenable">
+					<div class="chat-left row clearfix" id="favContactHeader">			
+						<div class="col-md-12">
+							<div class="panel-group" id="dashaccordion1">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="side-bar-title panel-title" data-toggle="collapse" data-parent="#dashaccordion1" href="#dashcollapse4">
+											<a><span class="icon-Favourites list-name-icons"></span> Favourites  </a>
+										</h4>
+									</div>
+									<div id="dashcollapse4" class="panel-collapse collapse">
+										<div class="panel-body">
+											<ul class="style-4 favContacts">
+												<li><a href="#">
+													<div class="name-images">
+														<img src="images/list-name.png" class="list-name-img"/>
+														<img src="images/green-active.svg" class="dotactives"/>
+													</div>
+													<span>Ronnie Diaz</span>
+												</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<hr>
+					<div class="chat-left row clearfix">			
+						<div class="col-md-12">
+							<div class="panel-group" id="dashaccordion2">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="side-bar-title panel-title">
+											<a data-toggle="collapse" data-parent="#dashaccordion2" href="#dashcollapse2"><span class="icon-Contacts list-name-icons"></span> Recents </a>
+											<a href="#" class="tooltips" id="contactPlus"><span class="icon-Add-doted dropdown-toggle" data-toggle="modal" data-target="#newmessageWin"></span>
+												<p class="pophover">New Message</p>
+											</a>
+										</h4>
+									</div>
+									<div id="dashcollapse2" class="panel-collapse collapse">
+										<div class="panel-body">
+											<ul class="style-4 contactsLoad">
+												<li>
+													<a href="#">
+														<div class="name-images">
+															<img src="images/list-name.png" class="list-name-img"/>
+															<img src="images/green-active.svg" class="dotactives"/>
+														</div>
+														<span>Ronnie Diaz</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<hr>
+					<div class="chat-left row clearfix" id="teamHeader">			
+						<div class="col-md-12">
+							<div class="panel-group" id="dashaccordion3">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="side-bar-title panel-title" >
+										  <a data-toggle="collapse" data-parent="#dashaccordion3" href="#dashcollapse3"><span class="icon-Teams list-name-icons"></span> Teams</a>
+										 	<!--<a href="#" class="tooltips1" data-toggle="modal" data-target="#teamPopUp">!-->
+											<a href="#" class="tooltips1">
+											  <span class="icon-Add-doted dropdown-toggle"></span>
+												<p class="pophover1">Create Team</p>
+											</a>
+										</h4>
+										
+									</div>
+									<div id="dashcollapse3" class="panel-collapse collapse">
+										<div class="panel-body">
+											<ul class="style-4 teamLoad">
+												<li class="active"><a href="#">
+													<div class="name-images">
+														<img src="images/list-name.png" class="list-name-img"/>
+														<img src="images/green-active.svg" class="dotactives"/>
+													</div>
+													<span>Ronnie Diaz</span>
+												</a></li>
+											</ul>					
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-9 second-columns disable-select" id="ControlWindow">
+				<div class="fixedscroll dashBoardWind style-4 disable-select" >
+					<div class="chat-info123" title="Expand">
+						<div class="toggle-info">
+							<a class="toggle-icon"><span class="icon-arrow-left"></span></a>
+						</div>
+					</div>
+					<img src="images/m-3dot.png" class="left-menu-section"/>
+						<!--<div class="search-filter fixed-top">
+							<div class="col-md-12">	
+								<div class="phds row clearfix" id="DashBHeader">
+									<div class="col-sm-5">
+										<img src="images/menu-black.svg" class="m-menus"/><h3>Dashboard</h3>
+									</div>
+									<div class="col-sm-6">
+										<div class="phdsbox row clearfix">			
+											<div class="col-md-12">
+												<input type="text" placeholder="Search" id="dashBrdSrc" onKeyup="DashBrdSrch_Fun(this.value)" autocomplete="off" maxlength="28">
+											</div>
+										</div>
+									</div>
+								</div>	
+							</div>
+						</div>	-->
+					<div class="phds row clearfix" id="DashBHeader">
+						<div class="col-sm-6">
+							<img src="images/menu-black.svg" class="m-menus"/><h3>Dashboard</h3>
+						</div>
+						<div class="col-sm-6">
+							<div class="phdsbox row clearfix">			
+								<div class="col-md-12">
+									<input type="text" placeholder="Search" id="dashBrdSrc" onKeyup="DashBrdSrch_Fun(this.value)" autocomplete="off" maxlength="28">
+								</div>
+							</div>
+						</div>
+					</div>	
+					
+					<div class="dirtectory-screen dashboard row clearfix style-4">
+						<div class="scrollenable nogame col-md-12">
+
+							
+							<div class="tablestask row clearfix" id="DashTasks">
+								<div class="tablerespons col-md-12 style-4">				
+								
+									<table id="examples" class="display dashboard DashTasksTable" cellspacing="0">
+										<thead>
+											<tr>
+												<th>Task <img src="images/plus-color.svg" class="addnewsinnertable" data-toggle="modal" data-target="#myModalTask"/></th>
+												<th>Assigned To</th>
+												<th>Due</th>
+												<th class="width-set">Section</th>
+												<th>Conversation</th>
+												<th>Actions</th>
+											</tr>
+										</thead>
+										<tbody>
+											<!--<tr>
+												<td><p>
+													<label class="containe"><b>Update the client call details</b>
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</p></label>
+												</td>
+												<td><p>ronnie_diaz@gmail.com</p></td>
+												<td><p>12.06.19</p></td>
+												<td><p>Sample</p></td>
+												<td><p>maria_jazz@gmail.com</p></td>
+												<td class="droppers">
+													<div class="dropdown"><span class="icon-edit dropdown-toggle rets" data-toggle="dropdown"></span>
+														<ul class="dropdown-menu">
+															<li><a href="#"><span class="icon-thump_up"></span> Like</a></li>
+															<li><a href="#"><span class="icon-Bookmark"></span> Bookmark</a></li>
+															<li><a href="#"><span class="icon-Pin"></span> Pin</a></li>
+															<li><a href="#"><span class="icon-Share"></span> Share</a></li>
+															<li><a href="#"><span class="icon-edit"></span> Edit</a></li>
+															<li><a href="#"><span class="icon-Delete-2"></span> Delete</a></li>
+														</ul>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td><p>
+													<label class="containe"><b>Update the client call details</b>
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</p></label>
+												</td>
+												<td><p>ronnie_diaz@gmail.com</p></td>
+												<td><p>12.06.19</p></td>
+												<td><p>Sample</p></td>
+												<td><p>maria_jazz@gmail.com</p></td>
+												<td class="droppers">
+													<div class="dropdown"><span class="icon-edit dropdown-toggle rets" data-toggle="dropdown"></span>
+														<ul class="dropdown-menu">
+															<li><a href="#"><span class="icon-thump_up"></span> Like</a></li>
+															<li><a href="#"><span class="icon-Bookmark"></span> Bookmark</a></li>
+															<li><a href="#"><span class="icon-Pin"></span> Pin</a></li>
+															<li><a href="#"><span class="icon-Share"></span> Share</a></li>
+															<li><a href="#"><span class="icon-edit"></span> Edit</a></li>
+															<li><a href="#"><span class="icon-Delete-2"></span> Delete</a></li>
+														</ul>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td><p>
+													<label class="containe"><b>Update the client call details</b>
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</p></label>
+												</td>
+												<td><p>ronnie_diaz@gmail.com</p></td>
+												<td><p>12.06.19</p></td>
+												<td><p>Sample</p></td>
+												<td><p>maria_jazz@gmail.com</p></td>
+												<td class="droppers">
+													<div class="dropdown"><span class="icon-edit dropdown-toggle rets" data-toggle="dropdown"></span>
+														<ul class="dropdown-menu">
+															<li><a href="#"><span class="icon-thump_up"></span> Like</a></li>
+															<li><a href="#"><span class="icon-Bookmark"></span> Bookmark</a></li>
+															<li><a href="#"><span class="icon-Pin"></span> Pin</a></li>
+															<li><a href="#"><span class="icon-Share"></span> Share</a></li>
+															<li><a href="#"><span class="icon-edit"></span> Edit</a></li>
+															<li><a href="#"><span class="icon-Delete-2"></span> Delete</a></li>
+														</ul>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td><p><span>70%</span> Update the Client</p>
+												</td>
+												<td><p>ronnie_diaz@gmail.com</p></td>
+												<td><p>12.06.19</p></td>
+												<td><p>Sample</p></td>
+												<td><p>maria_jazz@gmail.com</p></td>
+												<td class="droppers">
+													<div class="dropdown"><span class="icon-edit dropdown-toggle rets" data-toggle="dropdown"></span>
+														<ul class="dropdown-menu">
+															<li><a href="#"><span class="icon-thump_up"></span> Like</a></li>
+															<li><a href="#"><span class="icon-Bookmark"></span> Bookmark</a></li>
+															<li><a href="#"><span class="icon-Pin"></span> Pin</a></li>
+															<li><a href="#"><span class="icon-Share"></span> Share</a></li>
+															<li><a href="#"><span class="icon-edit"></span> Edit</a></li>
+															<li><a href="#"><span class="icon-Delete-2"></span> Delete</a></li>
+														</ul>
+													</div>
+												</td>
+											</tr>!-->
+										</tbody>
+									</table>
+								</div>
+							</div>	
+							
+							<div class="phds dashboard row clearfix" id="dashBRecent">
+								<div class="row dashboard_mentionsec">
+								<div class="col-sm-12">
+									<h3>@Mentions</h3>
+									<button id="showall_mention" style="float: right; display:none" onclick="BrowserMention()"> Show all</button>
+								</div>
+								</div>
+							</div>
+						
+							<div class="adminscreen team row clearfix" id="dashBRecentActivity">
+								<div class="col-md-12">
+									<!--<div class="loadersimg1" style="display:none"><div class="loader"><img src="./images/logo-loading-animation.gif"></div></div>!-->												
+									<ul class="ad-sect" id="recentActicity">
+										<li>
+											<div class="ad-name-images"><h3>Michelle Jackson in <b>Peterson</b><br><span><b>QA team</b> Jonathan kindly consider the noted issues reported</span></h3></div>
+											<div class="ad-name-icons">12.06.19 4:30 PM</div>
+										</li>
+										<li>
+											<div class="ad-name-images"><h3>IOS team<br><span>Arunkumar and d.christina</span></h3></div>
+											<div class="ad-name-icons">
+												<ul class="top-charts">
+													<li><a href=""><span class="icon-Search"></span></a></li>
+											<li><a href=""><span class="icon-Phone"></span></a></li>
+											<li><a href=""><span class="icon-Video"></span></a></li>
+											<li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-Action in"></span></a>
+												<ul class="dropdown-menu">
+													<li><a href="">Mark Unread</a></li>
+													<li><a href="#">Favourite <span class="icon-tick"></span></a></li>
+													<li><a href="#closechat" data-toggle="modal" data-dismiss="modal">Close Conversation</a></li>
+													<li class="dropleft"><a href="#">Post via Email</a>
+														<ul class="dropleft-menu">
+															<li>Post a message to this conversation by sending an email to <span>v.unifiedring@vectione.com</span><br><br>Attachments work too</li>
+														</ul>
+													</li>
+													<li class="mute-notificationson"><a href="#">Mute All Notifications</a></li>
+													<li class="unmute-notificationson"><a href="#">Unmute All Notifications</a></li>
+													<li class="mute-desktop-notificationson"><a href="#">Desktop Notifications</a></li>
+													<li class="unmute-desktop-notificationson"><a href="#">Unmute Desktop</a></li>
+													<li class="dropleft mobile"><a href="#">Mobile Notifications <span class="icon-arrow-right submenu-img"></span></a>	
+														<ul class="dropleft-menu mobile">
+															<li><a href="">Every Message</a></li>
+															<li><a href="">Off</a></li>
+														</ul>
+													</li>
+													<li><a href="#">Email Notifications <span class="icon-tick"></span></a></li>
+													<li class="dropleft sound"><a href="#">Sound</a>	
+														<ul class="dropleft-menu sound">
+															<li><a href="">#Sound1</a></li>
+															<li><a href="">#Sound1</a></li>
+														</ul>
+													</li>
+													<li><a href="#addintegration" data-toggle="modal" data-dismiss="modal">Add Integration</a></li>
+													<li><a href="#deactivateuser" data-toggle="modal" data-dismiss="modal">Deactivate this User</a></li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+				
+				
+				
+			<div class="col-sm-3 fourth-columns style-4">
+				<div class="chat-info" title="Collapse">
+					<div class="toggle-info">
+						<a class="toggle-icon"><span class="icon-arrow-right"></span></a>
+					</div>
+				</div>	
+				<div class="taskallocation row clearfix">
+					<div class="taskall-sect col-md-12"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="alert" id="GroupChatInvite">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header smodal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">Confirm Join</h4>
+				</div>
+				<div class="modal-body smodal-body">
+					<div><strong><span id="invitefrom"></span></strong>&nbsp;has invited you to join Group Chat&nbsp;<strong><span id="inviteto"></span></strong></div>
+					<p>Accept to Join ?</p>
+				</div>
+				<div class="modal-footer smodal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-primary" data-dismiss="modal" id="joinConfirmation">Join</button>
+					<input type="hidden" id="modelID" value="" />
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="modal fade" id="teamPopUp" role="dialog">
+		<div class="modal-dialog">    
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><img src="images/close.svg"/></button>
+					<h4 class="modal-title">New Team</h4>
+				</div>
+				<div class="modal-body">
+					<div class="row clearfix">
+						<div class="col-md-12">
+							<label>Team or Project Name<br>
+								<input type="text" name="" id="groupchat_name" placeholder="Team Name" maxlength="25" autocomplete="off"/>
+							</label>
+						</div>
+					</div>
+					<div class="row clearfix">
+						<div class="col-md-12">
+							<label>Members (Enter name or email address)</label>
+							<input type="text" id="contactlstSh" name="" onkeyup="TeamcontactSt(this.value)" placeholder=""  autocomplete="off"/>
+							<!--<div class="modal-body myModaladdnewteamevents style-4" id="teamcontacturlSt" style="overflow-y: auto; max-height: 200px;display:none"></div>!-->
+							<!--<div class="serch row clearfix style-4">
+								<div class="col-md-12">
+									<ul id="teamcontacturlSt" style="display:none">
+									</ul>
+								</div>
+							</div>!-->
+							<div class="modal-body myModaladdnewteamevents style-4" id="teamcontacturlSt" style="overflow-y: auto; max-height: 200px;display:none">
+								<ul class="style-4" id="teamcontacturl_ul"></ul>
+							</div>
+							<ol class="teamLst">
+								<li><img src="images/list-name.png"/> mary_ortiz <span><img src="images/close.svg"/></li>
+								<li><img src="images/list-name.png"/> mary_ortiz <span><img src="images/close.svg"/></li>
+								<li><img src="images/list-name.png"/> mary_ortiz <span><img src="images/close.svg"/></li>
+								<li><img src="images/list-name.png"/> mary_ortiz <span><img src="images/close.svg"/></li>
+							</ol>
+						</div>
+					</div>
+					<div class="row clearfix">
+						<div class="col-md-12">
+							<label>Description<br>
+								<input id="DestlstSh" type="text" name="" placeholder="Description" autocomplete="off"/>
+							</label>
+						</div>
+					</div>
+					<div class="data-retention row clearfix">
+						<div class="col-md-12">
+							<ul class="ad-secters">
+								<li>
+									<div class="ad-name-images"><h3>Public Team (any co-worker can join)</h3></div>
+									<div class="ad-name-icons">
+										<label class="switch ">
+											<input type="checkbox" class="primary" id="switch1">
+											<span class="slider round"></span>
+										</label>
+									</div>
+								</li>
+								<!--<li>
+									<div class="ad-name-images"><h3>Members (except guests) may add other members</h3></div>
+									<div class="ad-name-icons">
+										<label class="switch ">
+											<input type="checkbox" class="primary" id="switch2">
+											<span class="slider round"></span>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="ad-name-images"><h3>Members may post messages</h3></div>
+									<div class="ad-name-icons">
+										<label class="switch ">
+											<input type="checkbox" class="primary" id="switch3">
+											<span class="slider round"></span>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="ad-name-images"><h3>Members may @team mention</h3></div>
+									<div class="ad-name-icons">
+										<label class="switch ">
+											<input type="checkbox" class="primary" id="switch4">
+											<span class="slider round"></span>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="ad-name-images"><h3>Members may add integrations</h3></div>
+									<div class="ad-name-icons">
+										<label class="switch ">
+											<input type="checkbox" class="primary" id="switch5">
+											<span class="slider round"></span>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="ad-name-images"><h3>Members may pin posts</h3></div>
+									<div class="ad-name-icons">
+										<label class="switch ">
+											<input type="checkbox" class="primary" id="switch6">
+											<span class="slider round"></span>
+										</label>
+									</div>
+								</li>!-->									
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default closes" data-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-default proceed" id="create_group">Create Team</button>
+				</div>
+			</div>      
+		</div>
+	</div>
+	
+	<!--------------- Starting  Invitation Request Popup  ------------------>
+	<div class="modal" id="invitationrequest" role="dialog">
+		<div class="modal-dialog">    
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><img src="images/close.svg"/></button>
+					<h4 class="modal-title">Invitation Request</h4>
+				</div>
+				<div class="modal-body">
+					
+					<div class="row clearfix">
+						<div class="col-md-12">
+							<h5><img class="custImgTeam" src="images/avatar_profile_pic.svg"/> <span class="invitefrom">Jonathan Smith</span> has invited you to join the group<br><span class="inviteto">Design Team</span></h5>
+						</div>
+					</div>				
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default closes" data-dismiss="modal">Decline</button>
+					<button type="button" class="btn btn-default proceed" data-dismiss="modal" id="joinConfirmation">Accept</button>
+				</div>
+			</div>      
+		</div>
+	</div>
+	<!--------------- Ending  Invitation Request Popup ------------------>
+
+	<div class="modal fade" id="myModalTask" role="dialog">
+		<div class="modal-dialog">    
+			<div class="modal-content new-event-popup">
+				<div class="modal-header">
+					<button type="button" class="close"><img src="images/close.svg"/></button>
+					<h4 class="modal-title">New Task</h4>
+				</div>
+				<div class="modal-body task-sec-custom-con">
+					<div class="loadersimg2" style="display:none"><div class="loader"><img src="./images/logo-loading-animation.gif"></div></div>
+					<div id="default_sec">
+					<div class="row clearfix"> 
+						<div class="col-md-12 mar-top-min">
+							<label>Title *
+								
+							</label>
+							<input type="text" name="" id="taskname_id" class="custom-input-set form-control" placeholder="Title" required="" maxlength="64" autocomplete="off">
+						</div>
+					</div>
+					<div class="row clearfix">
+						<div class="col-md-6">
+							<label>Assignees
+								
+							</label>
+							<input type="text" name="" class="custom-input-set form-control" id="inputassigneeto_name" placeholder="Assignee" onkeyup="TaskCntSt(this.value)"  onkeypress="return IsAlphaNumeric(event);"  maxlength="32" autocomplete="off">
+							
+							<div class="assgin-popup">
+								<ul id="taskContactLst" class="style-4" style="display:none">
+								
+								
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<label>Category
+								
+							</label>
+							<select class="form-control custom-icon" id="Section_id">
+								<option value="UI Development" selected>UI Development</option>
+								<option value="PHP">PHP</option>
+								<option value="BA">BA</option>
+								<option value="UI Design">UI Design</option>
+							</select>
+							
+						</div>
+					</div>
+					<div class="col-md-12 clearfix">
+						<div class="row assigneeinner">
+							<ol class="taskLst"></ol>
+						</div>
+						
+					</div>
+
+					<div class="row clearfix">
+						<div class="col-md-4">
+							<label>Start Date *
+								
+							</label>
+							<div class="input-over-pop-sec ">
+							<input class="custom-input-set form-control iscdatepicker datepicker" id="expand-js-date" type="date" name="" placeholder="12.06.19" autocomplete="off">
+							<!-- <img class="calendericon" src="images/pop/calendar.svg" > -->
+							</div>
+						</div>
+						<div class="col-md-4">
+							<label>Due Date *
+								
+							</label>
+							<div class="input-over-pop-sec ">
+							<input name="" class="custom-input-set form-control iscdatepicker datepicker" id="expanddue-js-date" type="date" name="" placeholder="12.06.19" autocomplete="off">
+							<!-- <img class="calendericon" src="images/pop/calendar.svg" > -->
+							</div>
+						</div>
+						<div class="col-md-4">
+							<label>Due Time
+								
+							</label>
+							
+							<div class="input-over-pop-sec clock-popup">
+							<input type="text" name="" id="duetime_input"class="custom-input-set form-control " placeholder="Due time" required="" autocomplete="off">
+							<img class="calendericon" src="images/pop/time.svg" >
+							<ul class="clk-hour-list" id="Duetime_sec" style="display:none">
+								<li value="12:00 AM">No Due Time</li>
+								<li value="12:00 AM">12:00 am</li>
+								<li value="12:15 AM">12:15 am</li>
+								<li value="12:30 AM">12:30 am</li>
+								<li value="12:45 AM">12:45 am</li>
+								<li value="1:00 AM">1:00 am</li>
+								<li value="1:15 AM">1:15 am</li>
+								<li value="1:30 AM">1:30 am</li>
+								<li value="1:45 AM">1:45 am</li>
+								<li value="2:00 AM">2:00 am</li>
+								<li value="2:15 AM">2:15 am</li>
+								<li value="2:30 AM">2:30 am</li>
+								<li value="2:45 AM">2:45 am</li>
+								<li value="3:00 AM">3:00 am</li>
+								<li value="3:15 AM">3:15 am</li>
+								<li value="3:30 AM">3:30 am</li>
+								<li value="3:45 AM">3:45 am</li>
+								<li value="4:00 AM">4:00 am</li>
+								<li value="4:15 AM">4:15 am</li>
+								<li value="4:30 AM">4:30 am</li>
+								<li value="4:45 AM">4:45 am</li>
+								<li value="5:00 AM">5:00 am</li>
+								<li value="5:15 AM">5:15 am</li>
+								<li value="5:30 AM">5:30 am</li>
+								<li value="5:45 AM">5:45 am</li>
+								<li value="6:00 AM">6:00 am</li>
+								<li value="6:15 AM">6:15 am</li>
+								<li value="6:30 AM">6:30 am</li>
+								<li value="6:45 AM">6:45 am</li>
+								<li value="7:00 AM">7:00 am</li>
+								<li value="7:15 AM">7:15 am</li>
+								<li value="7:30 AM">7:30 am</li>
+								<li value="7:45 AM">7:45 am</li>
+								<li value="8:00 AM">8:00 am</li>
+								<li value="8:15 AM">8:15 am</li>
+								<li value="8:30 AM">8:30 am</li>
+								<li value="8:45 AM">8:45 am</li>
+								<li value="9:00 AM">9:00 am</li>
+								<li value="9:15 AM">9:15 am</li>
+								<li value="9:30 AM">9:30 am</li>
+								<li value="9:45 AM">9:45 am</li>
+								<li value="10:00 AM">10:00 am</li>
+								<li value="10:15 AM">10:15 am</li>
+								<li value="10:30 AM">10:30 am</li>
+								<li value="10:45 AM">10:45 am</li>
+								<li value="11:00 AM">10:00 am</li>
+								<li value="11:15 AM">11:15 am</li>
+								<li value="11:30 AM">11:30 am</li>
+								<li value="11:45 AM">11:45 am</li>
+								<li value="12:00 PM">12:00 pm</li>
+								<li value="12:15 PM">12:15 pm</li>
+								<li value="12:30 PM">12:30 pm</li>
+								<li value="12:45 PM">12:45 pm</li>
+								<li value="1:00 PM">1:00  pm</li>
+								<li value="1:15 PM">1:15 pm</li>
+								<li value="1:30 PM">1:30 pm</li>
+								<li value="1:45 PM">1:45 pm</li>
+								<li value="2:00 PM">2:00 pm</li>
+								<li value="2:15 PM">2:15 pm</li>
+								<li value="2:30 PM">2:30 pm</li>
+								<li value="2:45 PM">2:45 pm</li>
+								<li value="3:00 PM">3:00 pm</li>
+								<li value="3:15 PM">3:15 pm</li>
+								<li value="3:30 PM">3:30 pm</li>
+								<li value="3:45 PM">3:45 pm</li>
+								<li value="4:00 PM">4:00 pm</li>
+								<li value="4:15 PM">4:15 pm</li>
+								<li value="4:30 PM">4:30 pm</li>
+								<li value="4:45 PM">4:45 pm</li>
+								<li value="5:00 PM">5:00 pm</li>
+								<li value="5:15 PM">5:15 pm</li>
+								<li value="5:30 PM">5:30 pm</li>
+								<li value="5:45 PM">5:45 pm</li>
+								<li value="6:00 PM">6:00 pm</li>
+								<li value="6:15 PM">6:15 pm</li>
+								<li value="6:30 PM">6:30 pm</li>
+								<li value="6:45 PM">6:45 pm</li>
+								<li value="7:00 PM">7:00 pm</li>
+								<li value="7:15 PM">7:15 pm</li>
+								<li value="7:30 PM">7:30 pm</li>
+								<li value="7:45 PM">7:45 pm</li>
+								<li value="8:00 PM">8:00 pm</li>
+								<li value="8:15 PM">8:15 pm</li>
+								<li value="8:30 PM">8:30 pm</li>
+								<li value="8:45 PM">8:45 pm</li>
+								<li value="9:00 PM">9:00 pm</li>
+								<li value="9:15 PM">9:15 pm</li>
+								<li value="9:30 PM">9:30 pm</li>
+								<li value="9:45 PM">9:45 pm</li>
+								<li value="10:00 PM">10:00 pm</li>
+								<li value="10:15 PM">10:15 pm</li>
+								<li value="10:30 PM">10:30 pm</li>
+								<li value="10:45 PM">10:45 pm</li>
+								<li value="11:00 PM">11:00 pm</li>
+								<li value="11:15 PM">11:15 pm</li>
+								<li value="11:30 PM">11:30 pm</li>
+								<li value="11:45 PM">11:45 pm</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="row clearfix">
+						<div class="col-md-7">
+							<label>Repeat
+								
+							</label>
+								<select class="form-control custom-icon" id="repeat_sec">
+								<option value="Repeat none" selected>Does not repeat</option>
+								<option value="Every day">Every Day  </option>
+								<option value="Every week">Every Week</option>
+								<option value="Every month">Every Month</option>
+								<option value="Every year">Every year</option>
+								<option value="Custom">Custom</option>
+								
+							</select>
+						</div>
+						<div class="col-md-5">
+							<label>Complete When
+								
+							</label>
+								<select class="form-control custom-icon" id="Days">
+								<option value="100%" selected>100% Done</option>
+								<option value="checkedall">Checked by all assingness</option>
+								<option value="checkedonly">Checked</option>
+							</select>
+						
+						</div>
+					</div>
+
+					
+					<div class="row clearfix">
+						<div class="col-md-12">
+							<label id="rruletext" style="color: #1D76F2 !important">
+								
+							</label>
+							
+						</div>
+					</div>
+					<div class="row clearfix">
+						<div class="col-md-12">
+							<label>Description
+								
+							</label>
+							<textarea type="text" name="" id="Description" class="custom-input-set form-control" placeholder="" required=""></textarea>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<ol class="taskFileLst">
+						</ol>
+					</div>	
+					<div class="row clearfix">
+						<div class="col-md-12">
+							<label class="afiles-add top-pop-up" style="cursor: pointer;">
+								<input type="file" name="" placeholder="Add Attachment" multiple><span>Add Attachment</span>
+							</label>
+						</div>
+					</div>
+
+					<div class="modal-footer right-side">
+						<div class="float-right">
+							<button type="button" class="btn btn-default back-btn mr-3 taskbck">Cancel</button>
+							<button type="button" id="SubmitTask" class="btn cont-btn proceed auto-width" >Post</button>
+							<button type="button" id="SaveTask" class="btn cont-btn proceed" style="display:none">Save</button>
+							
+						</div>
+					</div>
+					</div>
+
+					<div class="task-sec-custom-con" id="repeatall_sec" style="display:none">
+						<div class="row clearfix">
+							<div class="col-md-12">
+								<h4 class="reapet-txt back_default"><img class="rep-icon-sec" src="images/pop/back_sub_nav.svg"> Repeat
+									
+								</h4>
+								
+							</div>
+						</div>
+						
+						<div class="row clearfix">
+							<div class="col-md-5">
+								<label>Repeats Every
+									
+								</label>
+								<select class="form-control custom-icon" id="repeatIntervalValue">
+									<option selected>1</option>
+									<option>2</option>
+									<option>3 </option>
+								</select>
+								
+							</div>
+							<div class="col-md-5">
+								<label>
+									&nbsp;
+								</label> 
+								<select class="form-control custom-icon" id="repeat_option">
+									<option value="daily" selected>Day</option>
+									<option value="weekly">Week</option>
+									<option value="monthly">Month</option>
+									<option value="yearly">Year</option>
+								</select>
+							</div>
+						</div>
+						<div id="every_week_sec" style="display: none;">
+						<div class="row clearfix">
+							<div class="col-md-12">
+								<label>Repeats On
+									
+								</label>
+								<div class="">
+									<ul class="date-badge-con rrule-weekly">
+										<li class="active" data-value="0"><a class=""  >S</a></li>
+										<li class="" data-value="1"><a class=""  data-value="1">M</a></li>
+										<li class="" data-value="2"><a class=""   data-value="2">T</a></li>
+										<li class="" data-value="3"><a class=""   data-value="3">W</a></li>
+										<li class="" data-value="4"><a class=""   data-value="4">T</a></li>
+										<li class="" data-value="5"><a class=""   data-value="5">F</a></li>
+										<li class="" data-value="6"><a class="" data-value="6">S</a></li>
+										
+										
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="every_month_sec" style="display: none;">
+					<div class="row clearfix">
+						<div class="col-md-12 mat-top-min rrule-monthly">
+							<label>Repeats On
+								
+							</label>
+							<div class="">
+								<div class="form-check">
+									<div class="custom-control custom-radio custom-control-inline">
+										<input type="radio" name="rruleMonthlyType" value="2" class="custom-control-input opacity-unset"  id="customRadio9" name="example" value="customEx">
+										<label class="custom-control-label" for="customRadio9">Monthly on the <span id="monthdays"></span></label>
+									</div>
+									
+								</div>
+							</div>
+							<div class="">
+								<div class="form-check">
+									<div class="custom-control custom-radio custom-control-inline">
+										<input type="radio" name="rruleMonthlyType" value="1" class="custom-control-input opacity-unset" id="customRadio10" name="example" value="customEx">
+										<label class="custom-control-label" for="customRadio10">Monthly on day <span id="monthdate"></span></label>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+					
+						<!-- <div id="every_day_sec"> -->
+								<div class="row clearfix endsection">
+									<div class="col-md-12 mat-top-min">
+									<label>Ends
+											
+										</label>
+									</div>	
+									
+									<div class="col-md-12 mar-bot-min">
+									<div class="mar-bot-min">
+										<div class="form-check">
+											
+											<div class="custom-control custom-radio custom-control-inline">
+												<input type="radio" class="custom-control-input opacity-unset" id="customRadio" name="rruleEndAction" value="never">
+												<label class="custom-control-label" for="customRadio">Never</label>
+											</div>
+											</div>
+										</div>
+									<div class="row mar-bot-min">
+										<div class="col-md-2">
+											<div class="form-check">
+												<div class="custom-control custom-radio custom-control-inline">
+												<input type="radio" class="custom-control-input opacity-unset" id="customRadio2" name="rruleEndAction" value="date">
+												<label class="custom-control-label" for="customRadio2">On</label>
+											</div>
+											
+											</div>
+										</div>
+										<div class="col-md-5">
+												<div class="input-over-pop-sec ">
+											<input id="repeatday-date" type="date" class="custom-input-set form-control iscdatepicker datepicker" placeholder="11 Dec 2019" required="">
+											
+											</div>
+										</div>
+									</div>
+										
+									<div class="row mar-bot-min">
+										<div class="col-md-2">
+											<div class="form-check">
+												<div class="custom-control custom-radio custom-control-inline">
+												<input type="radio" class="custom-control-input opacity-unset" id="customRadio3"  name="rruleEndAction" value="after">
+												<label class="custom-control-label" for="customRadio3">After</label>
+											</div>
+											
+											</div>
+										</div>
+										<div class="col-md-5">
+											<select class="form-control custom-icon" id="rruleEndSessionsCount">
+											<option>1</option>
+											<option>2</option>
+											<option>3 </option>
+											<option>4 </option>
+											<option>5 </option>
+											<option>6 </option>
+										</select>
+										</div>
+										<div class="col-md-5">
+											<label>Occurrence
+											
+											</label>
+										</div>
+										
+										
+									</div>
+									
+									</div>
+								
+									
+									
+								</div>
+						<!-- </div> -->
+
+						<!-- <div id="every_week_sec" style="display: none;">
+
+							<div class="row clearfix">
+								<div class="col-md-12">
+									<label>Repeats On
+										
+									</label>
+									<div class="">
+										<ul class="date-badge-con rrule-weekly">
+											<li class="" data-value="0"><a class=""  data-toggle="tab">s</a></li>
+											<li class="" data-value="1"><a class="" data-toggle="tab" data-value="1">M</a></li>
+											<li class="active" data-value="2"><a class=""  data-toggle="tab" data-value="2">T</a></li>
+											<li class="" data-value="3"><a class=""  data-toggle="tab" data-value="3">W</a></li>
+											<li class="" data-value="4"><a class=""  data-toggle="tab" data-value="4">T</a></li>
+											<li class="" data-value="5"><a class=""  data-toggle="tab" data-value="5">F</a></li>
+											<li class="" data-value="6"><a class="" data-toggle="tab" data-value="6">s</a></li>
+											
+											
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="row clearfix">
+								<div class="col-md-12 mat-top-min">
+								<label>Ends
+										
+									</label>
+								</div>	
+								
+								<div class="col-md-12 mar-bot-min">
+								<div class="mar-bot-min">
+									<div class="form-check">
+											
+											<div class="custom-control custom-radio custom-control-inline">
+												<input type="radio" class="custom-control-input opacity-unset" id="customRadio6" name="example" value="customEx">
+												<label class="custom-control-label" for="customRadio6">Never</label>
+											</div>
+										</div>
+									</div>
+								<div class="row mar-bot-min">
+									<div class="col-md-2">
+										<div class="form-check">
+											<div class="custom-control custom-radio custom-control-inline">
+												<input type="radio" class="custom-control-input opacity-unset" id="customRadio7" name="example" value="customEx">
+												<label class="custom-control-label" for="customRadio7">On</label>
+											</div>
+											
+										</div>
+									</div>
+									<div class="col-md-5">
+											<div class="input-over-pop-sec ">
+										<input id="repeatweek-date" type="date" class="custom-input-set form-control iscdatepicker datepicker" placeholder="11 Dec 2019" required="">
+										
+										</div>
+									</div>
+								</div>
+									
+								<div class="row mar-bot-min">
+									<div class="col-md-2">
+										<div class="form-check">
+											<div class="custom-control custom-radio custom-control-inline">
+												<input type="radio" class="custom-control-input opacity-unset" id="customRadio8" name="example" value="customEx">
+												<label class="custom-control-label" for="customRadio8">After</label>
+											</div>
+											
+										</div>
+									</div>
+									<div class="col-md-5">
+										<select class="form-control custom-icon">
+										<option>1</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3 </option>
+									</select>
+									</div>
+									<div class="col-md-5">
+										<label>Occurrence
+										
+										</label>
+									</div>
+									
+									
+								</div>
+								
+								</div>
+							
+								
+								
+							</div>
+						</div> -->
+
+						<!-- <div id="every_month_sec" style="display: none;">
+
+							<div class="row clearfix">
+								<div class="col-md-12 mat-top-min rrule-monthly">
+									<label>Repeats On
+										
+									</label>
+									<div class="">
+										<div class="form-check">
+											<div class="custom-control custom-radio custom-control-inline">
+												<input type="radio" name="rruleMonthlyType" value="2" class="custom-control-input opacity-unset"  name="example" value="customEx">
+												<label class="custom-control-label" for="customRadio9">Monthly on the third Tuesday</label>
+											</div>
+											
+										</div>
+									</div>
+									<div class="">
+										<div class="form-check">
+											<div class="custom-control custom-radio custom-control-inline">
+												<input type="radio" name="rruleMonthlyType" value="1" class="custom-control-input opacity-unset" name="example" value="customEx">
+												<label class="custom-control-label" for="customRadio10">Monthly on day 18</label>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row clearfix">
+								<div class="col-md-12 mat-top-min">
+								<label>Ends
+										
+									</label>
+								</div>	
+								
+								<div class="col-md-12 mar-bot-min">
+									<div class="mar-bot-min">
+									<div class="form-check">
+											
+											<div class="custom-control custom-radio custom-control-inline">
+												<input type="radio" class="custom-control-input opacity-unset" id="customRadio11" name="example" value="customEx">
+												<label class="custom-control-label" for="customRadio11">Never</label>
+											</div>
+										</div>
+									</div>
+								<div class="row mar-bot-min">
+									<div class="col-md-2">
+										<div class="form-check">
+											<div class="custom-control custom-radio custom-control-inline">
+												<input type="radio" class="custom-control-input opacity-unset" id="customRadio12" name="example" value="customEx">
+												<label class="custom-control-label" for="customRadio12">On</label>
+											</div>
+											
+										</div>
+									</div>
+									<div class="col-md-5">
+											<div class="input-over-pop-sec ">
+										<input id="repeatmonth-date" type="date" class="custom-input-set form-control iscdatepicker datepicker" placeholder="11 Dec 2019" required="">
+										
+										</div>
+									</div>
+								</div>
+									
+								<div class="row mar-bot-min">
+									<div class="col-md-2">
+										<div class="form-check">
+											<div class="custom-control custom-radio custom-control-inline">
+												<input type="radio" class="custom-control-input opacity-unset" id="customRadio13" name="example" value="customEx">
+												<label class="custom-control-label" for="customRadio13">After</label>
+											</div>
+											
+										</div>
+									</div>
+									<div class="col-md-5">
+										<select class="form-control custom-icon">
+										<option>1</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3 </option>
+									</select>
+									</div>
+									<div class="col-md-5">
+										<label>Occurrence
+										
+										</label>
+									</div>
+									
+									
+								</div>
+								
+								</div>
+							
+								
+								
+							</div>
+						</div> -->
+						
+						<!-- <div id="every_year_sec" style="display: none;">
+
+
+							<div class="row clearfix">
+								<div class="col-md-12 mat-top-min">
+								<label>Ends
+										
+									</label>
+								</div>	
+								
+								<div class="col-md-12 mar-bot-min">
+								<div class="mar-bot-min">
+									<div class="form-check">
+											
+											<div class="custom-control custom-radio custom-control-inline">
+												<input type="radio" class="custom-control-input opacity-unset" id="customRadio14" name="example" value="customEx">
+												<label class="custom-control-label" for="customRadio14">Never</label>
+											</div>
+										</div>
+									</div>
+								<div class="row mar-bot-min">
+									<div class="col-md-2">
+										<div class="form-check">
+											<div class="custom-control custom-radio custom-control-inline">
+												<input type="radio" class="custom-control-input opacity-unset" id="customRadio15" name="example" value="customEx">
+												<label class="custom-control-label" for="customRadio15">On</label>
+											</div>
+											
+										</div>
+									</div>
+									<div class="col-md-5">
+											<div class="input-over-pop-sec ">
+										<input type="text" name="" class="custom-input-set form-control iscdatepicker datepicker" placeholder="11 Dec 2019" required="">
+										<img class="calendericon" src="images/pop/calendar.svg" >
+										</div>
+									</div>
+								</div>
+									
+								<div class="row mar-bot-min">
+									<div class="col-md-2">
+										<div class="form-check">
+											<div class="custom-control custom-radio custom-control-inline">
+												<input type="radio" class="custom-control-input opacity-unset" id="customRadio16" name="example" value="customEx">
+												<label class="custom-control-label" for="customRadio16">After</label>
+											</div>
+											
+										</div>
+									</div>
+									<div class="col-md-5">
+										<select class="form-control custom-icon">
+										<option>1</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3 </option>
+									</select>
+									</div>
+									<div class="col-md-5">
+										<label>Occurrence
+										
+										</label>
+									</div>
+									
+									
+								</div>
+								
+								</div>
+							
+								
+								
+							</div>
+						</div> -->
+					
+						<div class="modal-footer right-side">
+							<div class="float-right">
+								<button type="button" class="btn btn-default back-btn mr-3 back_default" onclick="clearCustomRRule()">Cancel</button>
+								<button type="button" class="btn cont-btn back_default" onclick="saveCustomRRule()">Done</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>      
+		</div>
+	</div>
+
+	<!-- <div class="modal fade" id="myModalTask" role="dialog">
+		<div class="modal-dialog">    
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><img src="images/close.svg"/></button>
+					<h4 class="modal-title" id="taskHeader">New Task</h4>
+				</div>
+				<div class="modal-body pt-4">
+					<div class="row clearfix">
+						<div class="col-md-12 popup-mt">
+								<input type="text" name="" id="taskname_id" placeholder="Task Title" autocomplete="off" maxlength="32" onkeypress="return IsAlphaNumeric(event);"/>
+						</div>
+					</div>
+					<div class="row clearfix">
+						<div class="col-md-12">
+						<div>
+						<input type="email" name="" id="inputassigneeto_name" placeholder="Assignee" onkeyup="TaskCntSt(this.value)"  onkeypress="return IsAlphaNumeric(event);"  maxlength="32" autocomplete="off"/>
+						<ol class="taskLst"></ol>
+						<div class="serch row clearfix style-4">
+								<div class="col-md-12">
+									<ul id="taskContactLst" class="style-4" style="display:none">
+									</ul>
+								</div>
+							</div>	
+						</div>
+						</div>
+					</div>
+					<div class="row clearfix">
+						<div class="col-md-4">
+							<label>Start Date<br>
+								<input id="expand-js-date" type="date" name="" placeholder="12.06.19"/> 
+								
+	 
+							</label>
+						</div>
+						<div class="col-md-4">
+							<label>Due Date<br>
+								<input id="expanddue-js-date" type="date" name="" placeholder="12.06.19"/> 
+							</label>
+						</div>
+						<div class="col-md-4">
+							<label>Days<br>
+								<input id="Total_days" type="text" name="" placeholder="0" autocomplete="off" maxlength=4 onkeypress="return isNumber(event)"/>
+							</label>
+						</div>
+					</div>
+					<div class="row clearfix">
+						<div class="col-md-4">
+							<label>Repeat<br>
+								<select name="repeat" id="repeat_sec">
+									<option value="Repeat none" selected >Repeat none</option>
+									<option value="Every day">Every day</option>
+									
+									<option value="Every week">Every week</option>
+									<option value="Every month">Every month</option>
+									<option value="Every year">Every year</option>	
+								</select>
+							</label>
+						</div>
+						<div class="col-md-4" style="display:none" id="ending_sec">
+							<label><br>
+								<select name="Days" id="repeat_sec_opt1">
+									<option value="forever" selected >Forever</option>
+									<option value="endingafter">Ending After </option>
+									<option value="endingon">Ending ON</option>
+								</select>
+							</label>
+						</div>
+						<div class="col-md-4" style="display:none" id="ending_times">
+							<label id="r_times"><br>
+								<select name="Days" id="repeat_sec_opt2">
+									<option value="1" selected >1 Times</option>
+									<option value="2">2 Times</option>
+									<option value="3">3 Times</option>
+									<option value="4">4 Times</option>
+								</select>
+							</label>
+							<label id="r_date" style="display:none"><br>
+							<input id="rrule_ondate" type="date" name="" placeholder="12.06.19"/>
+							</label> 
+						</div>
+					</div>
+					<div class="row clearfix">
+						<div class="col-md-6">
+							<label>Complete When<br>
+								<select name="Days" id="Days">
+									<option value="100%" selected >100% Done</option>
+									<option value="checkedall">Checked by all assingness</option>
+									<option value="checkedonly">Checked</option>
+								</select>
+							</label>
+						</div>
+						<div class="col-md-6">
+							<label>Section<br>
+								<input type="text" name="" id="Section_id" placeholder="Section"  maxlength=48 autocomplete="off" />
+							</label>
+						</div>
+					</div>
+					<div class="row clearfix">
+						<div class="col-md-12" style="margin-top: 0%;">
+							<label>Description<br>
+								<input type="text" name="" id="Description" placeholder="Description"  maxlength=128 autocomplete="off" />
+							</label>
+						</div>
+					</div>
+					<div class="row clearfix" style="margin: 0px;">
+						<div class="colored">
+						<div class="col-sm-12">
+						<div class="col-md-3 clr-title">
+						<label class="labs">Color</label>
+						</div>
+						<div class="col-md-9 clr-align">
+								
+						<label class="blue">
+									<input type="radio" name ="taskcolor" value="purple">
+									<span class="checkmarks"></span>
+								</label>
+								<label class="blue1">
+									<input type="radio" name ="taskcolor" value="org">
+									<span class="checkmarks"></span>
+								</label>
+								<label class="blue2">
+									<input type="radio" name ="taskcolor" value="pink">
+									<span class="checkmarks"></span>
+								</label>
+								<label class="blue3">
+									<input type="radio" name ="taskcolor" value="blue">
+									<span class="checkmarks"></span>
+								</label>
+								<label class="blue4">
+									<input type="radio" name ="taskcolor" value="dark-blue">
+									<span class="checkmarks"></span>
+								</label>
+								<label class="blue5">
+									<input type="radio" name ="taskcolor" value="green">
+									<span class="checkmarks"></span>
+								</label>
+						</div>
+						
+				</div>
+					
+							
+								
+							
+						</div>
+						
+					</div>
+					
+					<div class="row clearfix attach-file">
+						<div class="col-md-8">
+							<label class="containe tskActive">After saving, Create another task
+								<input type="checkbox" id="anotherTask">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="col-md-4 attcFile">
+							<label class="afiles">
+								<input type="file" name="" placeholder="Attach Files"/><span>Attach Files</span>
+							</label>
+						</div>
+						<div class="col-md-12">
+						<ol class="taskFileLst">
+						</ol>
+					</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<ul class="proceedbtns">
+						<li><button type="button" class="btn btn-default closes" data-dismiss="modal">Cancel</button></li>				
+						
+						<li><button type="button" id="SubmitTask" class="btn btn-default proceed">Post Task</button></li>
+						<li><button type="button" id="SaveTask" class="btn btn-default proceed" style="display:none" >Save Task</button></li>
+					</ul>
+				</div>
+			</div>      
+		</div>
+	</div> -->
+<!-- 
+	<div class="modal fade" id="myModalTask" role="dialog">
+    <div class="modal-dialog">    
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><img src="images/close.svg"/></button>
+				<h4 class="modal-title" id="taskHeader">New Task</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<label>Task Title<br>
+							<input type="text" name="" id="taskname_id" placeholder="Sample Task Title" autocomplete="off" maxlength="32"/>
+						</label>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<label>Assigned To<br>
+							<input type="email" name="" id="inputassigneeto_name" placeholder="jonathansmith@gmail.com" onkeyup="TaskCntSt(this.value)" autocomplete="off"/>
+						</label>
+						
+						<div class="serch row clearfix style-4">
+							<div class="col-md-12">
+								<ul id="taskContactLst" class="style-4" style="display:none">
+								</ul>
+							</div>
+						</div>					
+					<ol class="taskLst"></ol>
+						
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-md-4">
+						<label>Start Date<br>
+							<input id="expand-js-date" type="date" name="" placeholder="12.06.19"/>
+						</label>
+					</div>
+					<div class="col-md-4">
+						<label>Due Date<br>
+							<input id="expanddue-js-date" type="date" name="" placeholder="12.06.19"/>
+						</label>
+					</div>
+					<div class="col-md-4">
+						<label>Days<br>
+							<input id="Total_days" type="text" name="" placeholder="0" autocomplete="off" maxlength=5 onkeypress="return isNumber(event)"/>
+						</label>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-md-4">
+						<label>Repeat<br>
+							<select name="repeat" id="repeat_sec">
+								<option value="Repeat none" selected >Repeat none</option>
+								<option value="Every day">Every day</option>
+								<option value="Every week day">Every week day</option>
+								<option value="Every week">Every week</option>
+								<option value="Every month">Every month</option>
+								<option value="Every year">Every year</option>	
+							</select>
+						</label>
+					</div>
+					<div class="col-md-8">
+						<label>Complete When<br>
+							<select name="Days" id="Days">
+								<option value="100%" selected >100% Done</option>
+								<option value="checkedall">Checked by all assingness</option>
+								<option value="checkedonly">Checked</option>
+							</select>
+						</label>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<label>Section<br>
+							<input type="text" name="" id="Section_id" placeholder="Sample Section"  maxlength=48 autocomplete="off" />
+						</label>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<label>Description<br>
+							<input type="text" name="" id="Description" placeholder="Sample Description"  maxlength=128 autocomplete="off" />
+						</label>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="colored col-md-8">
+						<label class="labs">Color<br>
+							<label class="blue">
+								<input type="radio" name ="taskcolor" value="purple">
+								<span class="checkmarks"></span>
+							</label>
+							<label class="blue1">
+								<input type="radio" name ="taskcolor" value="org">
+								<span class="checkmarks"></span>
+							</label>
+							<label class="blue2">
+								<input type="radio" name ="taskcolor" value="pink">
+								<span class="checkmarks"></span>
+							</label>
+							<label class="blue3">
+								<input type="radio" name ="taskcolor" value="blue">
+								<span class="checkmarks"></span>
+							</label>
+							<label class="blue4">
+								<input type="radio" name ="taskcolor" value="dark-blue">
+								<span class="checkmarks"></span>
+							</label>
+							<label class="blue5">
+								<input type="radio" name ="taskcolor" value="green">
+								<span class="checkmarks"></span>
+							</label>
+						</label>
+					</div>
+					<div class="col-md-4 attcFile">
+						<label class="afiles">Attach<br>
+							<input type="file" name="" placeholder="Attach Files"/><span>Attach Files</span>
+						</label>
+					</div>
+				</div>
+				<div>
+					<ol class="taskFileLst">
+					</ol>
+				</div>
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<label class="containe">After saving, Create another task
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<ul class="proceedbtns">
+					<li><button type="button" class="btn btn-default closes" data-dismiss="modal">Cancel</button></li>				
+					
+					<li><button type="button" id="SubmitTask" class="btn btn-default proceed">Post Task</button></li>
+					<li><button type="button" id="SaveTask" class="btn btn-default proceed" style="display:none" >Save Task</button></li>
+				</ul>
+			</div>
+		</div>      
+    </div>
+</div> -->
+	
+	<!--------------- Starting  Move To Popup  ------------------>
+<div class="modal dashboard" id="myModalnewposttasks" role="dialog">
+    <div class="modal-dialog editors">    
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><img src="images/close.svg"/></button>
+				<h4 class="modal-title">Move to</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<label>Type person or team name</label>
+						<p style="display:none; color:red" id="moveerror">At a time can be move to one user </p>
+						<input class="suggessiontxt" type="text" placeholder="Search" name=""/>
+					</div>
+					<div class="col-md-12 sharePop clearfix">
+						 <ol class="sharePop_ol">
+							<!--<li><img src="images/list-name.png"> mary_ortiz <span><img src="images/close.svg"></span></li>
+							<li><img src="images/list-name.png"> mary_ortiz <span><img src="images/close.svg"></span></li>
+							<li><img src="images/list-name.png"> mary_ortiz <span><img src="images/close.svg"></span></li>
+							<li><img src="images/list-name.png"> mary_ortiz <span><img src="images/close.svg"></span></li>!-->
+						</ol>
+					</div>
+				</div>
+				<div class="serch row clearfix style-4">
+					<div class="col-md-12">
+						<ul class="SuggessionLst">
+							<li>
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img">
+								</div>
+								<div class="name-images123"><p>Mary Ortiz<br><span>mary_ortiz@vectone.com</span></p></div>
+							</li>
+							<li>
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img">
+								</div>
+								<div class="name-images123"><p>Mary Ortiz<br><span>mary_ortiz@vectone.com</span></p></div>
+							</li>
+							<li>
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img">
+								</div>
+								<div class="name-images123"><p>Mary Ortiz<br><span>mary_ortiz@vectone.com</span></p></div>
+							</li>
+							<li>
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img">
+								</div>
+								<div class="name-images123"><p>Mary Ortiz<br><span>mary_ortiz@vectone.com</span></p></div>
+							</li>
+							<li>
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img">
+								</div>
+								<div class="name-images123"><p>Mary Ortiz<br><span>mary_ortiz@vectone.com</span></p></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default closes" data-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-default proceed">Share</button>
+				</div>
+			</div>
+		</div>      
+    </div>
+</div>
+<!--------------- Ending Move To Popup ------------------>
+	
+	
+<div class="modal fade" id="myModaladdnew1" role="dialog">
+    <div class="modal-dialog">    
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><img src="images/close.svg"/></button>
+				<h4 class="modal-title">Edit Task</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<label>Task Title<br>
+							<input type="text" name="" placeholder="Sample Task Title"/>
+						</label>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<label>Assigned To<br>
+							<input type="email" name="" placeholder="jonathansmith@gmail.com"/>
+						</label>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-md-4">
+						<label>Start Date<br>
+							<input type="date" name="" placeholder="12.06.19"/>
+						</label>
+					</div>
+					<div class="col-md-4">
+						<label>Due Date<br>
+							<input type="date" name="" placeholder="12.06.19"/>
+						</label>
+					</div>
+					<div class="col-md-4">
+						<label>Days<br>
+							<input type="text" name="" placeholder="2"/>
+						</label>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-md-4">
+						<label>Repeat<br>
+							<select name="">
+								<option value="">None</option>
+							</select>
+						</label>
+					</div>
+					<div class="col-md-8">
+						<label>Complete When<br>
+							<select name="">
+								<option value="">100% Done</option>
+							</select>
+						</label>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<label>Section<br>
+							<input type="text" name="" placeholder="Sample Section"/>
+						</label>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<label>Description<br>
+							<input type="text" name="" placeholder="Sample Description"/>
+						</label>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="colored col-md-8">
+						<label class="labs">Color<br>
+							<label class="blue">
+								<input type="radio">
+								<span class="checkmarks"></span>
+							</label>
+							<label class="blue1">
+								<input type="radio">
+								<span class="checkmarks"></span>
+							</label>
+							<label class="blue2">
+								<input type="radio">
+								<span class="checkmarks"></span>
+							</label>
+							<label class="blue3">
+								<input type="radio">
+								<span class="checkmarks"></span>
+							</label>
+							<label class="blue4">
+								<input type="radio" checked>
+								<span class="checkmarks"></span>
+							</label>
+							<label class="blue5">
+								<input type="radio">
+								<span class="checkmarks"></span>
+							</label>
+						</label>
+					</div>
+					<div class="col-md-4">
+						<label class="afiles">Attach<br>
+							<input type="file" name="" placeholder="Attach Files"/><span>Attach Files</span>
+						</label>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<label class="containe">After saving, Create another task
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default closes" data-dismiss="modal">Cancel</button>
+				<button type="button" class="btn btn-default proceed">Post Task</button>
+			</div>
+		</div>      
+    </div>
+</div>
+
+
+<!--------------- Starting  Share Status Popup  ------------------>
+<div class="modal" id="sharestatus" role="dialog">
+    <div class="modal-dialog">    
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><img src="images/close.svg"/></button>
+				<h4 class="modal-title">Share Status</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<label>Your Status<br>
+							<div class="result-showm" style="cursor:pointer"><p><img class="statusHdr" src='images/working_remotely.svg'/> <b class="statusMsg">Working remotely</b><span class="icon-arrow-down"></span></p></div>
+						</label>
+					</div>
+				</div>
+				<div class="serch row clearfix" id="shareStatusOpt" style="display:none">
+					<div class="col-md-12">
+						<ul>
+							<li class="statusLst">
+								<div class="name-images">
+									<img src="images/working_remotely.svg" class="list-name-img">
+								</div>
+								<div class="name-images123"><p>Working remotely</p></div>
+							</li>
+							<li class="statusLst">
+								<div class="name-images">
+									<img src="images/travelling.svg" class="list-name-img">
+								</div>
+								<div class="name-images123"><p>Travelling</p></div>
+							</li>
+							<li class="statusLst">
+								<div class="name-images">
+									<img src="images/out-sick.svg" class="list-name-img">
+								</div>
+								<div class="name-images123"><p>Out sick</p></div>
+							</li>
+							<li class="statusLst">
+								<div class="name-images">
+									<img src="images/out_office.svg" class="list-name-img">
+								</div>
+								<div class="name-images123"><p>Out office</p></div>
+							</li>
+							<li class="statusLst">
+								<div class="name-images">
+									<img src="images/on_holiday.svg" class="list-name-img">
+								</div>
+								<div class="name-images123"><p>On holiday</p></div>
+							</li>
+							<li class="statusLst">
+								<div class="name-images">
+									<img src="images/in_meeting.svg" class="list-name-img">
+								</div>
+								<div class="name-images123"><p>In a meeting</p></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default closes" data-dismiss="modal">Cancel</button>
+				<button type="button" class="btn btn-default proceed" onclick=statusApiCalling('set') data-dismiss="modal">Update</button>
+			</div>
+		</div>      
+    </div>
+</div>
+<!--------------- Ending Share Status Popup ------------------>
+
+
+<!--------------- Starting  New Snippet Popup ------------------>
+<div class="modal fade" id="addnewsnippet" role="dialog">
+    <div class="modal-dialog editors"> 
+		<div class="modal-content">
+			<div class="modal-header">
+				<button href="#myModalclosesave" data-toggle="modal" data-dismiss="modal" class="close"><img src="images/close.svg"/></button>
+				<h4 class="modal-title">New/Edit Snippet</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<label>Title<br>
+							<input type="text" name="" placeholder="C++ Code"/>
+						</label>
+					</div>
+				</div>				
+				<div class="row clearfix">
+					<div class="col-md-12">						
+						<label><br>
+							<textarea id="codesample"></textarea>
+						</label>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="col-md-12">						
+						<label>Comments<br>
+							<input type="text" name="" placeholder="Error Code here"/>
+						</label>
+					</div>
+				</div>				
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-default closes" data-toggle="modal" data-dismiss="modal">Cancel</button>
+				<button href="#myModalnewpost" class="btn btn-default proceed" data-toggle="modal" data-dismiss="modal">Post Snippet</button>
+			</div>
+		</div>      
+    </div>
+</div>
+<!--------------- Ending New Snippet Popup ------------------>
+
+
+<!--------------- Starting  Invite New User Popup  ------------------>
+<div class="modal" id="invitenewuser" role="dialog">
+    <div class="modal-dialog">    
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><img src="images/close.svg"/></button>
+				<h4 class="modal-title">Invite New User</h4>
+			</div>
+			<div class="modal-body">
+				<ul class="nav nav-pills">
+					<li class="active inviteHme"><a data-toggle="pill" href="#home">Email</a></li>
+					<li class="inviteLnk"><a data-toggle="pill" href="#menu1">Share a Link</a></li>
+				</ul>
+  
+				<div class="tab-content">
+					<div id="home" class="tab-pane fade in active">
+						<div class="row clearfix">
+							<div class="col-md-10">
+								<label>Email Address<br>
+									<input id="inviteTxt" type="text" name="" placeholder="sample@gmail.com" autocomplete="off"/>
+								</label>
+							</div>
+							<div class="col-md-2"><span class="icon-add-1"><span class="path1"></span><span class="path2"></span></span></div>
+						</div>
+						<div class="adduserslist row clearfix">
+							<div class="col-md-12">
+								<ol class="inviteMember">
+									<li><img src="images/list-name.png"/> mary_ortiz <span><img src="images/close.svg"/></li>
+									<li><img src="images/list-name.png"/> mary_ortiz <span><img src="images/close.svg"/></li>
+									<li><img src="images/list-name.png"/> mary_ortiz <span><img src="images/close.svg"/></li>
+									<li><img src="images/list-name.png"/> mary_ortiz <span><img src="images/close.svg"/></li>
+								</ol>
+							</div>
+						</div>
+					</div>
+					<div id="menu1" class="tab-pane fade">
+						<div class="row clearfix">
+							<div class="col-md-1"><span class='icon-Link'></span></div>
+							<div class="col-md-8">
+								<label>Link<br>
+									 <input type="text" id="inviteLink" name="" placeholder="https://www.sample.com" readonly/>
+								</label>
+							</div>
+							<div id="inviteCpy" class="col-md-3">Copy Link</div>
+						</div>
+					</div>
+				</div>
+						
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default closes" data-dismiss="modal">Cancel</button>
+				<button id="inviteSend" type="button" class="btn btn-default proceed">Invite User</button>
+			</div>
+		</div>      
+    </div>
+</div>
+<!--------------- Ending Invite New User Popup ------------------>
+
+<!--------------- Starting New Message Popup ------------------>
+<div class="modal" id="newmessageWin" role="dialog">
+    <div class="modal-dialog">    
+		<!-- Modal content-->
+		<div class="modal-content add-admins">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><img src="images/close.svg"/></button>
+				<h4 class="modal-title">New Message</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<label>Enter name or email address<br>
+							<!--<input type="email" name="" id="newMsgTxt" placeholder="Jonathan_smith@gmail.com"/>!-->
+							<input type="text" name="" id="newMsgTxt" onkeyup="NewMsgContact(this.value)" placeholder="sample@gmail.com" autocomplete="off"/>
+						</label>
+					</div>
+				</div>
+				<div class="modal-body myModaladdnewteamevents style-4" id="msgContactUrlSt" style="overflow-y: auto; max-height: 200px;display:none"></div>
+				<p class="recentPopupErr" style="display:none; color:red">Please select any one contact</p>
+				<p>Conversations with one or more specific people are great for informal chat. For projects, departments, or even topic-based discussion, you should <a href="#" onclick="createTeamfromMsgPopup()">create a team</a> instead.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default closes" data-dismiss="modal">Cancel</button>
+				<button type="button" id="newMsgSubmit" class="btn btn-default proceed">Continue</button>
+			</div>
+		</div>      
+    </div>
+</div>
+
+<!--------------- Ending New Message Popup ------------------>
+
+<!--------------- Starting New Message Popup ------------------>
+<div class="modal" id="searchPop" role="dialog">
+    <div class="modal-dialog">    
+		<!-- Modal content-->
+		<div class="modal-content add-admins">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><img src="images/close.svg"/></button>
+				<h4 class="modal-title">Results Posted By</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<label>Enter name or email address<br>
+							<!--<input type="email" name="" id="newMsgTxt" placeholder="Jonathan_smith@gmail.com"/>!-->
+							<input type="text" name="" id="srchcontactTxt" onkeyup="srchContact(this.value)" placeholder="sample@gmail.com" autocomplete="off"/>
+						</label>
+					</div>
+				</div>
+				<div class="modal-body myModaladdnewteamevents style-4" id="srchContactUrlSt" style="overflow-y: auto; max-height: 200px;display:none"></div>
+				<p class="recentPopupErr" style="display:none; color:red">Please select any one contact</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default closes" data-dismiss="modal">Cancel</button>
+				<button type="button" class="btn btn-default proceed">Continue</button>
+			</div>
+		</div>      
+    </div>
+</div>
+
+<!--------------- Ending New Message Popup ------------------>
+
+
+<!--------------- Starting Emergency Popup ------------------>
+
+<div class="modal" id="EmergencyAdd" role="dialog">
+	<div class="modal-dialog editors">    
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close"><img src="images/close.svg"/></button>
+				<h4 class="modal-title">Register Address for Emergency Calls</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row clearfix">
+					<div class="col-md-6">
+						<label>Customer Name<br>
+							<input id="emer_cust_Name" name="filename" type="text" placeholder="Name" autocomplete="off" maxlength="32">		
+						</label>
+					</div>
+					<div class="col-md-6">
+						<label>Address<br>
+							<input id="emer_cust_Add1" name="filename" type="text" placeholder="Address" autocomplete="off" maxlength="150">		
+						</label>
+					</div>
+					<div class="col-md-6">
+						<label>Address2<br>
+							<input id="emer_cust_Add2" name="filename" type="text" placeholder="Address1" autocomplete="off" maxlength="150">		
+						</label>
+					</div>
+					<div class="col-md-6">
+						<label>City<br>
+							<input id="emer_cust_City" name="filename" type="text" placeholder="City" autocomplete="off" maxlength="64">		
+						</label>
+					</div>
+					<div class="col-md-6">
+						<label>Country<br>
+							<input id="emer_cust_Country" name="filename" type="text" placeholder="Country" autocomplete="off" maxlength="64">		
+						</label>
+					</div>
+					<div class="col-md-6">
+						<label>Poscode<br>
+							<input id="emer_cust_Postcode" name="filename" type="text" placeholder="Poscode" autocomplete="off" maxlength="64">		
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default closes">CANCEL</button>
+				<button type="button" class="btn btn-default proceed" id="emergencystore" data-dismiss="modal">CONFIRM</button>
+			</div>
+		</div>      
+	</div>
+</div>
+<!--------------- Ending Emergency Popup ------------------>
+
+<!--------------- Starting edit filename Popup ------------------>
+
+<div class="modal" id="editFileName" role="dialog">
+		<div class="modal-dialog editors">    
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><img src="images/close.svg"/></button>
+					<h4 class="modal-title">Edit File</h4>
+				</div>
+				<div class="modal-body">
+					<div class="row clearfix">
+							<input id="compose_file_filename" name="filename" type="text" placeholder="Filename" autocomplete="off" maxlength="28">
+					</div>
+					
+				</div>
+				<div class="modal-footer">
+				
+					<button type="button" class="btn btn-default closes" data-dismiss="modal">Discard</button>
+					<button type="button" class="btn btn-default proceed" data-dismiss="modal">Save</button>
+				</div>
+			</div>      
+		</div>
+	</div>
+<!--------------- Ending edit filename Popup ------------------>
+
+<!--------------- Starting viewfile Popup ------------------>
+
+<div class="modal" id="viewAttachFile" role="dialog">
+		<div class="modal-dialog editors">    
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><img src="images/close.svg"/></button>
+					<h4 class="modal-title">View File</h4>
+				</div>
+				<div class="modal-body">
+					<div class="row clearfix">
+							<img class="viewAttach" src="images/nopath.png">
+					</div>
+					
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default closes" data-dismiss="modal">Ok</button>
+				</div>
+			</div>      
+		</div>
+	</div>
+<!--------------- Ending eviewfile Popup ------------------>
+
+
+<!--------------- DailPad	------------------------>
+<!--------------- DailPad	------------------------>
+<div class="modal fade in" id="phoneDailpad" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content my-content">	
+			<!--<div class="my-key">
+				<div class="col-md-12 my-part">
+					<p class="my-keyfont"><span class="icon-Dialpad"></span><b>Keypad</b> </p>
+				</div>
+			</div>!-->
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><img src="images/close.svg"></button>
+				<h4 class="modal-title">Keypad</h4>
+			</div>
+			<div class="my-key">
+				<div class="col-md-12 my-part">
+					<div class="dial-pad">
+						<input type="text" name="number" class="numbersections-all" id="dialpadPhone" onkeydown="IgnoreSpecialCharacters(this.value)" onkeyup="dailpadtext_Ind(this.value)" onkeypress="return blockSpecialChar(event)" placeholder="Type a name or number" maxlength=18 autocomplete="off"/><span><img src="images/p-dialpad.png" class="dial-pad-icon" style="cursor:pointer"></span>
+					</div>
+					<div class="dailpadtextdiv_ind style-4" style="display: none;">
+					</div>
+				</div>
+			</div>
+			<div class="my-dialnum">
+				<p>From:
+					<select id="dailpadlistSub_ind">
+						<option>+442034440424</option>
+					</select>
+				</p>
+				<div class="row">
+					<div class="col-sm-4 DnumFocus" bid="1" onclick=dailpadNum("1")><h1>1<br><span><img src="images/no1.svg"/></span></h1></div>
+					<div class="col-sm-4 DnumFocus" bid="2" onclick=dailpadNum("2")><h1>2<br><span>ABC</span></h1></div>
+					<div class="col-sm-4 DnumFocus" bid="3" onclick=dailpadNum("3")><h1>3<br><span>DEF</span></h1></div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4 DnumFocus" bid="4" onclick=dailpadNum("4")><h1>4<br><span>GHI</span></h1></div>
+					<div class="col-sm-4 DnumFocus" bid="5" onclick=dailpadNum("5")><h1>5<br><span>JKL</span></h1></div>
+					<div class="col-sm-4 DnumFocus" bid="6" onclick=dailpadNum("6")><h1>6<br><span>MNO</span></h1></div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4 DnumFocus" bid="7" onclick=dailpadNum("7")><h1>7<br><span>PQRS</span></h1></div>
+					<div class="col-sm-4 DnumFocus" bid="8" onclick=dailpadNum("8")><h1>8<br><span>TUV</span></h1></div>
+					<div class="col-sm-4 DnumFocus" bid="9" onclick=dailpadNum("9")><h1>9<br><span>WXYZ</span></h1></div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4 DnumFocus" onclick=dailpadNum("*")><h1 class="star-icon">*<br><span></span></h1></div>
+					<div class="col-sm-4 DnumFocus" id="phonePLongPress"><h1>0<br></h1><span class="dial-plus">+</span></div>
+					<div class="col-sm-4 DnumFocus" onclick=dailpadNum("#")><h1 class="num-sign-icon">#<br><span></span></h1></div>
+				</div>	
+				<div class="col-md-12 col-sm-12 col-xs-12 my-dial1btns">
+					<div class="col-sm-4"></div>
+					<div class="col-sm-4"><span class="icon-calling-1 img-responsive center-block" style="cursor: pointer;"><span class="path1"></span><span class="path2"></span></span></div>
+					<div class="col-sm-4"><h5 class="hidepad"><p id="phoneHide"> Hide </p></h5></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!---------------			 End DailPad ---------------->
+
+
+<!---------		incomming call ---->
+<div id="incoming-call" class="modal fade in" style="display: block; padding-left: 17px;">
+    <div class="vertical-alignment-helper">
+		<div class="modal-dialog vertical-align-center">
+			
+			<div class="modal-content">
+				<div class="incoming-calls">
+					<div class="modal-header">
+						<div class="first-screen">
+							<div class="icon-group">
+								<i><a class="close1" data-dismiss="modal" aria-hidden="true"><img src="images/close_btn.svg"></a></i>
+								<i><img src="images/minimize_btn.svg"></i>
+								<i><a href="#"><img src="images/maximize_btn.svg"></a></i>
+							</div>
+							<h4 class="modal-title">Incoming Call</h4>
+						</div>
+						<div class="second-screen">
+							<div class="icon-group">
+								<span class="icon-Left-arrow"></span>
+							</div>
+							<h4 class="modal-title">Forward call to</h4>
+						</div>
+						<div class="third-screen">
+							<div class="icon-group">
+								<span class="icon-Left-arrow"></span>
+							</div>
+							<h4 class="modal-title">Reply</h4>
+						</div>
+					</div>
+					<div class="modal-body">
+						<div class="first-screen">
+							<div class="text-center photo">
+								<img id="InCcallerImg" src="images/modal-photo.png">
+							</div>
+							<h1 id="InCallerName"></h1>
+							<h2 id="InNumber"></h2>
+						</div>
+						<div class="second-screen">
+							<div class="numberbox row clearfix">
+								<input type="text" name="number" class="numbersections" id="dialpadtype" placeholder="Type a Name or Number">
+							</div>
+							<div class="dialpad-section1">
+								<p>From: 8939326827 <span class="icon-arrow-down"></span></p>
+								<div class="row">
+									<div class="customer-names">
+										<img src="images/customer-img.png" class="customer-img">
+										<img src="images/green.png" class="dotactive">
+									</div>
+									<div class="customer-images">Ronnie Diaz<br><span>Ext. 302</span></div>
+								</div>
+								<div class="row">
+									<div class="customer-names">
+										<img src="images/customer-img.png" class="customer-img">
+										<img src="images/green.png" class="dotactive">
+									</div>
+									<div class="customer-images">Ronnie Diaz<br><span>Ext. 302</span></div>
+								</div>
+								<div class="row">
+									<div class="customer-names">
+										<img src="images/customer-img.png" class="customer-img">
+										<img src="images/green.png" class="dotactive">
+									</div>
+									<div class="customer-images">Ronnie Diaz<br><span>Ext. 302</span></div>
+								</div>
+								<div class="row">
+									<div class="customer-names">
+										<img src="images/customer-img.png" class="customer-img">
+										<img src="images/green.png" class="dotactive">
+									</div>
+									<div class="customer-images">Ronnie Diaz<br><span>Ext. 302</span></div>
+								</div>
+								<div class="row">
+									<div class="customer-names">
+										<img src="images/customer-img.png" class="customer-img">
+										<img src="images/green.png" class="dotactive">
+									</div>
+									<div class="customer-images">Ronnie Diaz<br><span>Ext. 302</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="third-screen">
+							<div class="dialpad-section1">
+								<div class="row">
+									<div class="customer-names">
+										<img src="images/customer-img.png" class="customer-img">
+									</div>
+									<div class="customer-images">Ronnie Diaz<br><span>302</span></div>
+								</div>
+							</div>
+							<ul>
+								<li><span class="icon-automobile"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span></span> Out of office</li>
+								<li><span class="icon-clock"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span></span> In a meeting</li>
+								<li><span class="icon-mask"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span></span> Out sick</li>
+								<li><span class="icon-house"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span></span> Working remotely</li>
+								<li><span class="icon-cocktail"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span></span> On holiday</li>
+								<li><span class="icon-airplane"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span></span> Traveling</li>
+							</ul>
+						</div>
+					</div>
+					<div class="modal-footer"> 
+						<ul class="icons-listing">
+							<li class="select-one">
+								<span class="icon-voicemail"><span class="path1"></span><span class="path2"></span></span>
+								<h6>Call End</h6>
+							</li>
+							<li class="select-two">
+								<span class="icon-forward"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span></span>
+								<h6>Forward</h6>
+							</li>
+							<li class="select-three">
+								<span class="icon-Chat"></span>
+								<h6>Reply</h6>
+							</li>
+							<li class="select-four">
+								<span class="icon-calling-1"><span class="path1"></span><span class="path2"></span></span>
+								<h6>Answer</h6>
+							</li>
+						</ul>
+					</div>  
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<!---------		incomming call  end 	---->
+
+<script src="js/fjs.js"></script><script> 
+$(document).ready(function(){
+	$('.tablerespons.col-md-12').mousewheel(function(e, delta) {
+		this.scrollLeft -= (delta * 60);
+		e.preventDefault();
+	});
+	$("img.list-name-img.last-childs").click(function(){	$("ul.member-list.keys li img").toggle();	});
+	$(".dashboard-home .col-sm-3 h4 span").click(function(){	$("ul.member-list.keys li img").toggle();	});
+	$(".closing").click(function(){	$(".dashboard-home .col-sm-2").hide();	});
+	$(".chat-info").click(function(){
+		$(".dashboard-home .col-sm-3").hide();
+		$(".chat-info123").show();
+		$(".chat-info").hide();
+		$(".dashboard-home .col-sm-9").css("width","77%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+	});
+	$(".chat-info123").click(function(){
+		$(".dashboard-home .col-sm-3").show();
+		$(".chat-info123").hide();
+		$(".chat-info").show();
+		$(".dashboard-home .col-sm-9").css("width","56%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+		$(".phone-sections.row.clearfix").css("width","100%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+		$(".ph-search").css("width","100%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+		$(".ph-search select").css("width","auto","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+	});  
+	$("label.containe").click(function(){
+		/* $(".dashboard-home .col-sm-3").show();
+		$(".chat-info123").hide();
+		$(".chat-info").show();
+		$(".dashboard-home .col-sm-9").css("width","56%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+		$(".phone-sections.row.clearfix").css("width","100%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+		$(".ph-search").css("width","100%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+		$(".ph-search select").css("width","auto","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s"); */		
+	});    
+});
+
+$(document).ready(function() {
+    $('#example').DataTable({
+        "order": [[ 3, "desc" ]]
+    });
+});
+$("img.m-menus").click(function(){
+    $(".dashboard-home .col-sm-2").show();
+	$(".dashboard-home .col-sm-2").css("transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+	//$(".start-chats").css("width","56%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+});
+</script>
+</body>
+</html>

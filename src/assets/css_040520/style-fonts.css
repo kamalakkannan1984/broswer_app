@@ -1,0 +1,226 @@
+@font-face {
+  font-family: 'ur_desktop_app';
+  src:  url('../fonts/ur_desktop_app.eot?p40x0n');
+  src:  url('../fonts/ur_desktop_app.eot?p40x0n#iefix') format('embedded-opentype'),
+    url('../fonts/ur_desktop_app.ttf?p40x0n') format('truetype'),
+    url('../fonts/ur_desktop_app.woff?p40x0n') format('woff'),
+    url('../fonts/ur_desktop_app.svg?p40x0n#ur_desktop_app') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon_"], [class*=" icon_"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'ur_desktop_app' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon_chat:before {
+  content: "\e100";
+}
+.icon_call:before {
+  content: "\e101";
+}
+.icon_contacts:before {
+  content: "\e102";
+}
+.icon_meeting:before {
+  content: "\e103";
+}
+.icon_filter:before {
+  content: "\e104";
+}
+.icon_favourite_active:before {
+  content: "\e105";
+}
+.icon_favourite_inactive:before {
+  content: "\e106";
+}
+.icon_like:before {
+  content: "\e107";
+}
+.icon_pin:before {
+  content: "\e108";
+}
+.icon_bookmark:before {
+  content: "\e109";
+}
+.icon_attachment:before {
+  content: "\e10a";
+}
+.icon_record_audio:before {
+  content: "\e10b";
+}
+.icon_more_horizondal:before {
+  content: "\e10c";
+}
+.icon_smile:before {
+  content: "\e10d";
+}
+.icon_search:before {
+  content: "\e10e";
+}
+.icon_add_new:before {
+  content: "\e10f";
+}
+.icon_call1:before {
+  content: "\e110";
+}
+.icon_team_call:before {
+  content: "\e111";
+}
+.icon_video_call:before {
+  content: "\e112";
+}
+.icon_more_vertical:before {
+  content: "\e113";
+}
+.icon_double_tick:before {
+  content: "\e114";
+}
+.icon_single_tick:before {
+  content: "\e115";
+}
+.icon_task_inactive:before {
+  content: "\e116";
+}
+.icon_task_active:before {
+  content: "\e117";
+}
+.icon_event_inactive:before {
+  content: "\e118";
+}
+.icon_event_active:before {
+  content: "\e119";
+}
+.icon_bookmark_inactive:before {
+  content: "\e11a";
+}
+.icon_bookmark_active:before {
+  content: "\e11b";
+}
+.icon_files_inactive:before {
+  content: "\e11c";
+}
+.icon_files_active:before {
+  content: "\e11d";
+}
+.icon_pin_inactive:before {
+  content: "\e11e";
+}
+.icon_pin_active:before {
+  content: "\e11f";
+}
+.icon_notes_inactive:before {
+  content: "\e120";
+}
+.icon_notes_active:before {
+  content: "\e121";
+}
+.icon_link_inactive:before {
+  content: "\e122";
+}
+.icon_at_mention:before {
+  content: "\e123";
+}
+.icon_me_conversation_inactive:before {
+  content: "\e124";
+}
+.icon_me_conversation_active:before {
+  content: "\e125";
+}
+.icon_close:before {
+  content: "\e126";
+}
+.icon_arrow_right:before {
+  content: "\e127";
+}
+.icon_arrow_left:before {
+  content: "\e128";
+}
+.icon_arrow_down:before {
+  content: "\e129";
+}
+.icon_arrow_up:before {
+  content: "\e12a";
+}
+.icon_email:before {
+  content: "\e12b";
+}
+.icon_edit:before {
+  content: "\e12c";
+}
+.icon_circle_unselected:before {
+  content: "\e12d";
+}
+.icon_circle_selected:before {
+  content: "\e12e";
+}
+.icon_logout:before {
+  content: "\e12f";
+}
+.icon_archive_team:before {
+  content: "\e130";
+}
+.icon_leave_team:before {
+  content: "\e131";
+}
+.icon_delete_team:before {
+  content: "\e132";
+}
+.icon_profile:before {
+  content: "\e133";
+}
+.icon_settings:before {
+  content: "\e134";
+}
+.icon_help:before {
+  content: "\e135";
+}
+.icon_info:before {
+  content: "\e136";
+}
+.icon_camera:before {
+  content: "\e137";
+}
+.icon_delete:before {
+  content: "\e138";
+}
+.icon_user_details:before {
+  content: "\e139";
+}
+.icon_change_password:before {
+  content: "\e13a";
+}
+.icon_preferences:before {
+  content: "\e13b";
+}
+.icon_back:before {
+  content: "\e13c";
+}
+.icon_email1:before {
+  content: "\e13d";
+}
+.icon_location:before {
+  content: "\e13e";
+}
+.icon_audio:before {
+  content: "\e13f";
+}
+.icon_show_password:before {
+  content: "\e140";
+}
+.icon_hide_password:before {
+  content: "\e141";
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+  <g id="working_in_home" transform="translate(1633 323)">
+    <rect id="Rectangle_1871" data-name="Rectangle 1871" width="22" height="22" transform="translate(-1633 -323)" fill="#fff" opacity="0"/>
+    <g id="house" transform="translate(-1629.999 -321)">
+      <rect id="Rectangle_659" data-name="Rectangle 659" width="1.932" height="3.373" transform="translate(12.612 2.424)" fill="#f05540"/>
+      <rect id="Rectangle_660" data-name="Rectangle 660" width="3.408" height="1.827" transform="translate(11.874 0.703)" fill="#f3705a"/>
+      <path id="Path_2455" data-name="Path 2455" d="M44.8,74.086v7.764H58.571V74.086L51.686,67.2h0C49.016,69.905,47.505,71.416,44.8,74.086Z" transform="translate(-43.325 -64.987)" fill="#ffd15c"/>
+      <path id="Path_2456" data-name="Path 2456" d="M58.606,74.086,51.721,67.2c-1.37,1.335-2.424,2.389-3.478,3.443L44.8,74.086v1.581l6.886-6.886,6.886,6.886v.211h0V74.086h.035Z" transform="translate(-43.325 -64.987)" fill="#f7b64c"/>
+      <rect id="Rectangle_661" data-name="Rectangle 661" width="5.41" height="4.743" transform="translate(5.461 10.715)" fill="#944851"/>
+      <path id="Path_2458" data-name="Path 2458" d="M16.547,7.658,9.2.316a1.146,1.146,0,0,0-1.581,0L.316,7.658a1.146,1.146,0,0,0,0,1.581,1.146,1.146,0,0,0,1.581,0L8.431,2.705l6.534,6.534a1.118,1.118,0,0,0,1.581-1.581Z" transform="translate(0 0)" fill="#f3705a"/>
+    </g>
+  </g>
+</svg>

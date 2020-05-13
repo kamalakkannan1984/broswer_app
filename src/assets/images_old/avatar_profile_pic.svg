@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+  <g id="avatar_profile_pic" transform="translate(-75 -65)">
+    <circle id="Ellipse_1931" data-name="Ellipse 1931" cx="22.5" cy="22.5" r="22.5" transform="translate(75 65)" fill="#eff4f7"/>
+    <g id="Group_1449" data-name="Group 1449" transform="translate(-46 -144.551)">
+      <circle id="Ellipse_216" data-name="Ellipse 216" cx="5.261" cy="5.261" r="5.261" transform="translate(138.739 220.551)" fill="#acbed5"/>
+      <path id="Rectangle_1318" data-name="Rectangle 1318" d="M9.9,0H12.1A9.9,9.9,0,0,1,22,9.9v0a.619.619,0,0,1-.619.619H.619A.619.619,0,0,1,0,9.9v0A9.9,9.9,0,0,1,9.9,0Z" transform="translate(133 232.986)" fill="#acbed5"/>
+    </g>
+  </g>
+</svg>

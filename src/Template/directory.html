@@ -1,0 +1,612 @@
+<!DOCTYPE html> 
+<html>
+<title>UnifiedRing</title>
+<head>
+<meta name="keyword" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="css/styles-app.css"/>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div class="dashboard-home container-fluid"> 
+	<div class="container">
+		<div class="row clearfix">			
+			<div class="col-sm-1 first-columns">
+				<ul class="icons-top">
+					
+					<li><a href="#"><span class="icon-Dashboard"></span>Dashboard</a></li>
+					<li><a href="#"><span class="icon-Phone"></span>Phone</a></li>
+					<li><a href="#"><span class="icon-Bookmark"></span>Bookmarks</a></li>
+					<li><a href="#"><span class="icon-Directory"></span>Directory</a></li>
+				</ul>
+				<ul class="icons-bottom">
+					<li><a href="#"><span class="icon-Task"></span>Task</a></li>
+					<li><a href="#"><span class="icon-Calendar-date"></span>Events</a></li>
+					<li><a href="#"><span class="icon-Notes"></span>Notes</a></li>
+					<li><a href="#"><span class="icon-Folder"></span>Files</a></li>
+					<li><a href="#"><span class="icon-Link"></span>Link</a></li>
+				</ul>
+			</div>
+					
+			<div class="col-sm-2 second-columns">
+				<div class="row clearfix">			
+					<div class="customer-header col-md-12">						
+						<img src="images/close.svg" class="closing"/> 
+						<div class="customer-header-sect">
+							<div class="dropdown customer-header-sect-img">
+								<img src="images/customer-img.png" class="customer-img" class="dropdown-toggle" data-toggle="dropdown"/>
+								<img src="images/green-active.svg" class="dotactive"/>
+								<ul class="dropdown-menu">
+									<li class="dropdown dropdown-submenu"><a href="#"><img src="images/green-active.svg"/> Available <span class="icon-arrow-right submenu-img"></span></a>
+										<ul class="dropdown-menus">
+											<li><a href="#"><img src="images/green-active.svg"/> Available</a></li>
+											<li><a href="#"><img src="images/yellow.png"/> Invisible</a></li>
+											<li><a href="#"><img src="images/red.png"/> Do not Disturb</a></li>
+											<li><a href="#"><img src="images/grey.png"/> Busy</a></li>
+										</ul>
+									</li>												
+									</li>
+									<li><a href="#">Share Status</a></li>
+									<li><a href="#">Edit profile</a></li>
+									<li><a href="#">Preferences</a></li>
+									<li><a href="#">Help</a></li>
+									<li><a href="#">Keyboard Shortcuts</a></li>
+									<li class="dropdown dropdown-submenu"><a href="#">About <span class="icon-arrow-right submenu-img"></span></a>		
+										<ul class="dropdown-menus">
+											<li><a href="#"><img src="images/green-active.svg"/> Available</a></li>
+											<li><a href="#"><img src="images/yellow.png"/> Invisible</a></li>
+											<li><a href="#"><img src="images/red.png"/> Do not Disturb</a></li>
+											<li><a href="#"><img src="images/grey.png"/> Busy</a></li>
+										</ul>
+									</li>
+									<li><a href="#">What's New</a></li>
+									<li><a href="#">Download Apps</a></li>
+									<li><a href="#">@Mentions</a></li>
+									<li><a href="#">Signout</a></li>
+								</ul>							
+							</div>
+							<div class="customer-header-sect-name">
+								<h3>  </h3>
+							</div>
+							<div class="customer-header-sect-imgplus dropdown"><span class="icon-Add dropdown-toggle" data-toggle="dropdown"></span>
+								<ul class="dropdown-menu">
+									<li><a href="#"><span class="icon-Phone"></span> Start phone Call</a></li>
+									<li><a href="#"><span class="icon-Video"></span> Start Video Meeting</a></li>
+									<li><a href="#"><span class="icon-Chat"></span> Send New Message</a></li>
+									<li><a href="#"><span class="icon-Contacts"></span> Create Team</a></li>
+									<li><a href="#"><span class="icon-mail-read"></span> Invite New User</a></li>
+								</ul>							
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="searchbox row clearfix">			
+					<div class="col-md-12">
+						<input type="text" name="search" placeholder="Search"/>
+					</div>
+				</div>
+				<div class="chat-left row clearfix">			
+					<div class="col-md-12">
+						<h4><span class="icon-Favourites list-name-icons"></span> Favourites</h4>
+						<ul class="style-4">
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+						</ul>
+					</div>
+				</div>
+				<hr>
+				<div class="chat-left row clearfix">			
+					<div class="col-md-12">
+						<h4><span class="icon-Contacts list-name-icons"></span> Contacts
+							<a href="#myModaladdnewmessage" class="tooltips"><span class="icon-Add-doted dropdown-toggle" data-toggle="modal" data-target="#myModaladdnewmessage"></span>
+								<p class="pophover">New Message</p>
+							</a>
+						</h4>
+						<ul class="style-4">
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+						</ul>
+					</div>
+				</div>
+				<hr>
+				<div class="chat-left row clearfix">			
+					<div class="col-md-12">
+						<h4><span class="icon-Teams list-name-icons"></span> Teams
+							<a href="#myModaladdnewmessage" class="tooltips1"><span class="icon-Add-doted dropdown-toggle" data-toggle="modal" data-target="#myModaladdnewmessage"></span>
+								<p class="pophover1">Create Team</p>
+								</ul>
+							</a>
+						</h4>
+						<ul class="style-4">
+							<li class="active"><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+							<li><a href="#">
+								<div class="name-images">
+									<img src="images/list-name.png" class="list-name-img"/>
+									<img src="images/green-active.svg" class="dotactives"/>
+								</div>
+								<span>Ronnie Diaz</span>
+							</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			
+			
+			
+			<div class="col-sm-9 third-columns"><div class="fixedscroll directoryWin style-4">
+				<div class="chat-info123" title="Expand">
+					<div class="toggle-info">
+						<a class="toggle-icon" ><span class="icon-arrow-left"></span></a>
+					</div>
+				</div>
+				<img src="images/m-3dot.png" class="left-menu-section"/>
+				
+				<div class="phds row clearfix">
+					<div class="col-sm-5">
+						<img src="images/menu-black.svg" class="m-menus"/><h3>Contact</h3>
+					</div>
+				</div>
+				<div class="ph-search row clearfix">
+					<div class="col-sm-4">
+						<input type="text" name="search" id="txtfilter" onkeyup="FilterContact(this.value)" placeholder="Search" autocomplete="off" maxlength="128"/>
+					</div>
+					<div class="col-sm-4">
+						<b><span class="menutitle">Show</span></b><h4 class="dropdown-toggle" data-toggle="dropdown"><span class="menulike" id="directorylst">All<span class="icon-arrow-down"></span></span></h4>
+						<ul class="dropdown-menu" id="directorylist">
+							<li><a href="#">All</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-4" id="dir_sort">
+						<b><span class="menutitle">Sort </span></b><h4 class="dropdown-toggle" data-toggle="dropdown"><span class="menulike" id="directorysrt">First Name<span class="icon-arrow-down"></span></span></h4>
+						<ul class="dropdown-menu">
+							<li class="dicFstName"><a href="#">First Name</a></li>
+							<li class="dicLstName"><a href="#">Last Name</a></li>
+							<!--<li class="dicRstName"><a href="#">Recent Post</a></li>!-->
+							<li class="dicMailName"><a href="#">Email</a></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="scrollenable nogame dirtectory-screen row clearfix">
+					<div class="col-md-12" id="directoryPage">
+						
+						<div class="directory-sections row clearfix">
+							<div class="col-md-12">
+								<div class="row clearfix">
+									<div class="col-sm-8">
+										<h3>
+											<div class="customer-names">
+												<img src="images/customer-img.png" class="customer-img"/>
+												<img src="images/green.png" class="dotactive"/>
+											</div>
+											<div class="customer-images">Michelle Jackson<br><span>ronnie_diaz@gmail.com</span></div>
+										</h3>
+									</div>
+									<div class="col-sm-4">
+										<h5>
+											<button id="reInviteBtn">Re-Invite</button>
+											<a href="" class="dirvpopen">
+												<span class="icon-Action"></span>
+												<h6 class="dirvp">View Profile</h6>
+											</a>											
+										</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="directory-sections row clearfix">
+							<div class="col-md-12">
+								<div class="row clearfix">
+									<div class="col-sm-8">
+										<h3>
+											<div class="customer-names">
+												<img src="images/customer-img.png" class="customer-img"/>
+												<img src="images/green.png" class="dotactive"/>
+											</div>
+											<div class="customer-images">Michelle Jackson<br><span>ronnie_diaz@gmail.com</span></div>
+										</h3>
+									</div>
+									<div class="col-sm-4">
+										<h5>
+											<button>Re-Invite</button>
+											<a href="" class="dirvpopen">
+												<span class="icon-Action"></span>
+												<h6 class="dirvp">View Profile</h6>
+											</a>											
+										</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="directory-sections row clearfix">
+							<div class="col-md-12">
+								<div class="row clearfix">
+									<div class="col-sm-8">
+										<h3>
+											<div class="customer-names">
+												<img src="images/customer-img.png" class="customer-img"/>
+												<img src="images/green.png" class="dotactive"/>
+											</div>
+											<div class="customer-images">Michelle Jackson<br><span>ronnie_diaz@gmail.com</span></div>
+										</h3>
+									</div>
+									<div class="col-sm-4">
+										<h5>
+											<button>Re-Invite</button>
+											<a href="" class="dirvpopen">
+												<span class="icon-Action"></span>
+												<h6 class="dirvp">View Profile</h6>
+											</a>											
+										</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="directory-sections row clearfix">
+							<div class="col-md-12">
+								<div class="row clearfix">
+									<div class="col-sm-8">
+										<h3>
+											<div class="customer-names">
+												<img src="images/customer-img.png" class="customer-img"/>
+												<img src="images/green.png" class="dotactive"/>
+											</div>
+											<div class="customer-images">Michelle Jackson<br><span>ronnie_diaz@gmail.com</span></div>
+										</h3>
+									</div>
+									<div class="col-sm-4">
+										<h5>
+											<button>Re-Invite</button>
+											<a href="" class="dirvpopen">
+												<span class="icon-Action"></span>
+												<h6 class="dirvp">View Profile</h6>
+											</a>											
+										</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="directory-sections row clearfix">
+							<div class="col-md-12">
+								<div class="row clearfix">
+									<div class="col-sm-8">
+										<h3>
+											<div class="customer-names">
+												<img src="images/customer-img.png" class="customer-img"/>
+												<img src="images/green.png" class="dotactive"/>
+											</div>
+											<div class="customer-images">Michelle Jackson<br><span>ronnie_diaz@gmail.com</span></div>
+										</h3>
+									</div>
+									<div class="col-sm-4">
+										<h5>
+											<button>Re-Invite</button>
+											<a href="" class="dirvpopen">
+												<span class="icon-Action"></span>
+												<h6 class="dirvp">View Profile</h6>
+											</a>	
+										</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			
+			</div></div>
+				
+			<div class="col-sm-3 fourth-columns" id="style-4">
+				<div class="chat-info" title="Collapse">
+					<div class="toggle-info">
+						<a class="toggle-icon"><span class="icon-arrow-right"></span></a>
+					</div>
+				</div>	
+				<div class="taskallocation row clearfix">
+					<div class="taskall-sect col-md-12">
+						<h4>Update the client call detail to my email</h4>						
+						<ol>
+							<li><a href="#"><span class="icon-thump_up"></span></a></li>
+							<li><a href="#"><span class="icon-Bookmark"></span></a></li>
+							<li><a href="#"><span class="icon-Pin"></span></a></li>
+							<li><a href="#"><span class="icon-Share"></span></a></li>
+							<li><a href="#myModaladdnew1" data-toggle="modal" data-target="#myModaladdnew1"><span class="icon-edit"></span></a></li>
+							<li><a href="#"><span class="icon-Delete-1"></span></a></li>
+						</ol>						
+						<ul class="allocate-details" id="style-4">
+							<li class="col-md-12">
+								<h3>Assigned To <br><span>jonathansmith32@gmail.com</span></h3>
+							</li>
+							<li class="col-md-4">
+								<h3>Start Date <br><span>12.06.19</span></h3>
+							</li>
+							<li class="col-md-4">
+								<h3>Due Date <br><span>12.06.19</span></h3>
+							</li>
+							<li class="col-md-4">
+								<h3>Days <br><span>2</span></h3>
+							</li>
+							<li class="col-md-3">
+								<h3>Repeat <br><span>None</span></h3>
+							</li>
+							<li class="col-md-9">
+								<h3>Complete When <br><span>100% Done</span></h3>
+							</li>
+							<li class="col-md-12">
+								<h3>Section <br><span>Sample Section</span></h3>
+							</li>
+							<li class="col-md-12">
+								<h3>Description <br><span>Sample Section</span></h3>
+							</li>
+							<li class="col-md-10">
+								<h3>Attach <br><span><img src="images/list-name.png"> Sample File.jpg<br><span>Added 1 days ago</span></span></h3>
+							</li>
+							<li class="col-md-2 dropdown">
+								<span class="icon-Action in dropdown-toggle rets" data-toggle="dropdown"></span>
+								<ul class="innermenus dropdown-menu">
+									<li><a href="#">Download</a></li>
+									<li><a href="#">Delete</a></li>
+								</ul>
+							</li>
+							<li class="col-md-12">
+								<div class="panel-group" id="accordion">
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<h4 class="panel-title">
+												<a data-toggle="collapse" data-parent="#accordion" href="#collapse2"><span class="icon-arrow-down"></span> Activity</a>
+											</h4>
+										</div>
+										<div id="collapse2" class="panel-collapse collapse in">
+											<div class="panel-body">
+												<div class="tasks">
+													<p>QA Team changed the color <span>16:45</span></p>
+												</div>
+												<div class="tasks">
+													<p>QA Team changed the color <span>16:45</span></p>
+												</div>
+												<div class="tasks">
+													<p>QA Team changed the color <span>16:45</span></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>								
+							</li>
+							<li class="col-md-12">
+								<h3>Conversation<br><br>
+								<div class="comment-name-section">
+									<div class="name-images">
+										<img src="images/list-name.png" class="list-name-img">	
+									</div>														
+									<h3>Ronnie Diaz</h3>
+									<h4>Mon, 2 Apr</h4>
+								</div>
+									<div class="comments-section">
+										<div class="commemts-boxes">Please let me know how we can assist you, we’re here to guide you through.</div>
+									</div>
+								</h3>
+							</li>
+						</ul>
+						<div class="start-chats">	
+							<div class="row clearfix">
+								<div class="col-md-2"> 
+									<span class="icon-add dropdown-toggle" data-toggle="dropdown"></span>
+									<ul class="dropdown-menu">
+										<li><a href="#addnewevent" data-toggle="modal" data-dismiss="modal">New Event</a></li>
+										<li><a href="#addnewtask" data-toggle="modal" data-dismiss="modal">New Task</a></li>
+										<li><a href="#addnewnote" data-toggle="modal" data-dismiss="modal">New Note</a></li>
+										<li><a href="#addnewsnippet" data-toggle="modal" data-dismiss="modal">New Snippet</a></li>
+										<li class="dropdown dropdown-submenu"><a href="#">Share Files <span class="icon-arrow-right"></span></a>
+											<ul class="dropdown-menus">
+												<li><a href="#"><span class="icon-monitor"></span> Computer</a></li>
+												<li><a href="#"><span class="icon-google-drive"></span> Google Drive</a></li>
+												<li><a href="#"><span class="icon-dropbox-logo"></span> Dropbox</a></li>
+												<li><a href="#"><span class="icon-box"></span> Box</a></li>
+												<li><a href="#"><span class="icon-evernote-logo"></span> Evernote</a></li>
+												<li><a href="#"><span class="icon-onedrive"></span> OneDrive</a></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+								<div class="col-md-7">
+									<input type="text" id="myInput" name="" placeholder="Type your message here">
+								</div>
+								<div class="col-md-3">
+									<ul class="bottom-charts">
+										<li><a href="#"><span class="icon-attach"></span></a></li>								
+										<li><a href="#" data-toggle="modal" data-target="#stickers"><span class="icon-sticker"></span></a></li>
+										<li><a href="#" data-toggle="modal" data-target="#emojis"><span class="icon-emojis"></span></a></li>
+									</ul>
+									<input type="submit" name="submit" value="send" class="lake">
+								</div>
+							</div>
+						</div>									
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+ 
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="js/fjs.js"></script><script> 
+$(document).ready(function(){
+if(window.isPageLoaded) window.isPageLoaded();
+  $("img.list-name-img.last-childs").click(function(){
+    $("ul.member-list.keys li img").toggle();
+  });
+  $(".dashboard-home .col-sm-3 h4 span").click(function(){
+    $("ul.member-list.keys li img").toggle();
+  });
+	$(".closing").click(function(){
+    $(".dashboard-home .col-sm-2").hide();
+  });
+  $(".chat-info").click(function(){
+    $(".dashboard-home .col-sm-3").hide();
+	$(".chat-info123").show();
+	$(".chat-info").hide();
+	$(".dashboard-home .col-sm-9").css("width","77%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+	//$(".start-chats").css("width","77%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+  });
+   $(".chat-info123").click(function(){
+    $(".dashboard-home .col-sm-3").show();
+	$(".chat-info123").hide();
+	$(".chat-info").show();
+	$(".dashboard-home .col-sm-9").css("width","56%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+	$(".phone-sections.row.clearfix").css("width","100%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+	$(".ph-search").css("width","100%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+	$(".ph-search select").css("width","auto","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");	
+	
+  });
+   
+});
+$("img.m-menus").click(function(){
+    $(".dashboard-home .col-sm-2").show();2
+	$(".dashboard-home .col-sm-2").css("transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+	//$(".start-chats").css("width","56%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+  });
+$(document).ready(function() {
+    $('#example').DataTable( {
+        "order": [[ 3, "desc" ]]
+    } );
+} );
+
+</script>
+<script src="js/fjs.js"></script><script> 
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+</body>
+</html>

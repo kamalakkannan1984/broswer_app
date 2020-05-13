@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>UnifiedRing Desktop App</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/style-fonts.css">
+<link rel="stylesheet" href="css/style_v.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet"/>
+
+</head>
+<body>
+<div id='ParentWindow'></div>
+<div id="overlay"></div>
+				<audio id="onhold" src="helper/sound/hold.wav" loop></audio>
+				<audio id="ringback" src="helper/sound/default_call.mp3" loop></audio>
+				<div class="col-sm-12 videocalling">
+					<video style="display:none" autoplay class="videos" id="remoteVideo" src="" preload="none" style="width:100%;height:100%"  poster="images/avatar2.png">Video Disabled or Unavailable</video>
+				</div>
+				<div class="localVideo">
+					<video   poster="images/avatar1.png" autoplay class="SmallVideo ToShare" onclick="ZoomMe(event)" style='display:none' id="selfVideo"  src="" muted></video>
+					<video   poster="images/avatar1.png" autoplay id="localVideo"  onclick="ZoomMe(event)" class="SmallVideo" src="" muted style="display:none"></video>
+				</div>
+				<audio id="ringer" loop><source src="./ringtone/ringback.wav"></audio>
+				<audio id="hangup"><source src="./ringtone/hangup.wav"></audio>
+				<audio id="pickup"><source src="./ringtone/pickup.wav"></audio>
+				<audio id="busy"><source src="./ringtone/busy.wav"></audio>
+				<audio id="calling" loop><source src="./ringtone/calling.wav"></audio>
+				<audio id="gum-local"><source src="./ringtone/ringback.wav"></audio>
+				<audio id="gum-remote"><source src="./ringtone/ringback.wav"></audio>	
+			</div>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+<script src="lib/popper.min.js"></script>-->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.timepicker.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/custom_v.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src='lib/handlebar.js' ></script>
+<script src='lib/jsxc.dep.js' ></script>
+<script type="text/javascript" src="lib/rrule.js"></script> 
+<script src='lib/jsxc.js' ></script>
+<script src="mainpage-bundle.js"></script>
+
+
+<script>
+
+
+</script>
+
+</body>
+</html>

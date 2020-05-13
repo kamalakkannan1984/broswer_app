@@ -1,0 +1,12 @@
+<a class="currentstatus" href="#">
+   {{> currentstatustbl currentstatus}}
+</a>
+<ul class="avail-st-in-con">
+    {{#each availablestatus}}
+    <li>
+        <a class="{{@key}}" href="#">
+           {{> availablestatuschange this}}
+        </a>
+    </li>
+    {{/each}}    
+</ul>

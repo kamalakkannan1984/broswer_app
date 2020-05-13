@@ -1,0 +1,529 @@
+<!DOCTYPE html> 
+<html>
+<title>UnifiedRing</title>
+<head>
+<meta name="keyword" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles-app.css"/>
+<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">	
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/fjs.js"></script><script> 
+$(document).ready(function() {
+    $('#examples').DataTable();
+} );
+</script>
+</head>
+<body>
+
+<div class="dashboard-home container-fluid"> 
+	<div class="container">
+		<div class="row clearfix">			
+			<div class="col-sm-9 videocalls">	
+				<div class="callWin">
+					<div class="chat-info123" title="Expand">
+						<div class="toggle-info">
+							<a class="toggle-icon"><span class="icon-arrow-left"></span></a>
+						</div>
+					</div>
+					<div class="videoface row clearfix">
+						<div class="col-md-12">
+							<img src="images/c-image.png"/>
+							<div class="overlaycall">
+								<canvas id="equalizerCanvas" width="400" height="150"></canvas>
+								<img class="callerImg" src="images/chris.png"/>
+								<h3 class="callerName"></h3>
+								<h4 class="callStatus">calling...</h4>
+								<h4 id="call_timer" style="display:none">00:00:00</h4>
+								<div class="ringing" id="callEndIcon">
+									<span class="icon-calling"><span class="path1"></span><span class="path2"></span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="videoicons row clearfix">
+						<div class="col-md-12">
+							<ul>
+								<li><a href="#"><span class="icon-Teams"></span></a></li>
+								<li><a href="#"><span class="icon-Contacts"></span></a></li>
+								<li><a href="#"><span class="icon-videocam"></span></a></li>
+								<li><a href="#"><span class="icon-speaker1"></span></a></li>
+								<li><a href="#"><span class="icon-Chat"></span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+
+			</div>
+				
+			<div class="col-sm-3 fourth-columns style-4">
+				<div class="chat-info" title="Collapse">
+					<div class="toggle-info">
+						<a class="toggle-icon"><span class="icon-arrow-right"></span></a>
+					</div>
+				</div>	
+				<div class="taskallocation row clearfix">
+					<div class="taskall-sect col-md-12">
+						<div class="inner-chat video-screen row clearfix style-4">
+							<div class="col-sm-12">
+								<div class="user-section chatuser">
+									<div class="chat-section">
+										<div class="chat-process-overall">
+											<div class="chat-process">
+												<h2>Hello Larry!</h2>
+												<h6>16:30</h6>
+											</div>
+										</div>								
+										<div class="chat-process-overall">
+											<div class="chat-process">							
+												<h2>Please let me know how I will assist you, I here to guide you through.</h2>
+												<h6>16:30</h6>
+											</div>
+										</div>															
+									</div>								
+								</div>
+								<div class="user-section">
+									<div class="member-image">
+										<img src="images/list-name.png" class="chat-user-img"/>
+									</div>
+									<div class="chat-section">
+										<h5>Hendry Watson . <span>Started a Task</span></h5>
+										<div class="chat-process-overall">
+											<div class="chat-process">							
+												<h2><span class="icon-speaker"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span> Sample file.mp3</h2>
+												<h6>16:30</h6>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="user-section">
+									<div class="member-image">
+										<img src="images/list-name.png" class="chat-user-img"/>
+									</div>
+									<div class="chat-section">
+										<h5>Hendry Watson . <span>Started a Task</span></h5>
+										<div class="chat-process-overall">
+											<div class="chat-process">							
+												<h2>
+													<label class="containe">
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</label>
+													<b class="viewdetailschat">Task 123</b>
+												</h2>
+												<h6>16:30</h6>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="user-section">
+									<div class="member-image">
+										<img src="images/list-name.png" class="chat-user-img">
+									</div>
+									<div class="chat-section">
+										<h5>Hendry Watson . <span>Started an Event</span></h5>
+										<div class="chat-process-overall">
+											<div class="chat-process">
+												<h2><span class="icon-Calendar-date"></span> <b class="viewevents">It’s quite simple, just follow the quick onboarding flow once you've have signed up.</b></h2>
+												<h2 class="dates">Date &amp; Time<br>yesterday at 9:15 AM - 9:45 AM</h2>
+												<h6>16:30</h6>
+											</div>
+										</div>	
+									</div>
+								</div>
+								<div class="user-section">
+									<div class="member-image">
+										<img src="images/list-name.png" class="chat-user-img">
+									</div>
+									<div class="chat-section">
+										<h5>Hendry Watson . <span>Started an Event</span></h5>
+										<div class="chat-process-overall">
+											<div class="chat-process">
+												<h2><span class="icon-Notes"></span> UnifiedRing Proposal</h2>
+												<h2 class="notesdescription">Private Telephone Network Within Your Business</h2>
+												<h6>16:30</h6>
+											</div>
+										</div>	
+									</div>
+								</div>	
+								<div class="user-section chatuser">
+									<div class="member-image">
+										<img src="images/list-name.png" class="chat-user-img"/>
+									</div>
+									<div class="chat-section">
+										<h5>Hendry Watson . <span>Started a video call</span></h5>
+										<div class="chat-process-overall">
+											<div class="chat-process">
+												<h2><img src="images/outline-event.svg"/> It’s quite simple, just follow the quick onboarding flow once you've have signed up.</h2>
+												<h2 class="dates">Date & Time<br>yesterday at 9:15 AM - 9:45 AM</h2>
+												<h6>16:30</h6>
+											</div>
+										</div>	
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="start-chats">	
+							<div class="row clearfix">
+								<div class="col-md-2"> 
+									<span class="icon-add dropdown-toggle" data-toggle="dropdown"></span>
+									<ul class="dropdown-menu">
+										<li><a href="#addnewevent" data-toggle="modal" data-dismiss="modal">New Event</a></li>
+										<li><a href="#addnewtask" data-toggle="modal" data-dismiss="modal">New Task</a></li>
+										<li><a href="#addnewnote" data-toggle="modal" data-dismiss="modal">New Note</a></li>
+										<li><a href="#addnewsnippet" data-toggle="modal" data-dismiss="modal">New Snippet</a></li>
+										<li class="dropdown dropdown-submenu"><a href="#">Share Files <span class="icon-arrow-right"></span></a>
+											<ul class="dropdown-menus">
+												<li><a href="#"><span class="icon-monitor"></span> Computer</a></li>
+												<li><a href="#"><span class="icon-google-drive"></span> Google Drive</a></li>
+												<li><a href="#"><span class="icon-dropbox-logo"></span> Dropbox</a></li>
+												<li><a href="#"><span class="icon-box"></span> Box</a></li>
+												<li><a href="#"><span class="icon-evernote-logo"></span> Evernote</a></li>
+												<li><a href="#"><span class="icon-onedrive"></span> OneDrive</a></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+								<div class="col-md-7">
+									<input type="text" id="myInput" name="" placeholder="Type your message here">
+								</div>
+								<div class="col-md-3">
+									<ul class="bottom-charts">
+										<li><a href="#"><span class="icon-attach"></span></a></li>								
+										<li><a href="#" data-toggle="modal" data-target="#stickers"><span class="icon-sticker"></span></a></li>
+										<li><a href="#" data-toggle="modal" data-target="#emojis"><span class="icon-emojis"></span></a></li>
+									</ul>
+									<input type="submit" name="submit" value="send" class="lake">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="myModalphonescreen" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content my-content">
+				<div class="my-sec">
+					<p><span class="call_timer">Connecting...</span><span class="my-hd">HD</span> <span class="my-arv" id="calMin"><span class="icon-minimize" style="cursor: pointer;"><span class="path1"></span><span class="path2"></span></span></span></p>
+				</div>
+				<div class="my-call">
+					<div class="col-md-12 my-part">
+						<div class="name-images1">
+							<img src="images/avatar_profile_pic.svg" class="list-name-img1 callerImg">
+							<div class="callerid">
+								<canvas id="equalizerCanvas" width="400" height="150" style="display:none"></canvas>
+								<h3 class="my-name callerName"></h3>
+								<h4 class="my-dec callerExt"></h4>
+							</div>
+						</div>			
+					</div>
+				</div>		
+				<div class="my-call1">
+					<div class="col-md-12 my-part">
+						<p class="my-add">Add to Conference</p>
+						<input type="text" name="" placeholder="Type name or number"/>
+					</div>
+				</div>
+				
+				
+				<div class="col-sm-12 videocalling">
+					<video style="display:none" autoplay class="videos" id="remoteVideo" src="" preload="none" style="width:100%;height:100%"  poster="images/avatar2.png">Video Disabled or Unavailable</video>
+				</div>
+				<div class="localVideo">
+					<video   poster="images/avatar1.png" autoplay class="SmallVideo ToShare" onclick="ZoomMe(event)" style='display:none' id="selfVideo"  src="" muted></video>
+					<video   poster="images/avatar1.png" autoplay id="localVideo"  onclick="ZoomMe(event)" class="SmallVideo" src="" muted style="display:none"></video>
+				</div>
+
+
+				<div class="my-key">
+					<div class="col-md-12 my-part">
+						<p class="my-keyfont"><span class="icon-Dialpad"></span><b>Keypad</b> </p>
+					</div>
+				</div>		
+				<div class="my-dial active">
+					<div class="col-md-12 col-sm-12 col-xs-12 my-dial1">
+						<div class="col-md-4 col-sm-4 col-xs-4" id="callMute" style="cursor: pointer;">
+							<a href="#"><div class="my-hg"><span class="icon-hold-voice"></span></div>
+							<p class="callMuteTxt">Mute</p></a>
+						</div>				
+						<div class="col-md-4 col-sm-4 col-xs-4" id="callKpad" style="cursor: pointer;">
+							<div class="my-hg my-keypad"><span class="icon-Dialpad"></span></div>
+							<p>Keypad</p>
+						</div>				
+						<div class="col-md-4 col-sm-4 col-xs-4" id="callSpeaker" style="cursor: pointer;">
+							<div class="my-hg my-keypad"><span class="icon-volume-up"></span></div>
+							<p>Speaker</p>		
+						</div>
+					</div>			
+					<div class="col-md-12 col-sm-12 col-xs-12 my-dial1" style="cursor: pointer;">
+						<div class="col-md-4 col-sm-4 col-xs-4" id="callAddCall">
+							<div class="my-hg my-addcal"><span class="icon-add-11"></span></div>
+							<p>Add Call</p>
+						</div>				
+						<div class="col-md-4 col-sm-4 col-xs-4" id="callHold" style="cursor: pointer;">
+							<div class="my-hg"><span class="icon-pause-1"></span></div>
+							<p class="callholdTxt">Hold</p>
+						</div>				
+						<div class="col-md-4 col-sm-4 col-xs-4" id="callRecord" style="cursor: pointer;">
+							<a href="#"><div class="my-hg"><span class="icon-speaker1"></span></div>
+							<p>Record</p></a>
+						</div>			
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12 my-dial1" style="cursor: pointer;">	
+						<div class="col-md-4 col-sm-4 col-xs-4" id="callSwitch">
+							<a href="#"><div class="my-hg"><span class="icon-transfer"></span></div>
+							<p>Switch</p></a>
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-4 video-call" id="callvideo" style="cursor: pointer;">
+							<a href="#"><div class="my-hg"><span class="icon-Video"></span></div>
+							<p>video</p></a>
+						</div>				
+						<div class="col-md-4 col-sm-4 col-xs-4" style="cursor: pointer;">
+							<span class="dropdown-toggle my-dropdown-toggle" data-toggle="dropdown"><div class="my-hg"><span class="icon-actions"></span></div></span>
+							<span class="dropdown-toggle my-dropdown-toggle1" data-toggle="dropdown"><div class="my-hg"><span class="icon-actions"></span></div></span>
+							<p>More</p>
+							<ul class="dropdown-menu dropdown-menu1">
+								<li id="callTransfer"><a href="#"><span class="icon-hold"></span> Transfer </a></li>
+								<li id="callPark"><a href="#"><span class="icon-park"></span> Park </a></li>
+								<li id="callFlip"><a href="#"><span class="icon-flip"></span> Flip </a></li>
+							</ul>
+						</div>				
+					</div>									
+				</div>
+
+				<div class="my-dial">
+					<div class="col-md-12 col-sm-12 col-xs-12 my-dial1">
+						<div class="btntry" data-dismiss="modal">
+							<span class="icon-call-end img-responsive center-block" style="cursor:pointer"><span class="path1"></span><span class="path2"></span></span>
+						</div>
+					</div>
+				</div>
+				<!-- number -->
+				<div class="my-dialnum-conf" style="display: none;">
+					<div class="col-md-12 col-sm-12 col-xs-12 my-dialnum-conf">
+						<div class="dial-pad">
+							<input type="text" name="number" class="numbersections-all" id="dialpadPhone_conf" onkeydown="IgnoreSpecialCharacters(this.value)" onkeyup="dailpadtext_conf(this.value)" onkeypress="return blockSpecialChar(event)" placeholder="Type a name or number" maxlength="18" autocomplete="off">
+						</div>
+
+						<div class="row">
+							<div class="col-sm-4 DnumFocus" bid="1" onclick="dailpadNum_conf(1)"><h1>1<br><span><img src="images/no1.svg"></span></h1></div>
+							<div class="col-sm-4 DnumFocus" bid="2" onclick="dailpadNum_conf(2)"><h1>2<br><span>ABC</span></h1></div>
+							<div class="col-sm-4 DnumFocus" bid="3" onclick="dailpadNum_conf(3)"><h1>3<br><span>DEF</span></h1></div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-4 DnumFocus" bid="4" onclick="dailpadNum_conf(4)"><h1>4<br><span>GHI</span></h1></div>
+							<div class="col-sm-4 DnumFocus" bid="5" onclick="dailpadNum_conf(5)"><h1>5<br><span>JKL</span></h1></div>
+							<div class="col-sm-4 DnumFocus" bid="6" onclick="dailpadNum_conf(6)"><h1>6<br><span>MNO</span></h1></div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-4 DnumFocus" bid="7" onclick="dailpadNum_conf(7)"><h1>7<br><span>PQRS</span></h1></div>
+							<div class="col-sm-4 DnumFocus" bid="8" onclick="dailpadNum_conf(8)"><h1>8<br><span>TUV</span></h1></div>
+							<div class="col-sm-4 DnumFocus" bid="9" onclick="dailpadNum_conf(9)"><h1>9<br><span>WXYZ</span></h1></div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-4 DnumFocus" onclick="dailpadNum_conf('*')"><h1 class="star-icon">*<br><span></span></h1></div>
+							<div class="col-sm-4 DnumFocus" id="phonePLongPress_conf"><h1>0<br></h1><span class="dial-plus">+</span></div>
+							<div class="col-sm-4 DnumFocus" onclick="dailpadNum_conf('#')"><h1 class="num-sign-icon">#<br><span></span></h1></div>
+						</div>
+						<div class="col-md-12 col-sm-12 col-xs-12 my-dial1">
+							<span class="icon-calling-1 img-responsive center-block"><span class="path1"></span><span class="path2"></span></span>
+							<p class="my-hide"> Hide </p>
+						</div>
+				</div>	
+			</div>
+			<div class="my-dialpad-conf" style="display: none;">
+				<div class="col-md-12 col-sm-12 col-xs-12 my-dialpadsub-conf">
+					<div class="dial-pad">
+						<input type="text" name="number" class="numbersections-all" id="dialpad_conf" onkeydown="IgnoreSpecialCharacters(this.value)" onkeyup="loadTransferContact(this.value)" onkeypress="return blockSpecialChar(event)" placeholder="Type a name or number" maxlength="18" autocomplete="off">
+					</div>
+					<div>
+						<div class="serch row clearfix style-4">
+							<div class="col-md-12">
+								<ul class="SuggessionLstTransfer">
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12 col-xs-12 my-dial1">
+							<p class="my-dailhide"> Hide </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="myModalphonescreen_small" role="dialog">
+		<div class="modal-dialog my-modal-dialog">
+			<div class="modal-content my-content1">
+				<div class="my-sec">
+					<p><span class="call_timer">00:00:00</span><span class="my-hd">HD</span> <span class="my-arv" id="calMax"> <span class="icon-maximize" style="cursor:pointer"><span class="path1"></span><span class="path2"></span></span></span></p>
+				</div>
+				<div class="my-calls1">
+					<div class="col-md-12 my-part">
+						<div class="name-images2">
+							<h4 class="my-name1 callerName"></h4>
+							<p class="my-dec1 callerExt">311</p>				
+						</div>
+						<ul>
+							<li><span class="icon-voice-3 list-name-img2" id="mimcallMute" style="cursor:pointer"><span class="path1"></span><span class="path2"></span></span></li>
+							<li>
+								<div class="btntry" data-dismiss="modal">
+									<span class="icon-call-end list-name-img2" style="cursor:pointer"><span class="path1"></span><span class="path2"></span></span></li>
+								</div>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</div>
+
+
+<script src="js/fjs.js"></script><script> 
+
+$(document).ready(function(){
+   	$(".team-created1").click(function(){
+		//alert($(".team-created1").text());
+      	$('span.menulike.one b').hide();
+		var scx = $(".team-created1").text();
+		$('span.menulike.one').append("<span id='mine'><b>"+scx+"</b></span>");   
+	});
+    $(".team-public1").click(function(){
+		//alert($(".team-public1").text());
+       	$('span.menulike.one b').hide();
+		var scx1 = $(".team-public1").text();
+		$('span.menulike.one').append("<span id='mine'><b>"+scx1+"</b></span>");
+    });
+    $(".team-archieve1").click(function(){
+		//alert($(".team-archieve1").text());
+       	$('span.menulike.one b').hide();
+		var scx2 = $(".team-archieve1").text();
+		$('span.menulike.one').append("<span id='mine'><b>"+scx2+"</b></span>");
+    }); 
+	$(".team-created1").click(function(){
+		//alert($(".team-name1").text());
+      	$('span.menulike.two b').hide();
+		var scx = $(".team-name1").text();
+		$('span.menulike.two').append("<span id='mine'><b>"+scx+"</b></span>");   
+	});
+    $(".team-post1").click(function(){
+		//alert($(".team-post1").text());
+       	$('span.menulike.two b').hide();
+		var scx1 = $(".team-post1").text();
+		$('span.menulike.two').append("<span id='mine'><b>"+scx1+"</b></span>");
+    });
+    $(".team-recent1").click(function(){
+		//alert($(".team-recent1").text());
+       	$('span.menulike.two b').hide();
+		var scx2 = $(".team-recent1").text();
+		$('span.menulike.two').append("<span id='mine'><b>"+scx2+"</b></span>");
+    });
+	$(".team-creators1").click(function(){
+		//alert($(".team-creators1").text());
+       	$('span.menulike.two b').hide();
+		var scx2 = $(".team-creators1").text();
+		$('span.menulike.two').append("<span id='mine'><b>"+scx2+"</b></span>");
+    });
+	$(".team-members1").click(function(){
+		//alert($(".team-members1").text());
+       	$('span.menulike.two b').hide();
+		var scx2 = $(".team-members1").text();
+		$('span.menulike.two').append("<span id='mine'><b>"+scx2+"</b></span>");
+    });		
+});
+
+
+$(document).ready(function(){
+  $("img.list-name-img.last-childs").click(function(){
+    $("ul.member-list.keys li img").toggle();
+  });
+  
+  $(".dashboard-home .col-sm-3 h4 span").click(function(){
+    $("ul.member-list.keys li img").toggle();
+  });
+	$(".closing").click(function(){
+    $(".dashboard-home .col-sm-2").hide();
+  });
+  $(".chat-info").click(function(){
+    $(".dashboard-home .col-sm-3").hide();
+	$(".chat-info123").show();
+	$(".chat-info").hide();
+	//$(".dashboard-home .col-sm-9").css("width","77%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+	//$(".start-chats").css("width","77%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+  });
+   $(".chat-info123").click(function(){
+    $(".dashboard-home .col-sm-3").show();
+	$(".chat-info123").hide();
+	$(".chat-info").show();
+	//$(".dashboard-home .col-sm-9").css("width","56%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+	//$(".phone-sections.row.clearfix").css("width","100%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+	//$(".ph-search").css("width","100%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+	//$(".ph-search select").css("width","auto","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");	
+	
+  });  
+	$("label.containe").click(function(){
+    $(".dashboard-home .col-sm-3").show();
+	$(".chat-info123").hide();
+	$(".chat-info").show();
+	//$(".dashboard-home .col-sm-9").css("width","56%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+	//$(".phone-sections.row.clearfix").css("width","100%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+	//$(".ph-search").css("width","100%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+//$(".ph-search select").css("width","auto","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");		
+  }); 
+
+	$(".team-created1").click(function(){
+		$("ul.ad-sect.all-default").hide();
+		$("ul.ad-sect.team-created").show();
+		$("ul.ad-sect.team-public").hide();
+		$("ul.ad-sect.team-archieve").hide();
+	});
+	$(".team-public1").click(function(){
+		$("ul.ad-sect.all-default").hide();
+		$("ul.ad-sect.team-created").hide();
+		$("ul.ad-sect.team-public").show();
+		$("ul.ad-sect.team-archieve").hide();
+	});
+	$(".team-archieve1").click(function(){
+		$("ul.ad-sect.all-default").hide();
+		$("ul.ad-sect.team-created").hide();
+		$("ul.ad-sect.team-public").hide();
+		$("ul.ad-sect.team-archieve").show();
+	});
+});
+
+$(document).ready(function(){
+// $('[data-toggle="tooltip"]').tooltip();   
+$(".videoicons a").tooltip({
+        template : '<div class="tooltip"><div class="tooltip-inner"></div></div>'
+    });
+	
+});
+$(document).ready(function() {
+    $('#example').DataTable( {
+        "order": [[ 3, "desc" ]]
+    } );
+} );
+$("img.m-menus").click(function(){
+    $(".dashboard-home .col-sm-2").show();2
+	$(".dashboard-home .col-sm-2").css("transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+	//$(".start-chats").css("width","56%","transition-duration","0.8s",  "transition-timing-function","ease-in", "transition-delay","0.8s");
+  });
+</script>
+</body>
+</html>

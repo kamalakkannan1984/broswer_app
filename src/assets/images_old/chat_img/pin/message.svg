@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="23.993" height="23.993" viewBox="0 0 23.993 23.993">
+  <g id="message" transform="translate(-130 -95.307)">
+    <g id="chat_6_" data-name="chat (6)" transform="translate(130 95.307)">
+      <path id="Path_24350" data-name="Path 24350" d="M20.994,0H3A3,3,0,0,0,0,3V16.5a3,3,0,0,0,3,3H4.5v3.749a.749.749,0,0,0,.432.679.761.761,0,0,0,.318.07.75.75,0,0,0,.48-.174l5.19-4.325H20.994a3,3,0,0,0,3-3V3A3,3,0,0,0,20.994,0Z" fill="#7a8b93"/>
+    </g>
+    <path id="Path_24351" data-name="Path 24351" d="M89.577,264.369H76.021a1.021,1.021,0,1,1,0-2.041H89.577a1.021,1.021,0,1,1,0,2.041Zm0,0" transform="translate(58.735 -155.853)" fill="#fcfeff"/>
+    <path id="Path_24352" data-name="Path 24352" d="M80.945,204.369H76.021a1.021,1.021,0,1,1,0-2.041h4.925a1.021,1.021,0,1,1,0,2.041Zm0,0" transform="translate(58.735 -100.579)" fill="#fcfeff"/>
+  </g>
+</svg>

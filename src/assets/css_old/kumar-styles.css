@@ -1,0 +1,425 @@
+/* login screen */
+
+.loadersimg {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+-webkit-transform: translate(-50%, -50%);
+-moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+	transition: all 5s ease-in-out;
+}
+
+.loadersimg1 {
+    top: 62%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    position: absolute;
+	transition: all 5s ease-in-out;
+}
+
+.loadersimg img, .loadersimg1 img {
+    width: 85px;
+    border-radius: 20px;
+}
+
+.loadersimg{
+    position: fixed;   
+    bottom: 0;
+    z-index: 1000;
+    background-color: #0000004a;
+    width: 100%;
+    height: 100%;
+}
+.loadersimg1{
+    position: fixed;   
+    bottom: 0;
+    z-index: 1000;
+   /*  background-color: #0000004a; */
+    width: 100%;
+    height: 100%;
+}
+div#AlertBoxWin p {
+    font-family: 'Poppins', sans-serif!important;
+    font-weight: bold;
+    display: block;
+    position: relative;
+}
+div#AlertBoxWin .modal-dialog {
+    width: 20%;
+    text-align: center;
+}
+div#AlertBoxWin p  {
+       margin-top: 15px;
+}
+.loader {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -50px 0px 0px -50px;
+	z-index:999999999999;
+}
+
+.loader img {
+    width: 100px;
+}
+.modal-header .close {
+    margin-top: -2px;
+    position: absolute;
+    right: 18px;
+    top: 18px;
+    font-weight: 400;
+    font-size: 24px;
+}
+.modal-dialog {width: 520px;}
+.modal-body label {font-size: 12px;line-height: 22px;font-weight: 400;}
+    .modal-body input, .modal-body select { font-size: 14px;}
+    .modal-footer {padding/* login screen */
+        .login-screen img{width: 200px;margin:auto;}
+        .login-right input {
+            height: 48px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #D6D6D6;
+            border-radius: 5px;
+            padding: 0 15px;
+            letter-spacing: 0.28px;
+            color: #9D9D9D;
+            font-size: 14px;
+            line-height: 45px;
+                margin: 1rem 0 0;
+        }
+        .login-right h4 {
+            font-size: 17px;
+            color: #000;
+            font-weight: bold;
+            font-family: 'h-light';
+            letter-spacing: 0.3px;
+            margin: 2rem 0 1.5rem;
+        }
+        span.text-right1 a {
+            color: #1D76F2;
+            letter-spacing: 0.28px;
+            line-height: 16px;
+            font-size: 14px;
+        }
+        .check-box { display: flex;padding-top: 5px;}
+        .p_0{padding: 0px;}
+        .text-right1{float: right;}
+        .check-box span {
+            font-size: 13px;
+            line-height: 14px;
+        }
+        .sub-btn {
+            text-align: center;
+            color: #fff;
+            margin-top: 1.2rem;
+            border: none;
+            letter-spacing: 0.4px;
+            font-size: 15px;
+            font-weight: 500;
+            width: 100%;
+            background: #1D76F2 0% 0% no-repeat padding-box;
+            border-radius: 5px;
+            height: 50px;
+                margin-bottom: 2rem;
+        }
+        .login-bg {
+          background-image: url('../images/login/login_bg_image.jpg');
+          background-repeat: no-repeat;
+          height: 100vh;
+          background-position: left bottom;
+            background-size: cover;
+        }
+        .login-right {background: #FFF 0% 0% no-repeat padding-box; box-shadow: 0px 3px 45px #0000001A; border-radius: 10px;padding: 2rem;margin-top: 4rem;}
+        .login-right input:focus {
+            border-color: #297df3;
+            box-shadow: 0 0 3px rgb(30, 118, 242);
+        }
+        .mar-btm{margin-bottom: 1.5rem;}
+        .check-box .col-sm-6.p_0 { padding: 0px;}
+        .contai {
+            display: block;
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            letter-spacing: 0.28px;
+            color: #192D4D;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 0.28px;
+        }
+        
+        /* Hide the browser's default checkbox */
+        .contai input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+        }
+        
+        /* Create a custom checkbox */
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 16px;
+            width: 16px;
+            border: 1px solid #d6d6d6;
+            border-radius: 4px;
+        }
+        
+        /* On mouse-over, add a grey background color */
+        .contai:hover input ~ .checkmark {
+          background-color: #ccc;
+        }
+        
+        /* When the checkbox is checked, add a blue background */
+        .contai input:checked ~ .checkmark {
+            background-color: #2196F3;
+            border: 0;
+        }
+        /* Create the checkmark/indicator (hidden when not checked) */
+        .checkmark:after {
+          content: "";
+          position: absolute;
+          display: none;
+        }
+        
+        /* Show the checkmark when checked */
+        .contai input:checked ~ .checkmark:after {
+          display: block;
+        }
+        
+        /* Style the checkmark/indicator */
+        .contai .checkmark:after {
+        left: 6px;
+            top: 3px;
+            width: 5px;
+            height: 9px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        /* forgot page */
+        .forgot-screen p{font-size: 14px;line-height: 21px;color: #717171; margin-bottom: 1.5rem;}
+        .forgot-screen img{width: 200px;margin:auto;}
+        .mar-top{margin-top: 1.9rem;}
+        .text-center.mar-top span {color: #1D76F2;font-size: 14px;}
+        .forgot-popup h4 {
+            font-size: 16px;
+            line-height: 22px;
+            color: rgb(0, 0, 0);
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+        
+        .forgot-popup p{
+                font-size: 14px;
+            line-height: 21px;
+            margin-bottom: 1.5rem;
+        }
+        .forgot-popup {
+            width: 311px !important;
+            height: 278px;
+            margin: 9rem auto;
+        }
+        .forgot-popup img { padding-bottom: 1rem;padding-top: 1rem;
+        }
+        .forgot-popup .done-btn { width: 141px;height: 40px;}
+        a:hover {
+            text-decoration: none!important;
+        }
+        h4.fpass {  margin-bottom: 0.6rem;}: 15px 5px 30px;}
+input {-webkit-user-select: text;}
+.login-screen img{width: 200px;margin:auto;}
+.login-right input {
+    height: 48px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #D6D6D6;
+    border-radius: 5px;
+    padding: 0 15px;
+    letter-spacing: 0.28px;
+    color: #9D9D9D;
+    font-size: 14px;
+    line-height: 45px;
+	    margin: 1rem 0 0;
+}
+.login-right h4 {
+    font-size: 17px;
+    color: #000;
+    font-weight: bold;
+    font-family: 'h-light';
+    letter-spacing: 0.3px;
+    margin: 2rem 0 1.5rem;
+}
+span.text-right1 a {
+    color: #1D76F2;
+    letter-spacing: 0.28px;
+    line-height: 16px;
+    font-size: 14px;
+}
+.check-box { display: flex;padding-top: 5px;}
+.p_0{padding: 0px;}
+.text-right1{float: right;}
+.check-box span {
+    font-size: 13px;
+    line-height: 14px;
+}
+.sub-btn {
+    text-align: center;
+    color: #fff;
+    margin-top: 1.2rem;
+    border: none;
+    letter-spacing: 0.4px;
+    font-size: 15px;
+    font-weight: 500;
+    width: 100%;
+    background: #1D76F2 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    height: 50px;
+	    margin-bottom: 2rem;
+}
+.login-bg {
+  background-image: url('../images/login/login_bg_image.jpg');
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-position: left bottom;
+    background-size: cover;
+}
+.login-right {background: #FFF 0% 0% no-repeat padding-box; box-shadow: 0px 3px 45px #0000001A; border-radius: 10px;padding: 2rem;margin-top: 4rem;}
+.login-right input:focus {
+    border-color: #297df3;
+    box-shadow: 0 0 3px rgb(30, 118, 242);
+}
+.mar-btm{margin-bottom: 1.5rem;}
+.check-box .col-sm-6.p_0 { padding: 0px;}
+.contai {
+    display: block;
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    letter-spacing: 0.28px;
+    color: #192D4D;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.28px;
+}
+
+/* Hide the browser's default checkbox */
+.contai input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+}
+
+/* On mouse-over, add a grey background color */
+.contai:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.contai input:checked ~ .checkmark {
+    background-color: #2196F3;
+    border: 0;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.contai input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.contai .checkmark:after {
+left: 6px;
+    top: 3px;
+    width: 5px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+/* forgot page */
+.forgot-screen p{font-size: 14px;line-height: 21px;color: #717171; margin-bottom: 1.5rem;}
+.forgot-screen img{width: 200px;margin:auto;}
+.mar-top{margin-top: 1.9rem;}
+.text-center.mar-top span {color: #1D76F2;font-size: 14px;}
+.forgot-popup h4 {
+    font-size: 16px;
+    line-height: 22px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.forgot-popup p{
+	    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 1.5rem;
+}
+.forgot-popup {
+    width: 311px !important;
+    height: 278px;
+    margin: 9rem auto;
+}
+.forgot-popup img { padding-bottom: 1rem;padding-top: 1rem;
+}
+.forgot-popup .done-btn { width: 141px;height: 40px;}
+a:hover {
+    text-decoration: none!important;
+}
+h4.fpass {  margin-bottom: 0.6rem;}
+
+
+div#AlertBoxWin p {
+    font-family: 'Poppins', sans-serif!important;
+    font-weight: bold;
+    display: block;
+    position: relative;
+}
+#AlertBoxWin{
+    opacity:1;
+}
+div#AlertBoxWin .modal-dialog {
+    width: 20%;
+    text-align: center;
+}
+div#AlertBoxWin p  {
+       margin-top: 15px;
+}

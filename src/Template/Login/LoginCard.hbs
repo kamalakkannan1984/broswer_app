@@ -1,0 +1,36 @@
+
+	<div class="row clearfix login-screen">
+			<div class="col-sm-7">
+			</div>
+			<div class="col-sm-4">
+				<div class="login-right" id='login-right'>
+					<div class="text-center mar-btm">
+					<img src="images/logo.png" class="text-center">
+					<!-- <span class="icon_favourite_inactive"></span> -->
+					</div>
+					
+					<h4>Sign In to your Account</h4>
+					{{> erroralert}}
+					{{> inputbox loginsetting.username}}
+					<div class="form-group" id="show_hide_password">
+						<span class="icon_hide_password" aria-hidden="true" toggle="#password-field"></span>								
+						{{> inputbox loginsetting.password}}
+						
+					</div>
+					<div class="check-box">
+						<div class="col-sm-6 p_0">
+						<label class="contai">Remember me
+							<input id="remember_me" type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+					
+						</div>
+						<div class="col-sm-6 p_0">
+						<span class="text-right1"><a href="#" class="forgotpwd">Forgot Password?</a></span>
+						</div>
+					</div>
+					<button type="button" class="sub-btn" id='submitsignin'>Sign In</button>
+				</div>
+			</div>
+		</div>
+

@@ -1,0 +1,804 @@
+
+  .my-content{
+		width: 350px;
+		height: 550px;
+		text-align: center;
+		margin: 0 auto;
+		}
+  
+  .my-sec {
+padding: 10px 0px 1px;
+    border-bottom: 1px solid #DFDFDF;
+}
+
+.my-sec p {
+color: #4179F9;
+    font-size: 15px;
+    font-weight: 500;
+}
+span.my-arv {
+    float: right;
+    font-size: 20px;
+    margin: 0px 15px 0px -60px;
+}
+
+span.my-hd {
+    padding: 2px 4px;
+    background: #71C945;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.my-dec {
+    font-size: 12px;
+    letter-spacing: 0.2px;
+}
+span.call_timer {
+    margin-right: 5px;
+}
+.name-images1 {
+    float: left;
+}
+/*.col-md-12.my-part input {
+    color: #979797;
+    background: transparent;
+    border: transparent;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    width: 100%;
+    margin: 0px 0px 10px;
+    height: 33px;
+}*/
+img.list-name-img1 {
+    width: 50px;
+    height: 50px;
+    float: left;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.callerid {
+    float: left;
+    text-align: start;
+    margin-left: 5px;
+}
+.my-call {
+width: 100%;
+    float: left;
+    background: #F8F8F8;
+    padding: 5px 0px 0px;
+}
+.my-calls1 span{
+	font-size: 38px;
+}
+.my-name {
+    color: #000000;
+    font-size: 14px!important;
+    font-weight: 500;
+    margin: 8px 0px -4px;
+}
+
+.my-dial, .my-dialnum {
+    width: 100%;
+    float: left;
+	    margin-top: 20px;
+}
+.my-dial p {
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 500;
+}
+.my-dial1 {
+    margin-top: 10px;
+}
+span.icon-calling-1.img-responsive.center-block{font-size: 53px;}
+.my-dial a, .my-dialnum a {
+	text-decoration: none;
+	color: #000;
+	
+}
+.my-hg span {
+    font-size: 24px;
+    line-height: 42px;
+    color: #000000;
+}
+
+@media (max-width: 479px) and (min-width: 320px) {
+	
+	  .my-content{
+		width: 320px !important;
+		
+		}
+	
+}
+
+
+.my-content1{
+		width: 350px;
+		height:110px;
+		text-align: center;
+		margin: 0 auto;
+		}
+		
+		.my-modal-dialog {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.name-images2 {
+    float: left;
+}
+p.my-dec1 {
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0px;
+    text-align: start;
+}
+span.icon-call-end.list-name-img2 span{font-size:46px;}
+.my-name1{
+    color: #000000;
+    font-size: 14px!important;
+    font-weight: 500;
+    margin: 0px 0px 5px;
+}
+.my-calls1 {
+    width: 100%;
+    padding: 10px 0px;
+    text-align: end;
+}
+img.list-name-img2 {
+    width: 50px;
+    height: 50px;
+    float: right;
+}
+.my-calls1 ul li {
+    list-style: none;
+    display: inline-block;
+}
+.my-calls1 ul li:nth-child(1) {
+    top: 3px;
+    position: absolute;
+    right: 66px;
+}
+img.my-drp1 {
+    margin-right: 5px;
+}
+
+img.my-drp2 {
+    margin-right: 12px;
+}
+
+img.my-drp3 {
+    margin-right: 8px;
+}
+.dropdown-menu1 {
+min-width: 109px !important;
+    top: -98px;
+    padding: 7px 0px;
+}
+.dropdown-menu1>li>a {
+    display: block;
+    padding: 0px 8px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.my-call1, .my-key {
+    width: 100%;
+    float: left;
+    background: #F8F8F8;
+    padding: 0px 0px;
+}
+#phoneDailpad .modal-header {
+    padding: 8px 20px;
+}
+.icon-voicemail .path1:before {
+    color: #fff!important;
+}
+icon-voicemail .path2:before {
+    margin: 0px 0px 0px -10px!important;
+    color: #000!important;
+    font-size: 41px;
+}
+ul.icons-listing li .icon-voicemail .path2:before {
+    margin-left:-1em;
+    color: #fff!important;
+    font-size: inherit;
+}
+ul.icons-listing .icon-voicemail .path1:before{color:red!important;}
+.dialsymbol{margin-top: -12px; margin-bottom: -12px!important;}
+p.symbols {
+font-size: 35px!important;
+    padding-top: 8px;
+}
+p.symbols1 {
+    font-size: 24px!important;
+    padding-top: 10px;
+}
+p.my-add {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 5px 0px 7px;
+}
+.dropdown-menu1 li a span {
+    margin-right: 7px;
+}
+p.my-type {
+    font-size: 20px;
+    color: #979797;
+}
+.my-dialnum .my-hg p {
+    /*font-size: 29px;
+    color: #000;
+    margin: 0px;*/
+
+    font-size: 26px;
+    line-height: 24px;
+    color: #000000;
+	margin: 5px 0px;
+    padding: 14px;
+    font-weight: 400;
+    width: 69px;
+    border-radius: 100%;
+    height: 64px;
+    background: #b2c2da4f;
+
+}
+.my-dialnum p {
+    font-size: 13px;
+	margin-bottom: 0px;
+}
+.my-dial1num {
+    margin-bottom: 15px;
+}
+p.my-keyfont span {
+    font-size: 24px;
+    margin-right: 8px;
+}
+p.my-hide {
+    color: #8E8E8E;
+    position: relative;
+    top: -37px;
+    width: 36px;
+    right: 30px;
+    float: right;
+}
+p.my-keyfont b{position: relative; top: -4px;}
+p.my-keyfont {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+
+/*********** Another css ***********/
+
+.dialpad .my-call {display: none !important;}
+.dialpad .number_section {padding: 15px; top:25px; position: relative;}
+.dialpad .number_section .number_pads h4 { font-size: 34px;  font-family: 'Roboto', sans-serif; color: #37474F; margin-bottom: 0px; }
+.dialpad .number_section .number_pads p {color: rgba(0, 0, 0, 0.54); margin-bottom: 0px;}
+.dialpad .number_section  a:hover {text-decoration: none;}
+.dialpad .number_section .number_pads .hide-txt { font-size: 14px; letter-spacing: 0.9px; color: #8E8E8E; vertical-align: middle; margin-top: 55px; }
+.dialpad .header_section {padding: 20px 0px; background: #F8F8F8;}
+.dialpad .header_section h3 {font-size: 16px; letter-spacing: 0; color: #000; line-height: 28px; text-align: center; margin-top: 0px; margin-bottom: 0px;}
+.dialpad .header_section h3:before { content: ''; background:url(../images/dialpad.svg) no-repeat left; position: absolute; width:29px; height: 29px; margin-left:-30px; }
+/* no-gutters Class Rules */
+.row.no-gutters {
+   margin-right: 0;
+   margin-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+   padding-right: 0;
+   padding-left: 0;
+}
+
+
+#incoming-call {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:9000;
+  background-color:rgba(0,0,0, .5);
+  display:none;
+}  
+#incoming-call .window {
+  position:absolute;
+  left:0;
+  top:0;
+  width:440px;
+  height:200px;
+  display:none;
+  z-index:9999;
+  padding:20px;
+  border-radius: 15px;
+  text-align: center;
+}
+#incoming-call #dialog {
+  width:398px; 
+  height:auto;
+  padding:0px;
+  background-color:#ffffff;
+  border-radius: 11px;
+  font-size: 15pt;
+}
+
+
+#incoming-call .box{
+  text-align: left;
+}
+
+#incoming-call .head_section {width:100%; position: relative; line-height: 50px; background: #fff; border-top-left-radius: 11px; border-top-right-radius: 11px;}
+#mask.box .head_section h4 { font-size: 17px; font-weight: 500; color: #000; display: inline-block;
+position: relative;
+left: 50%;
+transform: translateX(-50%); }
+#incoming-call .head_section .icon-group {float:right; line-height: 50px;}
+#incoming-call .head_section .icon-group i { margin-right: 20px; }
+#incoming-call .center-box {background: url(../images/popup-header.svg) no-repeat; min-height: 379px;}
+#incoming-call .center-box .photo {padding-top:43px;}
+#incoming-call .center-box h1 { font-size: 24px; font-weight: 500; line-height: 28px; color: #fff; text-align: center; padding-top:10px; }
+#incoming-call.center-box h2 { font-size:16px; line-height: 18px; opacity: 0.65;  text-align: center; color: #fff; }
+#incoming-call .center-box h3 { font-size:16px; line-height: 18px; opacity: 0.65;  text-align: center; color: #fff; padding-top: 10px; }
+#incoming-call .footer_section {position: relative; width: 100%; background: #fff; padding: 20px 0px;}
+
+.vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.vertical-alignment-helper {
+    display:table;
+    height: 100%;
+    width: 100%;
+}
+/*.modal-content {
+    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it
+    width:inherit;
+    height:inherit;
+    /* To center horizontally 
+    margin: 0 auto;
+}*/
+div#incoming-call .modal-content {
+    border-radius: 11px;
+    border: 0px;
+    width: 398px;
+margin: 0px auto;
+}
+.card span.icon-Edit-1 {
+    color: #1D76F2;
+    background: #fff;
+    border-radius: 37px;
+    box-shadow: 0px 0px 4px #949494;
+    padding: 6px;
+    position: absolute;
+    top: 72px;
+    left: 87px;
+    cursor: pointer;
+    z-index: 9;
+}
+.pro-photo {
+    float: left;
+    margin-right: 30px;
+}
+.pro-names { float: left;}
+ul.icon_section span {
+    color: #1D76F2;
+    margin-right: 7px;
+    font-size: 17px;
+}
+#incoming-call .modal-header, #incoming-call .close {background: #fff;}
+#incoming-call .modal-header .modal-title {color:#000; position: absolute; left:50%; transform:translateX(-50%); font-size: 17px; font-weight: 500;}
+#incoming-call .modal-header { padding: 10px; border-top-left-radius: 11px; border-top-right-radius:11px;height: 45px; }
+#incoming-call .modal-header .close1 {opacity: 1; margin-top: 0px; float: right;}
+#incoming-call .modal-dialog { width:398px; }
+#incoming-call .modal-header .icon-group {float:right; line-height: 20px;}
+#incoming-call .modal-header .icon-group i { margin-right: 15px; }
+#incoming-call .modal-body {background: url(../images/popup-header.svg) no-repeat; min-height: 379px; padding:0px;}
+#incoming-call .modal-body .photo {padding-top:30px;}
+#incoming-call .numberbox input{border-radius:0px;}
+#incoming-call .dialpad-section1{display:block;}
+#incoming-call .numberbox.row.clearfix{margin:0px;}
+#incoming-call .customer-images { padding-top: 9px; line-height: 15px;}
+#incoming-call .second-screen .dialpad-section1 {
+    padding-top: 20px;
+	border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+#incoming-call span.icon-Left-arrow {
+float: left;
+    position: absolute;
+    left: 22px;
+    font-size: 13px;
+    top: 17px;
+    color: #828282;
+    font-weight: 400;
+}
+#incoming-call .third-screen ul{
+	font-size: 13px;
+    font-weight: 500;
+    list-style: none;
+    line-height: 41px;
+    margin: 0px;
+    padding: 0px 25px 25px;
+	background:#fff;
+	border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+.second-screen, .third-screen{display:none;}
+#incoming-call .third-screen ul li {
+    border-bottom: 0.5px solid #f3f3f3;
+    line-height: 51px;
+}
+#incoming-call .third-screen ul li span { font-size: 16px;}
+#incoming-call .third-screen .dialpad-section1 .row {
+    background: #F8F8F8 0% 0% no-repeat padding-box;
+}
+#incoming-call .third-screen .dialpad-section1 .row .customer-names img {
+    width: 75px;
+    height: 75px;
+    margin-right: 10px;
+}
+#incoming-call .third-screen .dialpad-section1 .row .customer-images {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 21px;
+    padding-top: 12px;
+}
+#incoming-call .third-screen .dialpad-section1 .row .customer-images span{
+	    font-size: 13px;
+    font-weight: 400;
+}
+#incoming-call .dialpad-section1 .row {
+	padding: 10px 10px 5px;
+    border-top: 0.5px solid #f3f3f3;
+}
+#incoming-call .customer-names { float: left; min-height: auto;}
+#incoming-call .modal-body h1 {
+	    font-size: 20px;
+    line-height: 21px;
+    font-weight: 500;
+    padding-top: 3px;
+    color: #fff;
+    text-align: center;
+}
+#incoming-call .modal-body h2 {
+	    font-size: 14px;
+    line-height: 18px;
+    opacity: 0.65;
+    text-align: center;
+    color: #fff;
+    font-weight: 100;
+    letter-spacing: 1px;
+    margin: 0px;
+}
+#incoming-call .modal-body h3 {
+    font-size: 14px;
+    opacity: 0.65;
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+#incoming-call .modal-footer {text-align: center; border-bottom-left-radius:11px; border-bottom-right-radius: 11px;padding: 20px 0px 5px;}
+#incoming-call .modal-footer ul {margin:0px; padding: 0px;}
+#incoming-call .modal-footer ul li {text-align: center;  display: inline-block; padding: 8px; }
+#incoming-call .modal-footer ul li h6 {
+    font-size: 13px;
+    line-height: 28px;
+    color: #000;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 7px;
+}
+ul.icons-list li:nth-child(1) span, ul.icons-list li:nth-child(2) span, ul.icons-list li:nth-child(3) span {
+    font-size: 24px;
+    background: #eaeaea;
+    padding: 17px;
+    border-radius: 37px;
+    color: #4179f9;
+}
+ul.icons-list li:nth-child(4) span{   
+	font-size: 59.3px;
+    position: relative;
+    bottom: 3px;
+}
+ul.icons-list li:nth-child(4) {
+    position: relative;
+    top: -1px;
+}
+ul.icons-list li:nth-child(4) h6{
+	margin-bottom: 0px;
+    margin-top: 0px!important;
+    line-height: 22px!important;
+}
+img.profiler-sicon {
+    width: 17px;
+    position: absolute;
+    top: 80px;
+    left: 89px;
+}
+.profile-screen ul.icon_section li span.icon-Chat {
+    position: relative;
+    top: 4px;
+}
+.profilers-com{float:none!important;}
+ .profile-screen {width: 100%; padding: 20px 50px 20px 50px; position: relative;}
+ .col-sm-9 .profile-screen h1 { 
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 500;
+    padding: 0px;
+    margin: 0px;
+    text-align: start;
+ }
+ .modal-content.accepting-new .modal-body {
+    min-height: auto!important;
+    padding-bottom: 35px!important;
+}
+.modal-footer.accepting ul.icons-list li span {
+    background: unset;
+}
+ul.icons-lists li span {
+    font-size: 95px;
+}
+ul.icons-lists li:nth-child(2) span {
+    font-size: 73px;
+    position: relative;
+    top: -6px;
+}
+ul.icons-lists li h6 {
+    margin: -5px 0px 15px!important;
+}
+ img.w-100 {
+    width: 100px;
+    height: 100px;
+}
+.profile_body span {
+    color: #a8a8a8;
+    font-size: 17px;
+}
+.profile_body .card {
+    padding: 12px 0px;
+}
+ .profile-screen .head_section {padding: 10px 0px 10px; border-bottom: solid 1px #f1f1f1;   }
+.profile-screen .card-title {
+    font-size: 17px;
+    margin-top: 24px;
+    font-weight: 500;
+}
+.profile_body {
+    margin-top: 18px;
+}
+.profile-screen .card .card-text {font-size:15px; }
+.profile-screen ul.icon_section {margin:0px; padding: 0px; float:right; margin-top: 40px;} 
+.profile-screen ul.icon_section li {
+    display: inline-block;
+    list-style: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0px 30px;
+}
+.profile-screen .profile_body .card-title {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0px 0px 5px;
+}
+.profile-screen .profile_body .card-text {font-size: 15px;}
+.profile-screen .profile_body .col-md-1 {line-height: 40px; text-align: right;}
+.profile-screen .head_section .profile_edit {position: absolute; z-index: 99; bottom: -10px; right: 30px}
+
+#new_message .modal-header {background: #fff; padding: 15px 30px; border-top-left-radius: 11px; border-top-right-radius: 11px;}
+#new_message .modal-header .modal-title {color:#000;  font-size: 17px; font-weight: 500; text-align: left;}
+#new_message .modal-header .close {position: absolute; right: 30px; top:12px; opacity: 1;}
+#new_message .modal-body {padding: 15px 30px;} 
+#new_message .modal-body label { font-size: 13px; font-weight: 500; color: #828282; line-height: 26px; }
+#new_message .modal-body p { font-size: 14px; line-height: 27px; color: #7D7D7D; }
+#new_message .modal-body .form-control {border:0px !important; box-shadow: none !important; border-bottom: solid 1px #ebebeb !important; font-size: 16px; color:#000000; border-radius:0px;}
+#new_message .modal-footer {text-align: center;}
+#new_message .modal-footer .btn-primary {background: #4179F9; border-color:#4179F9; padding: 8px 20px; border-radius:4px; -webkit-border-radius:4px; -moz-border-radius:4px; font-size: 15px; font-weight: 500; min-width: 110px;}
+#new_message .modal-footer .btn-secondary {background: transparent; border-color:#4179F9; padding: 8px 20px; border-radius:4px; -webkit-border-radius:4px; -moz-border-radius:4px; font-size: 15px; font-weight: 500; color: #4179F9; min-width: 110px;  }
+.preferences_section {width: 100%; position: relative; padding: 20px 100px;}
+.preferences_section h1 { font-size: 32px; line-height: 48px;  color: #000; font-weight: 600 !important; text-align: left !important; margin-top: 0px !important; padding-top: 0px !important; margin-bottom: 60px; }
+.preferences_section .select2-container--default .select2-selection--single { border:0px; height: 46px;  border-radius: 0px; line-height: 30px; color:#787878; font-size: 20px; }
+.preferences_section .select2-container--default .select2-selection--single .select2-selection__rendered {color:#787878; line-height: 45px; border-bottom: solid 1px #cacaca; padding-left: 0px; }
+.preferences_section .select2-container--default .select2-selection--single .select2-selection__arrow b { border-width: 0px; border-style: none; border-color: none; background: url(../images/down-arrow.svg) no-repeat; width:14px; height: 9px; top:65%; }
+.preferences_section label { font-size: 20px; color: #000000; line-height: 30px; font-weight: 500; margin-top:15px; }
+
+.preferences_section [type="radio"]:checked,
+.preferences_section [type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+.preferences_section [type="radio"]:checked + label,
+.preferences_section [type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 40px;
+    cursor: pointer;
+    line-height: 24px; font-size: 20px; font-weight: 500;
+    display: inline-block;
+    color: #000;
+}
+.preferences_section [type="radio"]:checked + label:before,
+.preferences_section [type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+.preferences_section [type="radio"]:checked + label:after,
+.preferences_section [type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #0852fb;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.preferences_section [type="radio"]:checked + label:before { border-color: #0852fb; }
+.preferences_section [type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+.preferences_section [type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.preferences_section .checkbox-inline, .radio-inline {padding-left: 35px;}
+.preferences_section p { color:#828282; font-size: 18px; line-height: 29px; margin-top: 10px; }
+.preferences_section p a {text-align: right; position: relative; top:50px; color: #4179F9; font-size: 20px;}
+.preferences_section p a:after { content: ''; background: url(../images/right-arrow-small.svg) right; position: absolute; width:9px; height: 12px; top:10px; margin-left: 5px; }
+
+.preferences_section .switch label {
+    cursor: pointer; margin-top: 70px; font-size: 18px;
+}
+.preferences_section .switch label input[type=checkbox] {
+    opacity: 0;
+    width: 0;
+    height: 0
+}
+.preferences_section .switch label input[type=checkbox]:checked+.lever {
+    background-color: #C0D2FC;
+}
+.preferences_section .switch label input[type=checkbox]:checked+.lever:after {
+    background-color: #3168E5;
+    left: 1.5rem
+}
+.preferences_section .switch label input[type=checkbox]:checked:not(:disabled)~.lever:active:after {
+    box-shadow: 0 .0625rem .1875rem .0625rem rgba(0, 0, 0, .4), 0 0 0 .9375rem rgba(170, 102, 204, .1)
+}
+.preferences_section .switch label input[type=checkbox]:not(:disabled)~.lever:active:after {
+    box-shadow: 0 .0625rem .1875rem .0625rem rgba(0, 0, 0, .4), 0 0 0 .9375rem rgba(0, 0, 0, .08)
+}
+.preferences_section .switch label input[type=checkbox]:disabled+.lever {
+    cursor: default
+}
+.preferences_section .switch label input[type=checkbox]:disabled+.lever:after,
+ .preferences_section .switch label input[type=checkbox]:disabled:checked+.lever:after {
+    background-color: #bdbdbd
+}
+.preferences_section .switch label .lever {
+    content: "";
+    display: inline-block;
+    position: relative;
+    background-color: #ebebeb;
+    border-radius: .9375rem;
+    margin-right: .625rem;
+    vertical-align: middle;
+    margin: 0 0rem;
+    width: 43px;
+    height: 18px;
+    transition: background .3s ease
+}
+.preferences_section .switch label .lever:after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background-color: #f1f1f1;
+    border-radius: 1.3125rem;
+    left: -.3125rem;
+    top: -.275rem;
+    box-shadow: 0 .0625rem .1875rem .0625rem rgba(0, 0, 0, .4);
+    width: 25px;
+    height: 25px;
+    transition: left .3s ease, background .3s ease, box-shadow 1s ease
+}
+
+
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; 
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+} 
+ul.icons-list li:nth-child(1) span:hover, ul.icons-list li:nth-child(2) span:hover, ul.icons-list li:nth-child(3) span:hover {
+    font-size: 24px;
+    background: #4179f9;
+    padding: 17px;
+    border-radius: 37px;
+    color: #ffffff;
+}
+@media(max-width:1091px){
+	.col-sm-9 .profile-screen h1, .profile-screen .card-title {font-size: 15px; font-weight: 500;}
+	.profile-screen .card .card-text{font-size:13px;}
+	.profile-screen ul.icon_section li {font-size: 14px;}
+	.profile-screen ul.icon_section { margin-top: 40px;}
+	.profile-screen .profile_body .card-title {font-size: 15px;}	
+	.profile-screen .profile_body .card-text {font-size: 13px;}
+}
+@media(max-width:991px){
+	.profile-screen .head_section .row:nth-child(1) .col-md-6:nth-child(1) {float: left; width:100%;}
+	.profile-screen ul.icon_section { float: left;}
+	.profile-screen ul.icon_section li {padding: 0px 30px 0px 0px;}
+	
+}
+@media(max-width:767px){
+	.profile-screen .profile_body .card-title {font-size: 14px;}
+	.profile_body .card {padding: 10px 0px;}
+	.profile_body .card .col-sm-1 {width: 50px!important; height: 50px!important; text-align: center;float: left;}
+}
+@media(max-width:398px){	
+	div#incoming-call .modal-content{width:100%;}
+}

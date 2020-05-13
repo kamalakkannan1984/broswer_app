@@ -1,0 +1,100 @@
+  {{!-- {{#each this}}
+  <div class="row pt-2 pb-2 c-pointer new-task-desc">
+        <div class="col-1 col-sm-1 col-md-1">
+          
+  <label class="chbxcontainer">
+  <input type="checkbox">
+  <span class="chbxcheckmark"></span>
+  </label>
+        </div>
+        <div class="col-8 col-sm-9 col-md-9 pl-0">
+          <span class="cnt-box toggle-seocnd">
+              <h5 class="f-14 task-name">{{SUMMARY}}</h5>
+              <div class="msg-task-team">{{ATTENDEE}}</div>
+          </span>
+        </div>
+        <div class="col-3 col-sm-2 col-md-2">
+          <p class="notify-msg"><span class="notify-icon"></span><br><span class="dte-box">{{DTEND}}</span></p>
+        </div>
+  </div>
+    {{/each}} --}}
+
+{{!-- {{#each this}}
+            <div class="row contact-first-title">
+			                    <div class="container-fluid text-left">
+			                         <span>{{group}}</span>
+			                    </div>
+			                </div>
+							<ul class="contact-left">
+                        {{#ContactList}}
+                            <li class="con-li" bid={{sip_login_id}} style="cursor:pointer">
+									<div class="row d-flex align-items-center">
+			                          <div class="col-2 col-sm-2 col-md-2">
+										  {{#if ImageURL}}
+			                           		 <span class="image-box"><img src={{ImageURL}}>
+										{{else}}
+										 <span class="image-box"><img src="images/pho.png">
+									{{/if}} 
+			                            <span class="avail-con-sts available"></span></span>
+			                          </div>
+			                          <div class="col-7 col-sm-8 col-md-8">
+			                            <span class="cnt-box">
+			                               <h5 class="f-16 contact-name">{{caller_id}}</h5>
+			                            </span>
+			                          </div>
+			                          <div class="col-3 col-sm-2 col-md-2">
+			                            <p class="notify-msg"><span class="notify-icon">{{ext}}</span></p>
+			                          </div>
+			                        </div>
+</li>
+                        {{/ContactList}}
+						</ul>
+              
+        {{/each}}  --}}
+
+  {{#each this}}
+           <div class="row">
+										<div class="col-md-12">
+											<p class="task-cr-title">Created on: <span class="creation-date">{{group}}</span></p>
+										</div>
+							</div>
+
+              
+               {{#TaskList}}
+    <div class="row pt-3 pb-2 c-pointer task-inprog">
+      {{#ifelse COMPLETEDWHEN "100%"}}
+      <div class="col-1 col-sm-1 col-md-1">
+				  <span class="prgs-sts-cont">{{COMPLETEPERCENTAGE}}</span>
+				</div>
+      {{/ifelse}}
+       {{#ifelse COMPLETEDWHEN "checkedonly"}}
+         <div class="col-1 col-sm-1 col-md-1"> 
+          <label class="chbxcontainer">
+          <input type="checkbox">
+          <span class="chbxcheckmark"></span>
+          </label>
+        </div>
+       {{/ifelse}}
+
+       {{#ifelse COMPLETEDWHEN "checkedall"}}
+         <div class="col-1 col-sm-1 col-md-1"> 
+          <label class="chbxcontainer">
+          <input type="checkbox">
+          <span class="chbxcheckmark"></span>
+          </label>
+        </div>
+       {{/ifelse}}
+				                          
+				                          <div class="col-8 col-sm-9 col-md-9 pl-0">
+				                            <span class="cnt-box toggle-seocnd">
+				                               <h5 class="f-14 task-name">{{SUMMARY}}</h5>
+				                               <div class="msg-task-team">{{ATTENDEE}}</div>
+				                            </span>
+				                          </div>
+				                          <div class="col-3 col-sm-2 col-md-2">
+				                            <p class="notify-msg"><span class="notify-icon"></span><br><span class="dte-box">{{DTEND}}</span></p>
+				                          </div>
+				                        </div>
+                                {{/TaskList}}
+                                <hr/>
+                                {{/each}}

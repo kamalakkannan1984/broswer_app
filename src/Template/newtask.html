@@ -1,0 +1,86 @@
+<meta charset='utf-8' />
+<script src='js/dhtmlxscheduler.js?v=20190111' type="text/javascript" charset="utf-8"></script>
+<link rel='stylesheet' type='text/css' href='css/dhtmlxscheduler_material.css'>
+<script src="js/dhtmlxscheduler_minical.js?v=20190111" type="text/javascript" charset="utf-8"></script>
+
+
+<script type="text/javascript">
+	var prev = null;
+	var curr = null;
+	var next = null;
+	
+	$(document).ready(function() {
+	
+	function doOnLoad(filename) {
+			if(filename ==  "EventsFile")
+				filename = EventsFile;
+			else
+			filename = EventsFilterFile;
+		scheduler.config.repeat_date = "%m/%d/%Y";
+		scheduler.config.include_end_by = true;
+
+		scheduler.config.multi_day = true;
+		scheduler.config.xml_date="%Y-%m-%d %H:%i";
+		console.log('EventsFile', EventsFile);
+		scheduler.init('scheduler_here',new Date(),"month");
+		
+		scheduler.load(filename, "json")
+		
+		var calendar = scheduler.renderCalendar({
+			container:"cal_here", 
+			navigation:true,
+			handler:function(date){
+				scheduler.setCurrentView(date, scheduler.getState().mode);
+			}
+		});
+		scheduler.linkCalendar(calendar);
+
+		scheduler.setCurrentView();
+		
+		$(".day_tab, .week_tab, .month_tab").css("visibility", "hidden");
+
+		/* setTimeout(function() {
+		getCurretWeekcalendar();
+            }, 1000); */
+		
+	}
+	doOnLoad('EventsFile');
+	
+	});
+
+	//generateUserlistforEvents();
+	function closeDialogwindow()
+	{
+		scheduler.hide_lightbox();
+	}
+
+	function reloadCalender()
+	{
+		scheduler.clearAll();
+		scheduler.config.lightbox.sections=[
+		    {name:"description", height:70, map_to:"text", type:"textarea" , focus:true},
+			{name:"locationInput", height:35, map_to:"location", type:"textarea" },
+	    	{name:"typeSelect", map_to:"type", type:"select", options:scheduler.serverList("types")},
+	    	{name:"time", type:"time", map_to:"auto"}
+		];
+		scheduler.config.multi_day = true;
+		scheduler.config.xml_date="%Y-%m-%d %H:%i";
+		
+		scheduler.init('scheduler_here',new Date(),"month");
+		
+		scheduler.load(EventsFilterFile, "json")
+		
+		var calendar = scheduler.renderCalendar({
+			container:"cal_here", 
+			navigation:true,
+			handler:function(date){
+				scheduler.setCurrentView(date, scheduler.getState().mode);
+			}
+		});
+		scheduler.linkCalendar(calendar);
+		scheduler.setCurrentView();
+		$(".day_tab, .week_tab, .month_tab").css("visibility", "hidden");
+	}
+
+
+</script>

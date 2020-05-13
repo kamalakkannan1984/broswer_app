@@ -1,0 +1,28 @@
+<div class="modal" id="newmessageWin" role="dialog">
+    <div class="modal-dialog">    
+		
+		<div class="modal-content add-admins">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><img src="images/close.svg"/></button>
+				<h4 class="modal-title">New Message</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row clearfix">
+					<div class="col-md-12">
+						<label>Enter name or email address<br>
+							
+							<input type="text" name="" id="newMsgTxt" onkeyup="NewMsgContact(this.value)" placeholder="sample@gmail.com" autocomplete="off"/>
+						</label>
+					</div>
+				</div>
+				<div class="modal-body myModaladdnewteamevents style-4" id="msgContactUrlSt" style="overflow-y: auto; max-height: 200px;display:none"></div>
+				<p class="recentPopupErr" style="display:none; color:red">Please select any one contact</p>
+				<p>Conversations with one or more specific people are great for informal chat. For projects, departments, or even topic-based discussion, you should <a href="#" onclick="createTeamfromMsgPopup()">create a team</a> instead.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default closes" data-dismiss="modal">Cancel</button>
+				<button type="button" id="newMsgSubmit" class="btn btn-default proceed">Continue</button>
+			</div>
+		</div>      
+    </div>
+</div>

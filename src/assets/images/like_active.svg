@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="21" viewBox="0 0 23 21">
+  <defs>
+    <clipPath id="clip-like_active">
+      <rect width="23" height="21"/>
+    </clipPath>
+  </defs>
+  <g id="like_active" clip-path="url(#clip-like_active)">
+    <g id="outline-thumb_up-24px" transform="translate(0.041 0.041)">
+      <path id="Path_2241" data-name="Path 2241" d="M8.673,20.182H17.3a1.905,1.905,0,0,0,1.765-1.17l2.9-6.762a1.9,1.9,0,0,0,.134-.7V9.632a1.924,1.924,0,0,0-1.918-1.918H14.13l.911-4.383.029-.307a1.444,1.444,0,0,0-.422-1.017L13.631,1,7.311,7.32a1.906,1.906,0,0,0-.556,1.352v9.591A1.924,1.924,0,0,0,8.673,20.182ZM1,8.673H4.836V20.182H1Z" transform="translate(-0.041 -0.041)" fill="#1d76f2"/>
+    </g>
+  </g>
+</svg>

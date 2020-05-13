@@ -1,0 +1,52 @@
+<div class="modal fade in" id="phoneDailpad" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content my-content">	
+			
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><img src="images/close.svg"></button>
+				<h4 class="modal-title">Keypad</h4>
+			</div>
+			<div class="my-key">
+				<div class="col-md-12 my-part">
+					<div class="dial-pad">
+						<input type="text" name="number" class="numbersections-all" id="dialpadPhone" onkeydown="IgnoreSpecialCharacters(this.value)" onkeyup="dailpadtext_Ind(this.value)" onkeypress="return blockSpecialChar(event)" placeholder="Type a name or number" maxlength=18 autocomplete="off"/><span><img src="images/p-dialpad.png" class="dial-pad-icon" style="cursor:pointer"></span>
+					</div>
+					<div class="dailpadtextdiv_ind style-4" style="display: none;">
+					</div>
+				</div>
+			</div>
+			<div class="my-dialnum">
+				<p>From:
+					<select id="dailpadlistSub_ind">
+						<option>+442034440424</option>
+					</select>
+				</p>
+				<div class="row">
+					<div class="col-sm-4 DnumFocus" bid="1" onclick=dailpadNum("1")><h1>1<br><span><img src="images/no1.svg"/></span></h1></div>
+					<div class="col-sm-4 DnumFocus" bid="2" onclick=dailpadNum("2")><h1>2<br><span>ABC</span></h1></div>
+					<div class="col-sm-4 DnumFocus" bid="3" onclick=dailpadNum("3")><h1>3<br><span>DEF</span></h1></div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4 DnumFocus" bid="4" onclick=dailpadNum("4")><h1>4<br><span>GHI</span></h1></div>
+					<div class="col-sm-4 DnumFocus" bid="5" onclick=dailpadNum("5")><h1>5<br><span>JKL</span></h1></div>
+					<div class="col-sm-4 DnumFocus" bid="6" onclick=dailpadNum("6")><h1>6<br><span>MNO</span></h1></div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4 DnumFocus" bid="7" onclick=dailpadNum("7")><h1>7<br><span>PQRS</span></h1></div>
+					<div class="col-sm-4 DnumFocus" bid="8" onclick=dailpadNum("8")><h1>8<br><span>TUV</span></h1></div>
+					<div class="col-sm-4 DnumFocus" bid="9" onclick=dailpadNum("9")><h1>9<br><span>WXYZ</span></h1></div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4 DnumFocus" onclick=dailpadNum("*")><h1 class="star-icon">*<br><span></span></h1></div>
+					<div class="col-sm-4 DnumFocus" id="phonePLongPress"><h1>0<br></h1><span class="dial-plus">+</span></div>
+					<div class="col-sm-4 DnumFocus" onclick=dailpadNum("#")><h1 class="num-sign-icon">#<br><span></span></h1></div>
+				</div>	
+				<div class="col-md-12 col-sm-12 col-xs-12 my-dial1btns">
+					<div class="col-sm-4"></div>
+					<div class="col-sm-4"><span class="icon-calling-1 img-responsive center-block" style="cursor: pointer;"><span class="path1"></span><span class="path2"></span></span></div>
+					<div class="col-sm-4"><h5 class="hidepad"><p id="phoneHide"> Hide </p></h5></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,350 @@
+input
+{
+  -webkit-user-select: text;
+}
+
+/************Font Integration***************/
+@font-face {
+    font-family: 'h-regular';
+    src: url('../fonts/HelveticaNeue.eot');
+    src: url('../fonts/HelveticaNeue.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeue.woff2') format('woff2'), url('../fonts/HelveticaNeue.woff') format('woff'), url('../fonts/HelveticaNeue.ttf') format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'h-light';
+    src: url('../fonts/HelveticaNeue-Light.eot');
+    src: url('../fonts/HelveticaNeue-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeue-Light.woff2') format('woff2'), url('../fonts/HelveticaNeue-Light.woff') format('woff'), url('../fonts/HelveticaNeue-Light.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'h-medium';
+    src: url('../fonts/HelveticaNeue-Medium.eot');
+    src: url('../fonts/HelveticaNeue-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeue-Medium.woff2') format('woff2'), url('../fonts/HelveticaNeue-Medium.woff') format('woff'), url('../fonts/HelveticaNeue-Medium.ttf') format('truetype');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'h-bold';
+    src: url('../fonts/HelveticaNeue-Bold.eot');
+    src: url('../fonts/HelveticaNeue-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeue-Bold.woff2') format('woff2'), url('../fonts/HelveticaNeue-Bold.woff') format('woff'), url('../fonts/HelveticaNeue-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+body{font-family:'h-regular'!important; font-size:13px; line-height:21px; }
+.container-fluid.main-top {
+    background: #0F2369;
+    padding: 10px 15px;
+    height: 60px;
+}
+img.logo {height: 38px;  margin-left: 0.7rem;}
+.col-sm-1.main-left1 {
+    background: #0F2369;
+    height: calc(100vh - 60px);
+    max-width: 6%;
+}
+.col-sm-1.main-left4 {
+    background: #F0F4F8;
+    height: calc(100vh - 60px);
+    max-width: 4%;
+}
+.col-sm-1.main-left1 ul {  padding: 0;  margin-top: 2.5rem;}
+.col-sm-1.main-left1 ul li {
+    list-style: none;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    font-size: 10px;
+    margin: 1rem 0 1.5rem;
+    text-align: center;
+    font-family: 'h-light';
+    line-height: 12px;
+}
+.col-sm-7.main-left3 {
+    max-width: 65%;
+    flex: 65%;
+}
+.top-search input {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 0;
+    border-radius: 6px;
+    width: 450px;
+    float: left;
+    margin-right: 1.2rem;
+    height: 38px;
+    font-size: 13px;
+    padding: 0 2rem;
+    line-height: 15px;
+}
+button.topbtn {
+background: #1D76F2 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 19px;
+    border: none;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    font-size: 15px;
+    line-height: 24px;
+    height: 38px;
+    padding: 0 1.2rem;
+}
+.col-sm-1.main-left1 ul li span {
+    font-size: 21px;
+}
+span.dots {
+    background: #FF1717;
+    position: absolute;
+    font-size: 7px!important;
+    float: right;
+    text-align: center;
+    height: 9px;
+    width: 9px;
+    line-height: 8px;
+    border-radius: 7px;
+    margin-left: -0.3rem;
+}
+.col-sm-1.main-left4 ul {  padding: 0;  list-style: none;}
+.col-sm-1.main-left4 ul li {  margin: 1.2rem 0;  text-align: center;}
+.col-sm-1.main-left4 ul li span { color: #435669;  font-size: 20px;}
+.col-sm-3.main-left2 {
+    background: #F0F4F8;
+}
+.col-sm-3.main-left2 h3 {
+    color: #383838;
+    font-size: 21px;
+    line-height: 25px;
+    font-family: 'h-medium';
+    margin: 1rem 0;
+}
+span.contact-span, span.contact-span1 {
+    float: right;
+    letter-spacing: 0.14px;
+    color: #1D76F2;
+    font-size: 13px;
+    line-height: 16px;
+    font-family: 'h-regular';
+    margin: 4px 4px 0;
+}
+span.contact-span1 { position: relative; padding-top: 1px;}
+.leftsearch{
+	    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #E7ECF2;
+    border-radius: 6px;
+    width: 100%;
+    font-size: 13px;
+    color: #959595;
+    line-height: 15px;
+    height: 38px;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+img.top-pro-photo {
+    width: 46px;
+    float: right;
+    margin-top: -3px;
+}
+span.dotscolors.chatclr {
+    color: #16B716;
+    position: absolute;
+    width: 7px;
+    float: right;
+    bottom: 0px;
+    right: 1.3rem;
+    height: 7px;
+    padding: 0;
+    background: #16B716;
+    border: 1px solid;
+    border-radius: 50%;
+}
+span.dotscolors.awayclr {
+    color: #FFA35D ;
+    position: absolute;
+    width: 7px;
+    float: right;
+    bottom: 0px;
+    right: 1.3rem;
+    height: 7px;
+    padding: 0;
+    background: #FFA35D ;
+    border: 1px solid;
+    border-radius: 50%;
+}
+span.dotscolors.dndclr {
+    color: #F35A5A ;
+    position: absolute;
+    width: 7px;
+    float: right;
+    bottom: 0px;
+    right: 1.3rem;
+    height: 7px;
+    padding: 0;
+    background: #F35A5A ;
+    border: 1px solid;
+    border-radius: 50%;
+}
+span.dotscolors.xaclr {
+    color: #949494 ;
+    position: absolute;
+    width: 7px;
+    float: right;
+    bottom: 0px;
+    right: 1.3rem;
+    height: 7px;
+    padding: 0;
+    background: #949494 ;
+    border: 1px solid;
+    border-radius: 50%;
+}
+
+span.dotscolors.green {
+    color: #16B716;
+    position: absolute;
+    width: 7px;
+    float: right;
+    bottom: 0px;
+    right: 1.3rem;
+    height: 7px;
+    padding: 0;
+    background: #16B716;
+    border: 1px solid;
+    border-radius: 50%;
+}
+.inner-ptop img {
+    width: 39px;
+    float: left;
+    margin-right: 0.8rem;
+}
+.row.clearfix.inner-ptop h4 {
+    letter-spacing: 0px;
+    color: #000000;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+}
+.inner-ptop p {
+    letter-spacing: 0px;
+    color: #888888;
+    font-size: 11px;
+    line-height: 13px;
+	margin:0px;
+}
+span.dotscolors.green.static {
+    position: relative!important;
+    padding: 0 4px;
+    float: none!important;
+    border: 0;
+    font-size: 7px;
+    top: -1px;
+    right: 2px;
+}
+.inner-ptop ul{margin:0px;}
+.inner-ptop ul li {
+    background: #F7F8FA 0% 0% no-repeat padding-box;
+    list-style: none;
+    display: inline-block;
+    margin: 0 0.3rem;
+    padding: 3px 6px 1px;
+    border-radius: 50%;
+    font-size: 19px;
+    color: #435669;
+}
+.row.clearfix.inner-ptop {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 0px #0000000D;
+	padding: 10px 0;
+}
+.inner-ptop ul {
+    text-align: right;
+    margin: 0.3rem 2rem 0 0;
+    padding: 0;
+}
+span.signerr-icn {
+    vertical-align: baseline;
+    margin-right: 10px;
+}
+span.signerr-icn img {
+    width: 24px;
+    height: 24px;
+}
+.signinerr {
+    background: rgb(247, 199, 199);
+    padding: 12px 9px;
+    border-radius: 5px;
+}
+span.signerr-msg {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.loadersimg {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+	transition: all 5s ease-in-out;
+}
+
+.loadersimg1 {
+    top: 62%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+	transition: all 5s ease-in-out;
+}
+
+.loadersimg img, .loadersimg1 img {
+    width: 85px;
+    border-radius: 20px;
+}
+
+.loadersimg{
+    position: fixed;   
+    bottom: 0;
+    z-index: 1000;
+    background-color: #0000004a;
+    width: 100%;
+    height: 100%;
+}
+.loader {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -50px 0px 0px -50px;
+	z-index:999999999999;
+}
+
+.loader img {
+    width: 100px;
+}
+
+.loadersimg1{
+    position: fixed;   
+    bottom: 0;
+    z-index: 1000;
+   /*  background-color: #0000004a; */
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.modal-header .close {
+    margin-top: -2px;
+    position: absolute;
+    right: 18px;
+    top: 18px;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.aboutAppinfo {
+    padding: 15px;
+    text-align: center;
+    line-height: 31px;
+}
+.aboutAppinfo .abtBtn {
+    margin: 15px 0px;
+}
+.abtBtn .btn{background: #1D76F2; color: #fff;}
+
+
+div#appinfo .modal-dialog {
+    width: 25%;
+}

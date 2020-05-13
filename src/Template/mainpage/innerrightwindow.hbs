@@ -1,0 +1,53 @@
+	
+			  <div class="closenavbtn"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span class="icon_close"></span></a></div>
+              {{#if is_favourite}}
+			  <div class="rigtstar"><span class="favicon icon_favourite_active cyellow"></span></div>
+			  {{else}}
+			  <div class="rigtstar"><span class="favicon icon_favourite_inactive"></span></div>
+              {{/if}}
+			  <div class="vsliderighthead text-center">
+			   <div class="vsliderRpic">
+			     			{{#if ImageURL}}
+							<img src={{ImageURL}}>
+							{{else}}
+							<img src="images/pho.png"/>
+							{{/if}}
+			      <span class="avail-sts green"></span>
+			   </div>
+			   <div class="vsliderRpname">{{caller_id}}</div>
+			   <div class="vcon-sec">
+			      <div>
+			         <div class="vcon-sec-icn"><span class=""><img src="images/call.svg"></span></div>
+			         <div class="vcon-title">Call</div>
+			      </div>
+			      <div>
+			         <div class="vcon-sec-icn"><span class=""><img src="images/message.svg"></span></div>
+			         <div class="vcon-title">Message</div>
+			      </div>
+			      <div>
+			         <div class="vcon-sec-icn"><span class=""><img src="images/message.svg"></span></div>
+			         <div class="vcon-title">Meet</div>
+			      </div>
+			   </div>
+			  </div>
+			  <div class="vsliderighcontent">
+			   <ul id="myTab" class="nav slidelist">
+			        <li class="nav-item">
+			            <a href="#home" class="nav-link active">Contact Details</a>
+			        </li>
+			        <li class="nav-item">
+			            <a href="#profile" class="nav-link">Other Details</a>
+			        </li>
+			    </ul>
+
+			   <div class="tab-content">
+			        <div class="tab-pane fade show active " id="home">
+			            {{> contactdetails}}
+			        </div>
+			        <div class="tab-pane fade" id="profile">
+			           {{> otherdetails}}
+			        </div>
+			    </div>
+
+			  </div>
+			
