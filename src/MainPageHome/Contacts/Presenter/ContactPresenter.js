@@ -4,60 +4,46 @@
 
 
  */
-import ContactView from '../View/ContactView';
-import GetContactModel from '../Model/GetContacts';
-import GlobalData from '../../Storage/GlobalData';
-import {xmpp} from '../../Common/constant'
+import ContactView from "../View/ContactView";
+import GetContactModel from "../Model/GetContacts";
+import GlobalData from "../../Storage/GlobalData";
+import { xmpp } from "../../Common/constant";
 
-import {groupingContacts} from '../../Common/common'
+import { groupingContacts } from "../../Common/common";
 export default class ContactPresenter {
- 
-    constructor()
-    {
+  constructor() {}
+  /*
+   *** init function initiate on load event
+   */
+  init = () => {
+    let that = this; // this stored in that for function scope
+    that.callContacts();
+  };
 
-    
-    }
-    /* 
-    *** init function initiate on load event 
-    */
-    init=()=>{
-           
-        let that=this; // this stored in that for function scope 
-        that.callContacts()   
-                 
-    }
+  callContacts() {
+    let __Model = new GetContactModel();
+    __Model
+      .getContactsList()
+      .then((response) => {
+        if (response.error_code == 0 && response.error_msg == "Success") {
+          GlobalData.BuddyList = response.companycontacts;
 
-        
-        
-    callContacts(){
-        
-            let __Model = new GetContactModel();
-            __Model.getContactsList().then((response)=>
-            {
-                
-                    
-                
-                if( (response.error_code == 0) && (response.error_msg == "Success") ) 
-                {
+          response.companycontacts.map(function (val, index) {
+            var username = val.sip_login_id + "@" + xmpp.domain;
 
-                    GlobalData.BuddyList = response.companycontacts;
-                   
+            var bid = jsxc.jidToBid(username);
+            if (!jsxc.storage.getUserItem("buddy", bid)) {
+              jsxc.xmpp.addBuddy(
+                val.sip_login_id + "@" + xmpp.domain,
+                val.caller_id,
+                val.ext,
+                val.sip_login_id,
+                val.email_id
+              );
+            }
+          });
 
-                    response.companycontacts.map(function(val, index){ 
-
-                        var username 		= val.sip_login_id + '@' + xmpp.domain;
-				
-				        var bid 			= 	jsxc.jidToBid(username);
-                        if (!jsxc.storage.getUserItem('buddy', bid)) {	
-                           
-                             jsxc.xmpp.addBuddy(val.sip_login_id + "@" + xmpp.domain,val.caller_id, 
-                            val.ext, 
-                            val.sip_login_id, val.email_id);      
-                        } 
-
-                    }) 
-
-                    /* response.forEach(function(number, i) { 
+          /* response.forEach(function(number, i) { 
                         console.log( response[i].user_status);
 
                         switch(response[i].user_status){
@@ -84,9 +70,9 @@ export default class ContactPresenter {
                         
                     }); */
 
-                   let groupindata =  groupingContacts(response.companycontacts)
+          let groupindata = groupingContacts(response.companycontacts);
 
-                  /*  var groupindata = [
+          /*  var groupindata = [
                     {
                         Category: "General",
                         DocumentList: [
@@ -113,37 +99,26 @@ export default class ContactPresenter {
                         Category: "Minutes"
                     }
                 ]; */
-                    
-                    // console.log(GlobalData.ContactData);
-                    let contactResponse = {isContact:true, contactarray:groupindata}
-               
-                        this.View = new ContactView(contactResponse); // Create the object for View
-                        
-                        this.View.getView(contactResponse);
-                   
-                }
-                else
-                {
 
-                   
+          // console.log(GlobalData.ContactData);
+          console.log("KAMAL");
+          console.log(groupindata);
+          let contactResponse = { isContact: true, contactarray: groupindata };
 
-                    let contactResponse = {isContact:false, data:response}
-                    console.log(contactResponse);
-                    this.View = new ContactView(contactResponse); // Create the object for View
-         
-                    this.View.initContact();
-                   // this.View.apisucess(false, response);
-                } 
-           
-            
-         
-            }).catch(e => console.error("Login Module Critical failure: " + e.message));
-                 
+          this.View = new ContactView(contactResponse); // Create the object for View
+
+          this.View.getView(contactResponse);
+        } else {
+          let contactResponse = { isContact: false, data: response };
+          console.log(contactResponse);
+          this.View = new ContactView(contactResponse); // Create the object for View
+
+          this.View.initContact();
+          // this.View.apisucess(false, response);
         }
-
-
-        
-     
-    }
-   
-
+      })
+      .catch((e) =>
+        console.error("Login Module Critical failure: " + e.message)
+      );
+  }
+}

@@ -1,19 +1,18 @@
-
 <div class="container-fluid main-top">
 	<div class="row clearfix">
-		<div class="col-sm-12">				
+		<div class="col-sm-12">
 			<div class="row clearfix">
-				<div class="col-sm-3">				
-					<img src="images/ur_logo_white.svg" class="logo"/>
+				<div class="col-sm-3">
+					<img src="images/ur_logo_white.svg" class="logo" />
 				</div>
-				<div class="col-sm-7">				
+				<div class="col-sm-7">
 					<div class="top-search">
-						<input type="text" name="" placeholder="Search"/>
+						<input type="text" name="" placeholder="Search" />
 						<button class="topbtn"><span class="icon_add_new"></span> New</button>
 					</div>
 				</div>
-				<div class="col-sm-2">				
-					<img src="images/pho.png" class="top-pro-photo"/>
+				<div class="col-sm-2">
+					<img src="images/pho.png" class="top-pro-photo" />
 					<span class="dotscolors green"></span>
 				</div>
 			</div>
@@ -30,7 +29,8 @@
 				<div class="col-sm-12">
 					<ul>
 						<li><span class="icon_chat"></span><span class="dots">1</span><br>Chat</li>
-						<li><span class="icon_call"></span><br>Calls</li>
+						<li style="cursor:pointer"><a herf="#" id="callWindowOpen"><span
+									class="icon_call"></span><br>Calls</a></li>
 						<li><span class="icon_contacts"></span><br>Contacts</li>
 						<li><span class="icon_meeting"></span><br>Meeting</li>
 					</ul>
@@ -42,40 +42,42 @@
 				<div class="col-sm-12">
 					<div class="row clearfix">
 						<div class="col-sm-12">
-							<h3>Contacts <span class="contact-span1"><div class="dropdown">
-							  <span class="icon_filter dropbtn"></span>
-							  <div class="dropdown-content" id="filter-contact">
-							  	<span class="dropdown-menu-arrow"></span>
-							    <a href="#" data-value="All">All</a>
-							    <a href="#" data-value="Favourite">Favourite</a>
-							    <a href="#" data-value="Work">Work</a>
-							    <a href="#" data-value="Teams">Teams</a>
-							  </div>
-							</div></span><span class="contact-span">All</span></h3>				
+							<h3>Contacts <span class="contact-span1">
+									<div class="dropdown">
+										<span class="icon_filter dropbtn"></span>
+										<div class="dropdown-content" id="filter-contact">
+											<span class="dropdown-menu-arrow"></span>
+											<a href="#" data-value="All">All</a>
+											<a href="#" data-value="Favourite">Favourite</a>
+											<a href="#" data-value="Work">Work</a>
+											<a href="#" data-value="Teams">Teams</a>
+										</div>
+									</div>
+								</span><span class="contact-span">All</span></h3>
 						</div>
 					</div>
-					
+
 					<div class="container">
 						<div class="">
-							<input type="text" name="" id="con-search" placeholder="Search" class="leftsearch"/>
+							<input type="text" name="" id="con-search" placeholder="Search" class="leftsearch" />
 						</div>
 					</div>
-					
+
 					<div class="row clearfix left-contact-list">
 						<div class="col-sm-12" id="contactlist-sec">
-							
+
 						</div>
 					</div>
 				</div>
-			</div>		
+			</div>
 		</div>
 
 		<div class="col-sm-7 main-left3" id="chatsec">
-				
+
 		</div>
 
-	<div class="col-sm-1 main-left4">
-		{{> small-right}}
+		<div class="col-sm-1 main-left4">
+			{{> small-right}}
 		</div>
 	</div>
 </div>

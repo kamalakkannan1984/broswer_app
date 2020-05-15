@@ -1,18 +1,20 @@
 @font-face {
-  font-family: 'ur_desktop_app';
-  src:  url('../fonts/ur_desktop_app.eot?p40x0n');
-  src:  url('../fonts/ur_desktop_app.eot?p40x0n#iefix') format('embedded-opentype'),
-    url('../fonts/ur_desktop_app.ttf?p40x0n') format('truetype'),
-    url('../fonts/ur_desktop_app.woff?p40x0n') format('woff'),
-    url('../fonts/ur_desktop_app.svg?p40x0n#ur_desktop_app') format('svg');
+  font-family: "ur_desktop_app";
+  src: url("../fonts/ur_desktop_app.eot?p40x0n");
+  src: url("../fonts/ur_desktop_app.eot?p40x0n#iefix")
+      format("embedded-opentype"),
+    url("../fonts/ur_desktop_app.ttf?p40x0n") format("truetype"),
+    url("../fonts/ur_desktop_app.woff?p40x0n") format("woff"),
+    url("../fonts/ur_desktop_app.svg?p40x0n#ur_desktop_app") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon_"], [class*=" icon_"] {
+[class^="icon_"],
+[class*=" icon_"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'ur_desktop_app' !important;
+  font-family: "ur_desktop_app" !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -222,4 +224,196 @@
 }
 .icon_hide_password:before {
   content: "\e141";
+}
+.icon_time:before {
+  content: "\e142";
+}
+.icon_task_unchecked:before {
+  content: "\e143";
+}
+.icon_task_checked:before {
+  content: "\e144";
+}
+.icon_event_checked:before {
+  content: "\e145";
+}
+.icon_assignees:before {
+  content: "\e146";
+}
+.icon_edit_thin:before {
+  content: "\e147";
+}
+.icon_download:before {
+  content: "\e148";
+}
+.icon_current_location:before {
+  content: "\e149";
+}
+.icon_calendar:before {
+  content: "\e14a";
+}
+.icon_repeat_event:before {
+  content: "\e14b";
+}
+.icon_location1:before {
+  content: "\e14c";
+}
+.icon_play:before {
+  content: "\e14d";
+}
+.icon_pause:before {
+  content: "\e14e";
+}
+.icon_like_thin:before {
+  content: "\e14f";
+}
+.icon_pin_thin:before {
+  content: "\e150";
+}
+.icon_bookmark_thin:before {
+  content: "\e151";
+}
+.icon_message_thin:before {
+  content: "\e152";
+}
+.icon_link_avatar:before {
+  content: "\e153";
+}
+.icon_grid_view:before {
+  content: "\e154";
+}
+.icon_list_view:before {
+  content: "\e155";
+}
+.icon_share:before {
+  content: "\e156";
+}
+.icon_note:before {
+  content: "\e157";
+}
+.icon_send:before {
+  content: "\e158";
+}
+.icon_copy:before {
+  content: "\e159";
+}
+.icon_conference:before {
+  content: "\e15a";
+}
+.icon_msg_deleted:before {
+  content: "\e15b";
+}
+.icon_empty_img:before {
+  content: "\e15c";
+}
+.icon_empty_video:before {
+  content: "\e15d";
+}
+.icon_share_filled:before {
+  content: "\e15e";
+}
+.icon_delete_filled:before {
+  content: "\e15f";
+}
+.icon_attach_doc:before {
+  content: "\e160";
+}
+.icon_attach_pdf:before {
+  content: "\e161";
+}
+.icon_attach_audio:before {
+  content: "\e162";
+}
+.icon_attach_zip:before {
+  content: "\e163";
+}
+.icon_attach_img:before {
+  content: "\e164";
+}
+.icon_file_local:before {
+  content: "\e165";
+}
+.icon_file_drive:before {
+  content: "\e166";
+}
+.icon_file_dropbox:before {
+  content: "\e167";
+}
+.icon_file_box:before {
+  content: "\e168";
+}
+.icon_file_evernote:before {
+  content: "\e169";
+}
+.icon_file_cloud:before {
+  content: "\e16a";
+}
+.icon_send_files:before {
+  content: "\e16b";
+}
+.icon_incoming_call:before {
+  content: "\e16c";
+}
+.icon_missed_call:before {
+  content: "\e16d";
+}
+.icon_call_dialer:before {
+  content: "\e16e";
+}
+.icon_attend_call:before {
+  content: "\e16f";
+}
+.icon_end_call:before {
+  content: "\e170";
+}
+.icon_call_park:before {
+  content: "\e171";
+}
+.icon_call_flip:before {
+  content: "\e172";
+}
+.icon_msg_sending:before {
+  content: "\e173";
+}
+.icon_voicemail:before {
+  content: "\e174";
+}
+.icon_dialpad_audio:before {
+  content: "\e175";
+}
+.icon_dialpad_key:before {
+  content: "\e176";
+}
+.icon_dialpad_add:before {
+  content: "\e177";
+}
+.icon_dialpad_hold:before {
+  content: "\e178";
+}
+.icon_dialpad_record:before {
+  content: "\e179";
+}
+.icon_dialpad_transfer:before {
+  content: "\e17a";
+}
+.icon_dialpad_video:before {
+  content: "\e17b";
+}
+.icon_dialpad_more:before {
+  content: "\e17c";
+}
+.icon_dialpad_merge:before {
+  content: "\e17d";
+}
+.icon_dialpad_call_end:before {
+  content: "\e17e";
+}
+.icon_flag_filled:before {
+  content: "\e17f";
+}
+.icon_flag_outline:before {
+  content: "\e180";
+}
+.icon_audio1:before {
+  content: "\e181";
 }

@@ -1,4 +1,4 @@
- {{!-- <div>
+{{!-- <div>
         {{#each this}}
             <div class="row">
                 <div class="col-md-12">
@@ -31,48 +31,48 @@
     </div> --}}
 
 
-        {{#each this}}
-            <div class="row contact-first-title">
-			                    <div class="container-fluid text-left">
-			                         <span>{{group}}</span>
-			                    </div>
-			                </div>
-							<ul class="contact-left">
-                        {{#ContactList}}
-                            <li class="con-li" bid={{sip_login_id}} style="cursor:pointer">
-									<div class="row d-flex align-items-center">
-			                          <div class="col-2 col-sm-2 col-md-2">
-										  {{#if ImageURL}}
-			                           		 <span class="image-box"><img src={{ImageURL}}>
-										{{else}}
-										 <span class="image-box"><img src="images/pho.png">
-									{{/if}} 
-			                            <span class="avail-con-sts available"></span></span>
-			                          </div>
-			                          <div class="col-7 col-sm-8 col-md-8">
-			                            <span class="cnt-box">
-			                               <h5 class="f-16 contact-name">{{caller_id}}</h5>
-			                            </span>
-			                          </div>
-			                          <div class="col-3 col-sm-2 col-md-2">
-			                            <p class="notify-msg"><span class="notify-icon">{{ext}}</span></p>
-			                          </div>
-			                        </div>
-</li>
-                        {{/ContactList}}
-						</ul>
-              
-        {{/each}} 
-        
-         
-        
-   
+{{#each this}}
+<div class="row contact-first-title">
+	<div class="container-fluid text-left">
+		<span>{{group}}</span>
+	</div>
+</div>
+<ul class="contact-left">
+	{{#ContactList}}
+	<li class="con-li" bid={{sip_login_id}} style="cursor:pointer">
+		<div class="row d-flex align-items-center">
+			<div class="col-2 col-sm-2 col-md-2">
+				{{#if ImageURL}}
+				<span class="image-box"><img src={{ImageURL}}>
+					{{else}}
+					<span class="image-box"><img src="images/pho.png">
+						{{/if}}
+						<span class="avail-con-sts available"></span></span>
+			</div>
+			<div class="col-7 col-sm-8 col-md-8">
+				<span class="cnt-box">
+					<h5 class="f-16 contact-name">{{caller_id}} </h5>
+				</span>
+			</div>
+			<div class="col-3 col-sm-2 col-md-2">
+				<p class="notify-msg"><span class="notify-icon">{{ext}}</span></p>
+			</div>
+		</div>
+	</li>
+	{{/ContactList}}
+</ul>
+
+{{/each}}
 
 
 
 
 
- {{!-- {{#each this}}
+
+
+
+
+{{!-- {{#each this}}
  
            <li class="con-li" bid={{sip_login_id}}>
 									<div class="row d-flex align-items-center">
@@ -96,4 +96,3 @@
 </li>
  
     {{/each}} --}}
-
