@@ -5,12 +5,12 @@
         <div class="pad">
             <div class="dial-pad">
                 <div class="phoneStrings">
-                    <p class="text-center dialingtxt">Dialling… {{dialingData}}</p>
+                    <p class="text-center dialingtxt">Dialling… </p>
                 </div>
                 <div class="phoneStrings text-center">
-                    <div class="callericn"><img src="images/pho.png"></div>
-                    <span class="callername d-block">Jonathan Smith</span>
-                    <span class="extnum">Extn. 311</span>
+                    <div class="callericn"><img src="{{dialingData.ImageURL}}"></div>
+                    <span class="callername d-block">{{dialingData.caller_id}}</span>
+                    <span class="extnum">Extn. {{dialingData.ext}}</span>
                 </div>
                 <div class="digits dailed">
                     <div class="dig pound number-dig active" name="1"><span class="icon_dialpad_audio"></span>

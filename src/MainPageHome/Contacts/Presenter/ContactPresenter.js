@@ -101,8 +101,7 @@ export default class ContactPresenter {
                 ]; */
 
           // console.log(GlobalData.ContactData);
-          console.log("KAMAL");
-          console.log(groupindata);
+
           let contactResponse = { isContact: true, contactarray: groupindata };
 
           this.View = new ContactView(contactResponse); // Create the object for View

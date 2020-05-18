@@ -104,14 +104,6 @@ $(".formsgoption").on("click", function () {
   $(this).parent(".chat-msg").find("").addClass("cht-selected");
 });
 // ***************** ADD CLASS TO CHAT SCREEN MESSAGES SELECTED CLASS ************
-// ***************** AUDIO PLAYER
-document.addEventListener("DOMContentLoaded", function () {
-  new GreenAudioPlayer(".ready-player-1", {
-    showTooltips: true,
-    showDownloadButton: false,
-    enableKeystrokes: true,
-  });
-});
 
 $(function () {
   $("#basicExample").timepicker({ timeFormat: "h:i A" });
@@ -141,6 +133,7 @@ $(".number-dig").click(function () {
   //add number
   var currentValue = $(".phoneString input").val();
   var valueToAppend = $(this).attr("name");
+  alert(valueToAppend);
   $(".phoneString input").val(currentValue + valueToAppend);
 
   checkNumber();

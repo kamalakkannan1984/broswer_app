@@ -5,6 +5,7 @@ import TaskPresenter from "../Task/Presenter/TaskPresenter";
 import ContactView from "../Contacts/View/ContactView";
 
 import DialingPresenter from "../Calls/Presenter/DialingPresenter";
+import CallPresenter from "../Calls/Presenter/CallPresenter";
 
 export const LoggedDetails = JSON.parse(localStorage.getItem("login"));
 export function GetContactDetails(sipid) {
@@ -155,6 +156,7 @@ function compareName(a, b) {
 
 export function sortarray(result) {
   var text = $("#con-search").val();
+
   let FilterdArray = [];
   $.each(result, function (index, data) {
     var chkAdmin = $("#directorylst").text();
@@ -574,7 +576,12 @@ export function showWindow(item) {
 }
 
 //
-export function showDailingWindow(item) {
+export function showDialingWindow(item) {
   let DP = new DialingPresenter(item);
   DP.init();
+}
+
+export function closeDialingWindow() {
+  let CP = new CallPresenter();
+  CP.init();
 }

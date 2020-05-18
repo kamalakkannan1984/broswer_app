@@ -12,16 +12,17 @@ import dialingTemplate from "../../../Template/mainpage/calls-dialing.hbs";
 import TaskPresenter from "../../Task/Presenter/TaskPresenter";
 import HomeView from "../../DashBoard/View/HomeView"; */
 //import { xmpp } from "../../Common/constant";
-/*import {
+import {
   showWindow,
   FilterContact,
   loadFavContact,
   sortarray,
   dropDownContactList,
   weekAndDay,
-  showDailingWindow,
+  showDialingWindow,
+  closeDialingWindow,
 } from "../../Common/common";
-import CreateTask from "../../CreateTask/Presenter/NewtaskPresenter";
+/*import CreateTask from "../../CreateTask/Presenter/NewtaskPresenter";
 import RRulePresenter from "../../RRule/Presenter/RRulePresenter";
 import TaskFileUpload from "../../CreateTask/Presenter/TaskFileUpload";
 import GlobalData from "../../Storage/GlobalData"; */
@@ -34,13 +35,20 @@ export default class DialingView {
 
   //initLogin method used to append the loging template in the index.html
   getView(data) {
-    alert(data);
-    alert("Diling");
-    //this.contactWindow = contactTemplate(data);
+    this.assginTemplate(data);
+    this.endCall();
+  }
+
+  assginTemplate(data) {
     let dilaingResponse = { isdata: true, dialingData: data };
     this.dialingTemplate = dialingTemplate(dilaingResponse);
-
-    //$("#contactlist-sec").html(this.contactWindow);
     $("#chatsec").html(this.dialingTemplate);
+  }
+
+  endCall() {
+    $(".callbtn").click(function () {
+      alert("close dialing....");
+      closeDialingWindow();
+    });
   }
 }

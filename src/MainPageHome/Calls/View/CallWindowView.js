@@ -5,7 +5,7 @@
  * @param  {true}} {this.loginWindow=loginTemplate({login
  */
 
-import contactTemplate from "../../../Template/mainpage/calls/contacts.hbs";
+import contactTemplate from "../../../Template/mainpage/contacts.hbs";
 import dialpadTemplate from "../../../Template/mainpage/dialpad.hbs";
 
 import Alert from "../../../Utils/Alert";
@@ -19,12 +19,13 @@ import {
   sortarray,
   dropDownContactList,
   weekAndDay,
-  showDailingWindow,
+  showDialingWindow,
 } from "../../Common/common";
 import CreateTask from "../../CreateTask/Presenter/NewtaskPresenter";
 import RRulePresenter from "../../RRule/Presenter/RRulePresenter";
 import TaskFileUpload from "../../CreateTask/Presenter/TaskFileUpload";
 import GlobalData from "../../Storage/GlobalData";
+
 //import CallPresenter from "../../Calls/Presenter/CallPresenter";
 //This class is the first process for all the application follow.
 export default class CallView {
@@ -37,7 +38,7 @@ export default class CallView {
     let that = this;
     console.log("contactview", data);
     this.contactWindow = contactTemplate(data);
-    this.dialpadTemplate = dialpadTemplate();
+    this.dialpadTemplate = dialpadTemplate(data);
 
     $("#contactlist-sec").html(this.contactWindow);
     $("#chatsec").html(this.dialpadTemplate);
@@ -47,8 +48,7 @@ export default class CallView {
       .on("click", function (event) {
         console.log($(this).attr("bid"));
         if ($(".vsliderighthead").length > 0) closeNav();
-
-        showDailingWindow($(this).attr("bid") + "@" + that.ChatDomain);
+        showDialingWindow($(this).attr("bid"));
       });
 
     $("#filter-contact a")
@@ -285,21 +285,68 @@ export default class CallView {
         TU.init(files);
       });
 
-    /*  $("#repeatIntervalValue, #selectrepeat, #repeatday-date, #rruleEndSessionsCount").change(function() {
-      //r.rruleGenerate();
-      let RR = new RRulePresenter();
-      
-      RR.init();
-      
+    this.dialpadTyping();
+    this.clickTOCall();
+    this.searchContact();
+    this.searchTobind();
+  }
+
+  /**
+   * Number typing use to dialpad
+   */
+  dialpadTyping() {
+    $(".number-dig").click(function () {
+      addAnimationToButton(this);
+      var currentValue = $(".phoneString input").val();
+      var valueToAppend = $(this).attr("name");
+      $(".phoneString input").val(currentValue + valueToAppend);
     });
-    
-    
-      $(".endsection input[type=radio][name='rruleEndAction']").change(function() {
-      //r.rruleGenerate();
-     // let RR = new RRulePresenter();
-     let RR = new RRulePresenter();
-      
-     RR.init();
-    }); */
+  }
+
+  /**
+   * Click call button to call
+   */
+  clickTOCall() {
+    $(".callbtn").click(function () {
+      addAnimationToButton(this);
+      var currentValue = $(".phoneString input").val();
+      showDialingWindow(currentValue);
+    });
+  }
+
+  /**
+   * Add amimation button when click the dialpad buttons
+   * @param {thisButton} thisButton
+   */
+  addAnimationToButton(thisButton) {
+    $(thisButton).removeClass("clicked");
+    var _this = thisButton;
+    setTimeout(function () {
+      $(_this).addClass("clicked");
+    }, 100);
+  }
+
+  /**
+   * Search contact by name or number
+   */
+  searchContact() {
+    $("#con-dial-search")
+      .unbind()
+      .keyup(function () {
+        FilterContact();
+      });
+  }
+
+  /**
+   * dialpad search to bind number
+   */
+  searchTobind() {
+    $(".search-call-bind")
+      .unbind()
+      .on("click", function (event) {
+        var currentValue = $(".phoneString input").val();
+        var valueToAppend = $(this).attr("bid");
+        $(".phoneString input").val(currentValue + valueToAppend);
+      });
   }
 }

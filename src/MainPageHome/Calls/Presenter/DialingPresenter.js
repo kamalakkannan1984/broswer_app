@@ -9,7 +9,7 @@ import DialingWindowView from "../View/DialingWindowView";
 import GetContactModel from "../Model/GetContacts";
 import GlobalData from "../../Storage/GlobalData";
 import { xmpp } from "../../Common/constant";*/
-import { groupingContacts } from "../../Common/common";
+import { GetContactDetails } from "../../Common/common";
 export default class DialingPresenter {
   constructor(item) {
     alert(item);
@@ -20,6 +20,9 @@ export default class DialingPresenter {
 
   dailing(item) {
     this.View = new DialingWindowView(); // Create the object for View
-    this.View.getView(item);
+    const details = GetContactDetails(item);
+    console.log("DETAILS");
+    console.log(details);
+    this.View.getView(details);
   }
 }
