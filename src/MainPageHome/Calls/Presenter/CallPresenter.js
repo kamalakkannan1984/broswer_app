@@ -9,14 +9,15 @@ import GetContactModel from "../Model/GetContacts";
 import GlobalData from "../../Storage/GlobalData";
 import { xmpp } from "../../Common/constant";
 import { groupingContacts } from "../../Common/common";
+import { sipConnection } from "../../ServerConnection/SIPServer";
 export default class CallPresenter {
   constructor() {}
   /*
    *** init function initiate on load event
    */
   init = () => {
-    let that = this; // this stored in that for function scope
-    that.callContacts();
+    this.callContacts();
+    this.sreverIntgration();
   };
 
   callContacts() {
@@ -59,8 +60,16 @@ export default class CallPresenter {
           // this.View.apisucess(false, response);
         }
       })
-      .catch((e) =>
-        console.error("Login Module Critical failure: " + e.message)
-      );
+      .catch((e) => {
+        console.error(e.message);
+      });
+  }
+
+  /**
+   * call module intgration
+   */
+  async sreverIntgration() {
+    const ua = await sipConnection();
+    console.log(ua);
   }
 }

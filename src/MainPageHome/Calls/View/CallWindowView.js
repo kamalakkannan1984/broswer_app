@@ -25,6 +25,7 @@ import CreateTask from "../../CreateTask/Presenter/NewtaskPresenter";
 import RRulePresenter from "../../RRule/Presenter/RRulePresenter";
 import TaskFileUpload from "../../CreateTask/Presenter/TaskFileUpload";
 import GlobalData from "../../Storage/GlobalData";
+import $ from "jquery";
 
 //import CallPresenter from "../../Calls/Presenter/CallPresenter";
 //This class is the first process for all the application follow.
