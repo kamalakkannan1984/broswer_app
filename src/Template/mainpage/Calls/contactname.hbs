@@ -1,65 +1,397 @@
-{{!-- <div>
-        {{#each this}}
-            <div class="row">
-                <div class="col-md-12">
-                    <h2>{{group}}</h2>
-                        {{#ContactList}}
-                            <p>{{caller_id}} at {{caller_id}}</p>
-                        {{/ContactList}}
-                </div>
-            </div>
-        {{/each}}
-        
-            <p>There are no documents available at this time</p>
-        
-    </div> --}}
-
-{{!-- <div>
-        {{#each this}}
-            <div class="row">
-                <div class="col-md-12">
-                    <h2>{{group}}</h2>
-                        {{#DocumentList}}
-                            <p>{{DocumentName}} at {{DocumentLocation}}</p>
-                        {{/DocumentList}}
-                </div>
-            </div>
-        {{/each}}
-        
-            <p>There are no documents available at this time</p>
-        
-    </div> --}}
-
-
-{{#each this}}
-<div class="row contact-first-title">
-    <div class="container-fluid text-left">
-        <span>{{group}}</span>
-    </div>
-</div>
-<ul class="contact-left">
-    {{#ContactList}}
-    <li class="con-li" bid={{sip_login_id}} style="cursor:pointer">
-        <div class="row d-flex align-items-center">
+<ul class="msg-lst contact-left show-icon-elent">
+    <li>
+        <div class="row d-flex align-items-center pt-2 pb-2">
             <div class="col-2 col-sm-2 col-md-2">
-                {{#if ImageURL}}
-                <span class="image-box"><img src={{ImageURL}}>
-                    {{else}}
-                    <span class="image-box"><img src="images/pho.png">
-                        {{/if}}
-                        <span class="avail-con-sts available"></span></span>
-            </div>
-            <div class="col-7 col-sm-8 col-md-8">
-                <span class="cnt-box">
-                    <h5 class="f-16 contact-name">{{caller_id}} </h5>
+                <span class="image-box"><img src="images/pho.png">
                 </span>
             </div>
-            <div class="col-3 col-sm-2 col-md-2">
-                <p class="notify-msg"><span class="notify-icon">{{ext}}</span></p>
+            <div class="col-6 col-sm-7 col-md-7 pr-0">
+                <span class="cnt-box">
+                    <h5 class="f-16 contact-name">Dennis Collins</h5>
+                    <div class="msg-desc"><span class="icon_incoming_call"></span><span
+                            class="type-status pr-1"></span>Mobile</div>
+                </span>
+            </div>
+            <div class="col-4 col-sm-3 col-md-3">
+                <p class="notify-msg hide-sec"><span class="dte-box">2:30 pm</span></p>
+
+
+                <div class="row align-items-center icon-con-sec-hide">
+                    <ul>
+                        <li>
+                            <span class="icon_call"></span>
+                        </li>
+                        <li>
+                            <span class="icon_message_thin"></span>
+                        </li>
+                        <li>
+                            <div class="dropdown ">
+                                <span class="icon_more_vertical" id="dropdownMenuButton" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false"></span>
+                                <div class="dropdown-menu onhvclick" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Call Details</a>
+                                    <a class="dropdown-item" href="#">Delete</a>
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+
+                </div>
             </div>
         </div>
     </li>
-    {{/ContactList}}
-</ul>
+    <li>
+        <div class="row d-flex align-items-center pt-2 pb-2">
+            <div class="col-2 col-sm-2 col-md-2">
+                <span class="image-box"><img src="images/pho.png">
+                </span>
+            </div>
+            <div class="col-6 col-sm-7 col-md-7 pr-0">
+                <span class="cnt-box">
+                    <h5 class="f-16 contact-name">Will Vargas</h5>
+                    <div class="msg-desc"><span class="icon_incoming_call"></span><span
+                            class="type-status pr-1"></span>Mobile</div>
+                </span>
+            </div>
+            <div class="col-4 col-sm-3 col-md-3">
+                <p class="notify-msg hide-sec"><span class="dte-box">2:30 pm</span></p>
 
-{{/each}}
+
+                <div class="row align-items-center icon-con-sec-hide">
+                    <ul>
+                        <li>
+                            <span class="icon_call"></span>
+                        </li>
+                        <li>
+                            <span class="icon_message_thin"></span>
+                        </li>
+                        <li>
+                            <div class="dropdown ">
+                                <span class="icon_more_vertical" id="dropdownMenuButton" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false"></span>
+                                <div class="dropdown-menu onhvclick" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Call Details</a>
+                                    <a class="dropdown-item" href="#">Delete</a>
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="row d-flex align-items-center pt-2 pb-2">
+            <div class="col-2 col-sm-2 col-md-2">
+                <span class="image-box"><img src="images/pho.png">
+                </span>
+            </div>
+            <div class="col-6 col-sm-7 col-md-7 pr-0">
+                <span class="cnt-box">
+                    <h5 class="f-16 contact-name red-clr">+91 84891 76157</h5>
+                    <div class="msg-desc"><span class="icon_missed_call red-clr"></span><span
+                            class="type-status pr-1"></span>Mobile</div>
+                </span>
+            </div>
+            <div class="col-4 col-sm-3 col-md-3">
+                <p class="notify-msg hide-sec"><span class="dte-box">Yesterday</span><br></p>
+
+
+                <div class="row align-items-center icon-con-sec-hide">
+                    <ul>
+                        <li>
+                            <span class="icon_call"></span>
+                        </li>
+                        <li>
+                            <span class="icon_message_thin"></span>
+                        </li>
+                        <li>
+                            <div class="dropdown ">
+                                <span class="icon_more_vertical" id="dropdownMenuButton" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false"></span>
+                                <div class="dropdown-menu onhvclick" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Call Details</a>
+                                    <a class="dropdown-item" href="#">Delete</a>
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="row d-flex align-items-center pt-2 pb-2">
+            <div class="col-2 col-sm-2 col-md-2">
+                <span class="image-box"><img src="images/pho.png">
+                </span>
+            </div>
+            <div class="col-6 col-sm-7 col-md-7 pr-0">
+                <span class="cnt-box">
+                    <h5 class="f-16 contact-name red-clr">Sara Stewart</h5>
+                    <div class="msg-desc"><span class="icon_missed_call red-clr"></span><span
+                            class="type-status pr-1"></span>Mobile</div>
+                </span>
+            </div>
+            <div class="col-4 col-sm-3 col-md-3">
+                <p class="notify-msg hide-sec"><span class="dte-box">Monday</span><br></p>
+
+
+                <div class="row align-items-center icon-con-sec-hide">
+                    <ul>
+                        <li>
+                            <span class="icon_call"></span>
+                        </li>
+                        <li>
+                            <span class="icon_message_thin"></span>
+                        </li>
+                        <li>
+                            <div class="dropdown ">
+                                <span class="icon_more_vertical" id="dropdownMenuButton" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false"></span>
+                                <div class="dropdown-menu onhvclick" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Call Details</a>
+                                    <a class="dropdown-item" href="#">Delete</a>
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="row d-flex align-items-center pt-2 pb-2">
+            <div class="col-2 col-sm-2 col-md-2">
+                <span class="image-box"><img src="images/pho.png">
+                </span>
+            </div>
+            <div class="col-6 col-sm-7 col-md-7 pr-0">
+                <span class="cnt-box">
+                    <h5 class="f-16 contact-name">+91 84891 76157</h5>
+                    <div class="msg-desc"><span class="icon_incoming_call"></span><span
+                            class="type-status pr-1"></span>Mobile</div>
+                </span>
+            </div>
+            <div class="col-4 col-sm-3 col-md-3">
+                <p class="notify-msg hide-sec"><span class="dte-box">Monday</span><br></p>
+
+
+                <div class="row align-items-center icon-con-sec-hide">
+                    <ul>
+                        <li>
+                            <span class="icon_call"></span>
+                        </li>
+                        <li>
+                            <span class="icon_message_thin"></span>
+                        </li>
+                        <li>
+                            <span class="icon_info"></span>
+                        </li>
+                        <!-- <li> -->
+                        <!-- <div class="dropdown "> -->
+                        <!-- <span class="icon_more_vertical" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span> -->
+                        <!-- <div class="dropdown-menu onhvclick" aria-labelledby="dropdownMenuButton"> -->
+                        <!-- <a class="dropdown-item" href="#">Call Details</a> -->
+                        <!-- <a class="dropdown-item" href="#">Delete</a> -->
+
+                        <!-- </div> -->
+                        <!-- </div> -->
+                        <!-- </li> -->
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="row d-flex align-items-center pt-2 pb-2">
+            <div class="col-2 col-sm-2 col-md-2">
+                <span class="image-box"><img src="images/pho.png">
+                </span>
+            </div>
+            <div class="col-6 col-sm-7 col-md-7 pr-0">
+                <span class="cnt-box">
+                    <h5 class="f-16 contact-name red-clr">+91 84891 76157</h5>
+                    <div class="msg-desc"><span class="icon_missed_call red-clr"></span><span
+                            class="type-status pr-1"></span>Mobile</div>
+                </span>
+            </div>
+            <div class="col-4 col-sm-3 col-md-3">
+                <p class="notify-msg hide-sec"><span class="dte-box">12/12/19</span><br></p>
+
+
+                <div class="row align-items-center icon-con-sec-hide">
+                    <ul>
+                        <li>
+                            <span class="icon_call"></span>
+                        </li>
+                        <li>
+                            <span class="icon_message_thin"></span>
+                        </li>
+                        <li>
+                            <div class="dropdown ">
+                                <span class="icon_more_vertical" id="dropdownMenuButton" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false"></span>
+                                <div class="dropdown-menu onhvclick" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Call Details</a>
+                                    <a class="dropdown-item" href="#">Delete</a>
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="row d-flex align-items-center pt-2 pb-2">
+            <div class="col-2 col-sm-2 col-md-2">
+                <span class="image-box"><img src="images/pho.png">
+                </span>
+            </div>
+            <div class="col-6 col-sm-7 col-md-7 pr-0">
+                <span class="cnt-box">
+                    <h5 class="f-16 contact-name">Dennis Collins</h5>
+                    <div class="msg-desc"><span class="icon_voicemail"></span><span
+                            class="type-status pr-1"></span>Mobile</div>
+                </span>
+            </div>
+            <div class="col-4 col-sm-3 col-md-3">
+                <p class="notify-msg hide-sec"><span class="dte-box">2:30 pm</span></p>
+
+
+                <div class="row align-items-center icon-con-sec-hide">
+                    <ul>
+                        <li>
+                            <span class="icon_play"></span>
+                        </li>
+                        <li>
+                            <span class="icon_call"></span>
+
+                        </li>
+                        <li>
+                            <div class="dropdown ">
+                                <span class="icon_more_vertical" id="dropdownMenuButton" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false"></span>
+                                <div class="dropdown-menu onhvclick" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Call Details</a>
+                                    <a class="dropdown-item" href="#">Delete</a>
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="row d-flex align-items-center pt-2 pb-2">
+            <div class="col-2 col-sm-2 col-md-2">
+                <span class="image-box"><img src="images/pho.png">
+                </span>
+            </div>
+            <div class="col-6 col-sm-7 col-md-7 pr-0">
+                <span class="cnt-box">
+                    <h5 class="f-16 contact-name">Will Vargas</h5>
+                    <div class="msg-desc"><span class="icon_voicemail"></span><span
+                            class="type-status pr-1"></span>Mobile</div>
+                </span>
+            </div>
+            <div class="col-4 col-sm-3 col-md-3">
+                <p class="notify-msg hide-sec"><span class="dte-box">Yesterday</span></p>
+
+
+                <div class="row align-items-center icon-con-sec-hide">
+                    <ul>
+                        <li>
+                            <span class="icon_play"></span>
+                        </li>
+                        <li>
+                            <span class="icon_call"></span>
+
+                        </li>
+                        <li>
+                            <div class="dropdown ">
+                                <span class="icon_more_vertical" id="dropdownMenuButton" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false"></span>
+                                <div class="dropdown-menu onhvclick" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Call Details</a>
+                                    <a class="dropdown-item" href="#">Delete</a>
+
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="row d-flex align-items-center pt-2 pb-2">
+            <div class="col-2 col-sm-2 col-md-2">
+                <span class="image-box"><img src="images/pho.png">
+                </span>
+            </div>
+            <div class="col-6 col-sm-7 col-md-7 pr-0">
+                <span class="cnt-box">
+                    <h5 class="f-16 contact-name">+91 84891 76157</h5>
+                    <div class="msg-desc"><span class="icon_voicemail"></span><span
+                            class="type-status pr-1"></span>Mobile</div>
+                </span>
+            </div>
+            <div class="col-4 col-sm-3 col-md-3">
+                <p class="notify-msg hide-sec"><span class="dte-box">Monday</span><br></p>
+
+
+                <div class="row align-items-center icon-con-sec-hide">
+                    <ul>
+
+                        <li>
+                            <span class="icon_play"></span>
+                        </li>
+                        <li>
+                            <span class="icon_call"></span>
+                        </li>
+                        <li>
+                            <span class="icon_info"></span>
+                        </li>
+                        <!-- <li> -->
+                        <!-- <div class="dropdown "> -->
+                        <!-- <span class="icon_more_vertical" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span> -->
+                        <!-- <div class="dropdown-menu onhvclick" aria-labelledby="dropdownMenuButton"> -->
+                        <!-- <a class="dropdown-item" href="#">Call Details</a> -->
+                        <!-- <a class="dropdown-item" href="#">Delete</a> -->
+
+                        <!-- </div> -->
+                        <!-- </div> -->
+                        <!-- </li> -->
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>

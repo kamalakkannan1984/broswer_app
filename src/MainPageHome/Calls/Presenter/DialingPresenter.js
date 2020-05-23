@@ -1,28 +1,47 @@
 /**
- * Presenter first pattern 
- * ContactView and model connected here 
-
-
+ * Presenter first pattern
+ * ContactView and model connected here
  */
 import DialingWindowView from "../View/DialingWindowView";
-/*import CallWindowView from "../View/CallWindowView";
-import GetContactModel from "../Model/GetContacts";
-import GlobalData from "../../Storage/GlobalData";
-import { xmpp } from "../../Common/constant";*/
-import { GetContactDetails } from "../../Common/common";
+import { GetContactDetailsByExt } from "../../Common/common";
+import { sipConfig } from "../../Common/constant";
+import { sipConnection } from "../../ServerConnection/SIPServer";
 export default class DialingPresenter {
-  constructor(item) {
-    alert(item);
-    this.dailing(item);
+  constructor() {
+    this.loggeduser = JSON.parse(localStorage.getItem("login"));
   }
 
   init() {}
 
-  dailing(item) {
+  directNumber(PhoneNumber) {
+    alert(PhoneNumber);
+    this.dialNow(PhoneNumber);
+  }
+
+  extensionCall(ext) {
     this.View = new DialingWindowView(); // Create the object for View
-    const details = GetContactDetails(item);
-    console.log("DETAILS");
-    console.log(details);
+    const details = GetContactDetailsByExt(ext);
+    this.dialNow(ext);
     this.View.getView(details);
+  }
+
+  async dialNow(PhoneNumber) {
+    var options = {
+      media: { constraints: { audio: true, video: false } },
+      extraHeaders: ["X-webcall: audio"],
+      params: { from_displayName: this.loggeduser.ext },
+    };
+    var uri = "sip:" + PhoneNumber + "@" + sipConfig.domain;
+    const ua = await sipConnection();
+    console.log(ua);
+    ua.on("invite", function (rsession) {
+      console.log("KAMAL");
+      console.log(rsession);
+    });
+    const invite = ua.invite(uri, options);
+    console.log("KA");
+    console.log(invite);
+    //SessionRunner++;
+    //sessions[SessionRunner] = UA.invite(uri, options);
   }
 }

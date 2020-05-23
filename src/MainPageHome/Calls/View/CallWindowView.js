@@ -5,8 +5,10 @@
  * @param  {true}} {this.loginWindow=loginTemplate({login
  */
 
-import contactTemplate from "../../../Template/mainpage/contacts.hbs";
+import contactTemplate from "../../../Template/mainpage/Calls/contacts.hbs";
 import dialpadTemplate from "../../../Template/mainpage/dialpad.hbs";
+import dropdownTemplate from "../../../Template/mainpage/dropdown.hbs";
+import headerBarTemplate from "../../../Template/mainpage/header-bar.hbs";
 
 import Alert from "../../../Utils/Alert";
 import TaskPresenter from "../../Task/Presenter/TaskPresenter";
@@ -20,6 +22,7 @@ import {
   dropDownContactList,
   weekAndDay,
   showDialingWindow,
+  directNumber,
 } from "../../Common/common";
 import CreateTask from "../../CreateTask/Presenter/NewtaskPresenter";
 import RRulePresenter from "../../RRule/Presenter/RRulePresenter";
@@ -38,11 +41,11 @@ export default class CallView {
   getView(data) {
     let that = this;
     console.log("contactview", data);
+    const headerData = { iscallHeader: true };
+    this.headerBarTemplate = headerBarTemplate(headerData);
     this.contactWindow = contactTemplate(data);
-    this.dialpadTemplate = dialpadTemplate(data);
-
+    $("#headerPartial").html(this.headerBarTemplate);
     $("#contactlist-sec").html(this.contactWindow);
-    $("#chatsec").html(this.dialpadTemplate);
 
     $(".con-li")
       .unbind()
@@ -285,13 +288,21 @@ export default class CallView {
         let TU = new TaskFileUpload();
         TU.init(files);
       });
-
-    this.dialpadTyping();
-    this.clickTOCall();
-    this.searchContact();
-    this.searchTobind();
   }
 
+  dialPadView(data) {
+    var that = this;
+    const dropdownListResponse = {
+      isContact: true,
+      contactarray: data,
+    };
+    that.dialpadTemplate = dialpadTemplate(dropdownListResponse);
+    $("#chatsec").html(that.dialpadTemplate);
+    that.dialpadTyping();
+    that.clickToCall();
+    that.searchTobind();
+    that.searchContact(that, data);
+  }
   /**
    * Number typing use to dialpad
    */
@@ -307,11 +318,17 @@ export default class CallView {
   /**
    * Click call button to call
    */
-  clickTOCall() {
+  clickToCall() {
     $(".callbtn").click(function () {
       addAnimationToButton(this);
       var currentValue = $(".phoneString input").val();
-      showDialingWindow(currentValue);
+      if (currentValue.length === 3) {
+        showDialingWindow(currentValue);
+      } else if (currentValue.length >= 3) {
+        directNumber(currentValue);
+      } else {
+        alert("Invalid numbr");
+      }
     });
   }
 
@@ -330,12 +347,30 @@ export default class CallView {
   /**
    * Search contact by name or number
    */
-  searchContact() {
+  searchContact(that, data) {
     $("#con-dial-search")
       .unbind()
       .keyup(function () {
-        FilterContact();
+        var inputVal = $(this).val();
+        if (that.checkValidation(inputVal, this)) {
+          that.filterList(that, data, inputVal);
+        }
       });
+  }
+
+  checkValidation(inputVal, thisObj) {
+    var numericReg = /^[a-z0-9]+$/gi;
+    var charReg = /^[a-z]+$/gi;
+    var numberReg = /^[0-9]+$/gi;
+    if (!numericReg.test(inputVal)) {
+      $(thisObj).val("");
+    } else if (charReg.test(inputVal)) {
+      return 1;
+    } else if (numberReg.test(inputVal)) {
+      return 1;
+    } else {
+      $(thisObj).val("");
+    }
   }
 
   /**
@@ -345,9 +380,26 @@ export default class CallView {
     $(".search-call-bind")
       .unbind()
       .on("click", function (event) {
-        var currentValue = $(".phoneString input").val();
-        var valueToAppend = $(this).attr("bid");
-        $(".phoneString input").val(currentValue + valueToAppend);
+        const ext = $(this).attr("bid");
+        showDialingWindow(ext);
       });
+  }
+
+  /**
+   * Filter the dropdown list
+   * @param {string} val
+   */
+  filterList(that, data, val) {
+    var found_names = $.grep(data, function (v) {
+      return v.caller_id.toLowerCase().match(val.toLowerCase()) || v.ext == val;
+    });
+    if (found_names.length > 0) {
+      that.dropdownTemplate = dropdownTemplate(found_names);
+      $(".dialpad-name-list").html(that.dropdownTemplate);
+    } else {
+      that.dropdownTemplate = dropdownTemplate(data);
+      $(".dialpad-name-list").html(that.dropdownTemplate);
+    }
+    that.searchTobind();
   }
 }

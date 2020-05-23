@@ -71,7 +71,7 @@ export const sipConfig = {
   uri: "",
   userAgentString: "URWEB:WEB",
   traceSip: true,
-  register: true,
+  register: false,
   authorizationUser: "",
   password: "",
   log: "debug",

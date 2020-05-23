@@ -46,11 +46,14 @@ export default class CallPresenter {
           let groupindata = groupingContacts(response.companycontacts);
 
           // console.log(GlobalData.ContactData);
-          let contactResponse = { isContact: true, contactarray: groupindata };
+          let contactResponse = {
+            isContact: true,
+            contactarray: groupindata,
+          };
 
           this.View = new CallWindowView(contactResponse); // Create the object for View
-
           this.View.getView(contactResponse);
+          this.View.dialPadView(response.companycontacts);
         } else {
           let contactResponse = { isContact: false, data: response };
           console.log(contactResponse);

@@ -37,10 +37,7 @@ export async function sipConnection() {
     ua.on("bye", function (rsession) {
       console.log("bye");
     });
-    ua.on("invite", function (rsession) {
-      console.log("invite");
-      console.log(rsession);
-    });
+
     return ua;
   } catch (err) {
     console.log(err);

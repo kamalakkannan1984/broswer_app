@@ -15,6 +15,14 @@ export function GetContactDetails(sipid) {
     return obj;
   }
 }
+
+export function GetContactDetailsByExt(ext) {
+  if (GlobalData.BuddyList) {
+    var obj = GlobalData.BuddyList.find((data) => data.ext == ext);
+    return obj;
+  }
+}
+
 export function groupingContacts(contactsData) {
   let soretedContacts = contactsData.sort(compareg);
 
@@ -577,8 +585,13 @@ export function showWindow(item) {
 
 //
 export function showDialingWindow(item) {
-  let DP = new DialingPresenter(item);
-  DP.init();
+  let DP = new DialingPresenter();
+  DP.extensionCall(item);
+}
+
+export function directNumber(item) {
+  let DP = new DialingPresenter();
+  DP.directNumber(item);
 }
 
 export function closeDialingWindow() {

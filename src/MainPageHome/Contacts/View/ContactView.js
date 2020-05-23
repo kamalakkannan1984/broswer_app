@@ -6,6 +6,7 @@
  */
 
 import contactTemplate from "../../../Template/mainpage/contacts.hbs";
+import headerBarTemplate from "../../../Template/mainpage/header-bar.hbs";
 
 import Alert from "../../../Utils/Alert";
 import TaskPresenter from "../../Task/Presenter/TaskPresenter";
@@ -32,10 +33,11 @@ export default class ContactView {
   //initLogin method used to append the loging template in the index.html
   getView(data) {
     let that = this;
-
+    const headerData = { isContactHeader: true };
+    this.headerBarTemplate = headerBarTemplate(headerData);
     console.log("contactview", data);
     this.contactWindow = contactTemplate(data);
-
+    $("#headerPartial").html(this.headerBarTemplate);
     $("#contactlist-sec").html(this.contactWindow);
 
     $(".con-li")

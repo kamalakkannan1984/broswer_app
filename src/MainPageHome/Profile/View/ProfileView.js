@@ -3,6 +3,7 @@ import availablestatus from "./availableshare";
 import HOmeView from "../../DashBoard/View/HomeView";
 import GlobalData from "../../Storage/GlobalData";
 import CallPresenter from "../../Calls/Presenter/CallPresenter";
+import ContactPresenter from "../../Contacts/Presenter/ContactPresenter";
 export default class ProfileView extends HOmeView {
   constructor(data) {
     super();
@@ -34,12 +35,20 @@ export default class ProfileView extends HOmeView {
 
     $(".loadersimg").hide();
     this.openCallWindow();
+    this.openContactWindow();
   }
 
   openCallWindow() {
     $("#callWindowOpen").on("click", function (event) {
       const callPresenter = new CallPresenter();
       callPresenter.init();
+    });
+  }
+
+  openContactWindow() {
+    $("#contactWindowOpen").on("click", function (event) {
+      const contactPresenter = new ContactPresenter();
+      contactPresenter.init();
     });
   }
 }
