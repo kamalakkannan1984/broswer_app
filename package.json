@@ -24,7 +24,7 @@
     "es6-promise": "^4.2.8",
     "expose-loader": "^0.7.5",
     "express": "^4.17.1",
-    "express-fileupload": "^1.1.6",
+    "express-fileupload": "^1.1.9",
     "file-loader": "^6.0.0",
     "form-data": "^2.5.1",
     "formidable": "^1.2.1",
