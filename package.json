@@ -61,7 +61,7 @@
     "moment": "^2.24.0",
     "node-blob": "0.0.2",
     "node-couchdb": "^1.3.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "path": "^0.12.7",
     "pouchdb": "^7.2.1",
     "precompile-handlebars": "^1.0.5",
