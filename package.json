@@ -23,7 +23,7 @@
     "electron": "^6.0.8",
     "es6-promise": "^4.2.8",
     "expose-loader": "^0.7.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-fileupload": "^1.1.6",
     "file-loader": "^6.0.0",
     "form-data": "^2.5.1",
